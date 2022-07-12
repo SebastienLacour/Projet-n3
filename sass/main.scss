@@ -1,5 +1,33 @@
+@import "./Utils/variables";
+@import "./base/typography.scss";
+
 /* Police de la Page */
 
 body{
-    font-family: $font-text;
+    text-align: center;
+}
+
+/* Mise en Page du Header */
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__logo{
+        margin-left: 30%;
+        &--size{
+            width: 40%;
+        }
+    }
+    &__icone{
+        &--size{
+            height: 10%;
+        }
+    }
+    &__location{
+        margin-left: 1%;
+        &--size{
+            font-size: 30px;
+        }
+    }
 }
