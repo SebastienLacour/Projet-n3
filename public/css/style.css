@@ -1,0 +1,32 @@
+body {
+  font-family: "Roboto" sans-serif;
+}
+
+/* Police de la Page */
+body {
+  text-align: center;
+}
+
+/* Mise en Page du Header */
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title__logo {
+  margin-left: 30%;
+}
+.title__logo--size {
+  width: 40%;
+}
+.title__icone--size {
+  height: 10%;
+}
+.title__location {
+  margin-left: 1%;
+}
+.title__location--size {
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
