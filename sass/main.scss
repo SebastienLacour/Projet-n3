@@ -23,11 +23,10 @@ body{
             width: 40%;
         }
     }
-    &__icone{
-        &--size{
-            height: 10%;
-        }
+    &__position{   
+    background-color: darken($color: white, $amount: 10%);
     }
+    
     &__location{
         margin-left: 1%;
         &--size{
@@ -41,6 +40,7 @@ body{
 
 .intro{
     text-align: left;
+    margin-left: 2%;
     @media (max-width: 599px) {
         text-align: center;
     }
@@ -69,11 +69,19 @@ body{
 }
 
 .filters{
+    margin-left: 2%;
     &__title{
         text-align: left;
     }
     &__list{
         display: flex;
         justify-content: space-around;
+        @media (max-width: 599) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__btn{
+        @include btn-filters;
     }
 }
