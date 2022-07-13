@@ -3,15 +3,22 @@
 }
 
 @mixin btn-type {
-    background-color: $color-secondary;
+    background: $color-secondary;
     color: white;
     font-size: 20px;
     border-radius: 30px;
     width: 17%;
-    height: 50px;
+    height: 60px;
     @media (max-width: 599px) {
         width: 260px;
         margin-left: 20%;
     }
         
+}
+
+@mixin btn-filters {
+    background: $background-darker;
+    height: 60px;
+    width: 140%;
+    border-radius: 30px;
 }
