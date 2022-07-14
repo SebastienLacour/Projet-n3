@@ -1,3 +1,10 @@
+.filters__btn{
+    background: darken($color: white, $amount: 5%);
+    height: 60px;
+    width: 160%;
+    border-radius: 30px;
+}
+
 .restaurant__button{
     background-color: white;
     border-radius: 30px;
