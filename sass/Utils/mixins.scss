@@ -3,7 +3,7 @@
 }
 
 @mixin btn-type {
-    background: $color-secondary;
+    background: linear-gradient($color-secondary,$color-primary);
     color: white;
     font-size: 20px;
     border-radius: 30px;
@@ -16,9 +16,3 @@
         
 }
 
-@mixin btn-filters {
-    background: $background-darker;
-    height: 60px;
-    width: 140%;
-    border-radius: 30px;
-}
