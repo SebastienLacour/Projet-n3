@@ -10,18 +10,44 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" rel="stylesheet" />
     </head>
     <body>
+
+        <!--Header: Logo et La position de la Recherche-->
+
         <header class="title title--size">
+
+            <!--logo-->
+
             <img class=" title__logo  title__logo--size" src="./images/logo/ohmyfood.png" alt="Logo" />
+
+            <!--Position de la recherche-->
+
             <p><span class="title__position"><i class="fas fa-location-dot fa-2x title__icone title__icone--size"></i><span class="title__location title__location--size">Paris, Belleville</span></span></p>
+
         </header>
+
+        <!--Main: Intro,Filtres et Cartes Restaurant-->
+
         <main>
+
+            <!--Intro et Filtres-->
+
             <section>
+
+                <!--Section d'intro-->
+
             <div class="intro">
                 <h1 class="intro__title">Réservez le menu qui vous convient</h1>
                 <p class="intro__paragraph">Découvrez des restaurants d'exception séléctionnés par nos soins</p>
+
+                <!--Boutton de l'intro-->
+
                 <button class="intro__btn">Explorer nos restaurants</button>
             </div>
+
             </section>
+
+            <!--Filtres-->
+
             <section class="filters">
                     <h2 class="filters__title">Fonctionnement</h2>
                     <ol class="filters__list">
@@ -30,39 +56,42 @@
                         <li class="filters__choice"><button class="filters__btn"><i class="fas fa-store filters__icone"></i>Dégustez au restaurant</button></li>
                     </ol>
             </section>
+
+            <!--Cartes Restaurant-->
+            
             <section class="restaurant">
                 <h2>restaurants</h2>
-                    <form action="#" method="get">
+                    <form action="#" method="get" class="restaurant__card">
                         <button>
-                            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                            <strong>La palette du goût</strong>
+                            <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="restaurant__picture restaurant__picture--size">
+                            <strong class="restaurant__title">La palette du goût</strong>
                             <p>Ménilmontant</p>
                             <i class="fat fa-heart"></i>
                         </button>
                     </form>
 
-                    <form action="#" method="get">
+                    <form action="#" method="get" class="restaurant__card">
                         <button>
-                            <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-                            <strong>La note enchantée</strong>
+                            <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" class="restaurant__picture restaurant__picture--size">
+                            <strong class="restaurant__title">La note enchantée</strong>
                             <p>Charonne</p>
                             <i class="fas fa-heart"></i>
                         </button>
                     </form>
 
-                    <form action="#" method="get">
+                    <form action="#" method="get" class="restaurant__card">
                         <button>
-                            <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
-                            <strong>À la française</strong>
+                            <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française" class="restaurant__picture restaurant__picture--size">
+                            <strong class="restaurant__title">À la française</strong>
                             <p>Cité Rouge</p>
                             <i class="fat fa-heart"></i>
                         </button>
                     </form>
 
-                    <form action="#" method="get">
+                    <form action="#" method="get" class="restaurant__card">
                         <button>
-                            <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-                            <strong>Le délice des sens</strong>
+                            <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" class="restaurant__picture restaurant__picture--size">
+                            <strong class="restaurant__title">Le délice des sens</strong>
                             <p>Folie-Méricourt</p>
                             <i class="fat fa-heart"></i>
                         </button>
