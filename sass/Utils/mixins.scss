@@ -1,18 +1,26 @@
 @mixin dark-background($background-color:darkness-shift($background-color)) {
     background-color: $background-color;
 }
+@mixin margin-page {
+    margin-left: 5%;
+}
 
 @mixin btn-type {
     background: linear-gradient($color-secondary,$color-primary);
     color: white;
     font-size: 20px;
     border-radius: 30px;
-    width: 17%;
+    width: 260px;
     height: 60px;
+    &:hover {
+        background: lighten($color: $color-secondary, $amount: 2%),
+    }
     @media (max-width: 599px) {
         width: 260px;
         margin-left: 20%;
     }
         
 }
+
+
 
