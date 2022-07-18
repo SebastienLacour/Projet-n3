@@ -1,0 +1,18 @@
+.filters{
+    &__title{
+        text-align: left;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-around;
+        margin-right: 13%;
+        @media (max-width: 599px){
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__icone{
+        margin-right: 10%;
+    }
+}
