@@ -1,8 +1,12 @@
 @import "./base/typography.scss";
 @import "./Components/button.scss";
+@import "./Layout/header.scss";
+@import "./Layout/footer.scss";
 @import "./Utils/variables";
 @import "./Utils/mixins.scss";
 @import "./Utils/functions.scss";
+
+
 
 
 /* Police de la Page */
@@ -93,6 +97,7 @@ body{
             flex-direction: column;
         }
     }
+
     &__icone{
         margin-right: 10%;
     }
@@ -101,27 +106,45 @@ body{
 .restaurant{
     display: flex;
     flex-direction: column;
+    height: 700px;
     margin-top: 5%;
+    margin-left: -5%;
     text-align: left;
     background: $background-darker;
     @media(max-width: 599px) {
         display: flex;
         flex-direction: column;
     }
+
+    &__title{
+        position: relative;
+        left: 4.5%;
+    }
+
     &__menu{
         display: flex;
         flex-wrap: wrap;
-        
+        @media(max-width: 599px) {
+            flex-direction: column;
+        }
     }
+        
+    
     &__card{
         margin-top: 2%;
         margin-left: 6%;
         &--size{
             width: 40%;
             height: 250px;
+            @media(max-width: 599px) {
+                width: 100%;
+                margin-bottom: 1%;
+                margin-top: 10%;
+            }
             
         }
     }
+
     &__picture{
         border-radius: 30px 30px 0 0;
         position: relative;
@@ -133,10 +156,69 @@ body{
             
         }
     }
-    &__text{
-        text-align: left;
+
+    &__name{
+        position: relative;
+        bottom: 7%;
         &--size{
-            font-size: 15px;
+            font-size: 17px;
         }
     }
+
+    &__location{
+        position: relative;
+        top: 2%;
+        right: 28%;
+    }
+
+    &__new{
+        margin-bottom: 10%;
+        position: relative;
+        bottom: 85%;
+        padding: 2%;
+        @media(max-width: 599px) {
+            position: relative;
+            bottom: 85%;
+            left: 40%;
+        }
+        &--color{
+            background-color: $color-tertiary;
+            color: darken($color: $color-tertiary, $amount: 40%);
+        }
+        &--size{
+            width: 50%;
+            height: 50%;
+        }
+        &--second{
+            position: relative;
+            right: 1%;
+            bottom: 80%;
+        }
+    }
+    
+    &__icone{
+        margin-left: 40%;
+    }
+    
+}
+
+#first-restaurant-name{
+
+}
+
+#second-restaurant-name{
+    margin-left: 2%;
+}
+
+#third-restaurant-name{
+    margin-right: 10%;
+}
+
+#third-restaurant-location{
+    position: relative;
+    right: 31%;
+}
+
+#fourth-restaurant-name{
+
 }
