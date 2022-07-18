@@ -1,0 +1,31 @@
+.footer{
+    background-color: lighten($color: black, $amount: 15%);
+    color: white;
+    text-align: left;
+    height: 260px;
+    margin-left: -5%;
+    padding-left: 5%;
+    padding-top: 3%;
+    @media(max-width: 599px) {
+        margin-top: 150%;
+    }
+    &__logo{
+        width: 20%;
+        filter: url(/images/logo/ohmyfood.png) hue-rotate(70%);
+        @media(max-width: 599px) {
+            width: 30%;
+            margin-left: 7%;
+        }
+    }
+    &__list{
+        position: relative;
+        right: 2%;
+    }
+    &__choice{
+        list-style-type: none;
+        margin-bottom: 1%;
+    }
+    &__name{
+        margin-left: 0.5%;
+    }
+}
