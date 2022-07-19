@@ -13,8 +13,10 @@ h2 {
 .filters__btn {
   background: #f2f2f2;
   height: 60px;
-  width: 170%;
+  width: 300px;
   border-radius: 30px;
+  border: 3px;
+  box-shadow: 2px 2px #cccccc;
   margin-right: 5%;
 }
 @media (max-width: 599px) {
@@ -32,10 +34,10 @@ h2 {
   height: 100%;
 }
 
-.title__logo__logo {
+.title__logo {
   margin-left: 30%;
 }
-.title__logo__logo--size {
+.title__logo--size {
   width: 40%;
 }
 
@@ -48,9 +50,20 @@ h2 {
   padding-left: 5%;
   padding-top: 3%;
 }
+@media (max-width: 599px) {
+  .footer {
+    margin-top: 150%;
+  }
+}
 .footer__logo {
   width: 20%;
-  filter: hue-rotate(90%);
+  filter: url(/images/logo/ohmyfood.png) hue-rotate(70%);
+}
+@media (max-width: 599px) {
+  .footer__logo {
+    width: 30%;
+    margin-left: 7%;
+  }
 }
 .footer__list {
   position: relative;
@@ -64,6 +77,62 @@ h2 {
   margin-left: 0.5%;
 }
 
+.filters__title {
+  text-align: left;
+}
+.filters__list {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 13%;
+  list-style-type: none;
+}
+@media (max-width: 599px) {
+  .filters__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.filters__numbers {
+  font-size: 12px;
+  border-radius: 45%;
+  position: relative;
+  right: 6%;
+  padding: 5px 7px 5px 7px;
+}
+.filters__numbers--color {
+  background-color: #9356DC;
+  color: white;
+}
+.filters__first {
+  position: relative;
+  right: 3%;
+}
+.filters__second {
+  position: relative;
+  right: 5%;
+}
+.filters__third {
+  position: relative;
+  right: 3%;
+}
+.filters__name {
+  margin-right: 20%;
+  font-weight: bold;
+}
+.filters__icone {
+  margin-right: 8%;
+  color: gray;
+}
+.filters__icone-mobile {
+  position: relative;
+}
+.filters__icone-list {
+  position: relative;
+}
+.filters__icone-store {
+  position: relative;
+}
+
 /* Police de la Page */
 body {
   text-align: center;
@@ -75,12 +144,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.title__logo {
-  margin-left: 30%;
-}
-.title__logo--size {
-  width: 40%;
 }
 .title__information {
   background: linear-gradient(#d9d9d9 1%, #e6e6e6);
@@ -155,24 +218,6 @@ body {
     width: 260px;
     margin-left: 20%;
   }
-}
-
-.filters__title {
-  text-align: left;
-}
-.filters__list {
-  display: flex;
-  justify-content: space-around;
-  margin-right: 13%;
-}
-@media (max-width: 599px) {
-  .filters__list {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.filters__icone {
-  margin-right: 10%;
 }
 
 .restaurant {
@@ -268,6 +313,11 @@ body {
 }
 .restaurant__icone {
   margin-left: 40%;
+}
+.restaurant__icone--pink {
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
 }
 
 #second-restaurant-name {
