@@ -1,16 +1,24 @@
+
+
 .filters__btn{
     background: darken($color: white, $amount: 5%);
     height: 60px;
-    width: 160%;
+    width: 300px;
     border-radius: 30px;
+    border: 3px;
+    box-shadow: 2px 2px darken($color: white, $amount: 20%);
+    margin-right: 5%;
+    @media (max-width: 599px) {
+        width: 40%;
+    }
 }
 
 .restaurant__button{
     background-color: white;
     border-radius: 30px;
     &--size{
-        width: 70%;
-        height: 70%;
+        width: 90%;
+        height: 100%;
         }
 }
 
