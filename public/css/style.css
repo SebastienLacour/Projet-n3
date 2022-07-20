@@ -12,16 +12,20 @@ h2 {
 
 .filters__btn {
   background: #f2f2f2;
-  height: 60px;
-  width: 300px;
+  height: 70px;
+  width: 330px;
   border-radius: 30px;
   border: 3px;
   box-shadow: 2px 2px #cccccc;
   margin-right: 5%;
 }
+.filters__btn--purple {
+  background: #efe6fa;
+}
 @media (max-width: 599px) {
   .filters__btn {
     width: 40%;
+    margin-top: 25px;
   }
 }
 
@@ -57,7 +61,6 @@ h2 {
 }
 .footer__logo {
   width: 20%;
-  filter: url(/images/logo/ohmyfood.png) hue-rotate(70%);
 }
 @media (max-width: 599px) {
   .footer__logo {
@@ -83,7 +86,7 @@ h2 {
 .filters__list {
   display: flex;
   justify-content: space-around;
-  margin-right: 13%;
+  margin-right: 8%;
   list-style-type: none;
 }
 @media (max-width: 599px) {
@@ -118,19 +121,39 @@ h2 {
 .filters__name {
   margin-right: 20%;
   font-weight: bold;
+  font-size: 15px;
+}
+@media (max-width: 599px) {
+  .filters__name-second {
+    position: relative;
+    right: 3%;
+  }
 }
 .filters__icone {
   margin-right: 8%;
-  color: gray;
+}
+@media (max-width: 599px) {
+  .filters__icone {
+    margin-left: 5px;
+  }
 }
 .filters__icone-mobile {
   position: relative;
+  color: gray;
 }
 .filters__icone-list {
   position: relative;
+  color: gray;
+}
+@media (max-width: 599px) {
+  .filters__icone-list {
+    position: relative;
+    right: 3%;
+  }
 }
 .filters__icone-store {
   position: relative;
+  color: #9356DC;
 }
 
 /* Police de la Page */
