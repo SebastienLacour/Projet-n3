@@ -6,7 +6,7 @@
     &__list{
         display: flex;
         justify-content: space-around;
-        margin-right: 13%;
+        margin-right: 8%;
         list-style-type: none;
         @media (max-width: 599px){
             display: flex;
@@ -45,25 +45,40 @@
     &__name{
         margin-right: 20%;
         font-weight: bold;
+        font-size: 15px;
+    }
+
+    &__name-second{
+        @media(max-width: 599px) {
+            position: relative;
+            right: 3%;
+        }
     }
 
     &__icone{
         margin-right: 8%;
-        color: darken($color: white, $amount: 50%);
+        @media(max-width: 599px) {
+            margin-left: 5px;
+        }
     }
 
     &__icone-mobile{
         position: relative;
+        color: darken($color: white, $amount: 50%);
         
     }
 
     &__icone-list{
         position: relative;
-        
+        color: darken($color: white, $amount: 50%);
+        @media(max-width: 599px) {
+            position: relative;
+            right: 3%;
+        }
     }
 
     &__icone-store{
         position: relative;
-        
+        color: #9356DC;
     }
 }
