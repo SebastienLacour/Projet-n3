@@ -11,6 +11,10 @@
     &--purple{
         background: lighten($color: #9356DC, $amount: 34%);
     }
+    @media (min-width: 599px) and (max-width: 968px) {
+        margin-top: 25px;
+    }
+
     @media (max-width: 599px) {
         width: 40%;
         margin-top: 25px;
