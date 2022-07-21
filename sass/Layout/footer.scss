@@ -6,12 +6,14 @@
     margin-left: -5%;
     padding-left: 5%;
     padding-top: 3%;
+    @media (min-width: 599px) and (max-width: 968px) {
+        margin-top: 90%;
+    }
     @media(max-width: 599px) {
         margin-top: 150%;
     }
     &__logo{
         width: 20%;
-        filter: url(/images/logo/ohmyfood.png) hue-rotate(70%);
         @media(max-width: 599px) {
             width: 30%;
             margin-left: 7%;
