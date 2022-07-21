@@ -1,6 +1,9 @@
 .filters{
     &__title{
         text-align: left;
+        @media (min-width: 599px) and (max-width: 968px) {
+            text-align: center;
+        }
     }
 
     &__list{
@@ -8,6 +11,11 @@
         justify-content: space-around;
         margin-right: 8%;
         list-style-type: none;
+        @media (min-width: 599px) and (max-width: 968px) {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10%;
+        }
         @media (max-width: 599px){
             display: flex;
             flex-direction: column;
