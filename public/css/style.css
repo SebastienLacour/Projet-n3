@@ -22,6 +22,11 @@ h2 {
 .filters__btn--purple {
   background: #efe6fa;
 }
+@media (min-width: 599px) and (max-width: 968px) {
+  .filters__btn {
+    margin-top: 25px;
+  }
+}
 @media (max-width: 599px) {
   .filters__btn {
     width: 40%;
@@ -83,11 +88,23 @@ h2 {
 .filters__title {
   text-align: left;
 }
+@media (min-width: 599px) and (max-width: 968px) {
+  .filters__title {
+    text-align: center;
+  }
+}
 .filters__list {
   display: flex;
   justify-content: space-around;
   margin-right: 8%;
   list-style-type: none;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .filters__list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+  }
 }
 @media (max-width: 599px) {
   .filters__list {
@@ -181,6 +198,11 @@ body {
 .title__location--size {
   font-size: 200%;
 }
+@media (min-width: 599px) and (max-width: 968px) {
+  .title__location--size {
+    font-size: 150%;
+  }
+}
 @media (max-width: 599px) {
   .title__location--size {
     font-size: 120%;
@@ -195,6 +217,11 @@ body {
   height: 240px;
   position: relative;
 }
+@media (min-width: 599px) and (max-width: 968px) {
+  .intro {
+    text-align: center;
+  }
+}
 @media (max-width: 599px) {
   .intro {
     text-align: center;
@@ -204,6 +231,13 @@ body {
   font-size: 220%;
   margin-top: 0.1%;
   padding-top: 20px;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .intro__title {
+    width: 80%;
+    font-size: 180%;
+    margin-left: 22%;
+  }
 }
 @media (max-width: 599px) {
   .intro__title {
@@ -215,6 +249,12 @@ body {
 }
 .intro__paragraph {
   font-size: 200%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .intro__paragraph {
+    font-size: 150%;
+    margin-left: 10%;
+  }
 }
 @media (max-width: 599px) {
   .intro__paragraph {
@@ -235,6 +275,11 @@ body {
 }
 .intro__btn:hover {
   background: #ff83dd;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .intro__btn {
+    margin-left: 33%;
+  }
 }
 @media (max-width: 599px) {
   .intro__btn {
@@ -300,6 +345,12 @@ body {
   position: relative;
   bottom: 7%;
 }
+@media (max-width: 599px) {
+  .restaurant__name {
+    position: relative;
+    right: 5%;
+  }
+}
 .restaurant__name--size {
   font-size: 17px;
 }
@@ -311,6 +362,7 @@ body {
 .restaurant__new {
   margin-bottom: 10%;
   position: relative;
+  left: 40%;
   bottom: 85%;
   padding: 2%;
 }
@@ -329,22 +381,24 @@ body {
   width: 50%;
   height: 50%;
 }
-.restaurant__new--second {
-  position: relative;
-  right: 1%;
-  bottom: 80%;
-}
 .restaurant__icone {
   margin-left: 40%;
 }
-.restaurant__icone--pink {
+.restaurant__solide--pink {
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   color: transparent;
 }
 
 #second-restaurant-name {
-  margin-left: 2%;
+  margin-left: 3%;
+  position: relative;
+  right: 2%;
+}
+
+#second-restaurant-location {
+  position: relative;
+  right: 31%;
 }
 
 #third-restaurant-name {
