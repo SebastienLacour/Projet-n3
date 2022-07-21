@@ -15,6 +15,10 @@
     &:hover {
         background: lighten($color: $color-secondary, $amount: 2%),
     }
+    @media (min-width: 599px) and (max-width: 968px) {
+        margin-left: 33%;
+    }
+
     @media (max-width: 599px) {
         width: 260px;
         margin-left: 20%;
