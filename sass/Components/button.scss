@@ -6,7 +6,7 @@
     width: 330px;
     border-radius: 30px;
     border: 3px;
-    box-shadow: 2px 2px darken($color: white, $amount: 20%);
+    box-shadow: 2px 2px 3px darken($color: white, $amount: 20%);
     margin-right: 5%;
     &--purple{
         background: lighten($color: #9356DC, $amount: 34%);
@@ -28,5 +28,29 @@
         width: 90%;
         height: 100%;
         }
+}
+
+.btn-heart{
+    background-color: white;
+    border: none;
+    margin-right: 5%;
+    &:active{
+        background: linear-gradient(#FF79DA ,#9356DC);
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.menu__btn{
+    height: 80px;
+    width: 30%;
+    background-color: white;
+    &--border{
+        border-radius: 30px;
+        border: none;
+        box-shadow: 3px 3px 3px darken($color: white, $amount: 20%);
+    }
+
+
 }
 
