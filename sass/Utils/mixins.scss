@@ -1,6 +1,3 @@
-@mixin dark-background($background-color:darkness-shift($background-color)) {
-    background-color: $background-color;
-}
 @mixin margin-page {
     margin-left: 5%;
 }
@@ -9,21 +6,22 @@
     background: linear-gradient($color-secondary,$color-primary);
     color: white;
     font-size: 20px;
-    border-radius: 30px;
+    border-radius: $radius;
+    border: none;
+    box-shadow: 3px 3px 3px darken($color: white, $amount: 20%);
     width: 260px;
     height: 60px;
     &:hover {
         background: lighten($color: $color-secondary, $amount: 2%),
     }
-    @media (min-width: 599px) and (max-width: 968px) {
-        margin-left: 33%;
-    }
-
-    @media (max-width: 599px) {
-        width: 260px;
-        margin-left: 20%;
-    }
         
+}
+
+@mixin  border-btn-filter {
+        border-radius: $radius;
+        border: none;
+        box-shadow: 3px 3px 3px darken($color: white, $amount: 20%);
+    
 }
 
 
