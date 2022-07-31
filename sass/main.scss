@@ -1,10 +1,18 @@
+
 @import "./base/typography.scss";
-@import "./Components/button.scss";
-@import "./Layout/header.scss";
-@import "./Layout/footer.scss";
 @import "./Utils/variables";
 @import "./Utils/mixins.scss";
 @import "./Utils/functions.scss";
+@import "./base/animations.scss";
+@import "./base/keyframes.scss";
+@import "./Components/button.scss";
+@import "./Layout/header.scss";
+@import "./Layout/footer.scss";
+@import "./Layout/Background-image.scss";
+@import "./Layout/menu.scss";
+@import "./Pages/filters.scss";
+@import "./Pages/title.scss";
+
 
 
 
@@ -22,15 +30,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &__logo{
-        margin-left: 30%;
-        &--size{
-            width: 40%;
-        }
-    }
+
     &__information{
-        background: linear-gradient(darken(white,15%) 1%,darken(white, 10%));
+        background: darken($color: white, $amount: 10%);
         margin-left: -6%;
+        position: relative;
+        top: 3px;
     }
 
     &__position{
@@ -41,6 +46,9 @@ body{
         margin-left: 1%;
         &--size{
             font-size: 200%;
+            @media (min-width: 599px) and (max-width: 968px) {
+                font-size: 150%;
+            }
             @media (max-width: 599px) {
                 font-size: 120%;
             }
@@ -55,6 +63,9 @@ body{
     padding-left: 6%;
     height: 240px;
     position: relative;
+    @media (min-width: 599px) and (max-width: 968px) {
+        text-align: center;
+    }
     @media (max-width: 599px) {
         text-align: center;
     }
@@ -62,6 +73,11 @@ body{
         font-size: 220%;
         margin-top: 0.1%;
         padding-top: 20px;
+        @media (min-width: 599px) and (max-width: 968px) {
+            width: 80%;
+            font-size: 180%;
+            margin-left: 22%;
+        }
         @media (max-width: 599px) {
             width: 80%;
             margin-left: 10%;
@@ -71,6 +87,10 @@ body{
     }
     &__paragraph{
         font-size: 200%;
+        @media (min-width: 599px) and (max-width: 968px) {
+            font-size: 150%;
+            margin-left: 10%;
+        }
         @media (max-width: 599px) {
             width: 80%;
             margin-left: 10%;
@@ -80,26 +100,7 @@ body{
     }
     &__btn{
         @include btn-type;
-        margin-left: 42%;
-    }
-}
-
-.filters{
-    &__title{
-        text-align: left;
-    }
-    &__list{
-        display: flex;
-        justify-content: space-around;
-        margin-right: 13%;
-        @media (max-width: 599px){
-            display: flex;
-            flex-direction: column;
-        }
-    }
-
-    &__icone{
-        margin-right: 10%;
+        margin-left: 40%;
     }
 }
 
@@ -111,6 +112,11 @@ body{
     margin-left: -5%;
     text-align: left;
     background: $background-darker;
+    @media (min-width: 599px) and (max-width: 968px) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50%;
+    }
     @media(max-width: 599px) {
         display: flex;
         flex-direction: column;
@@ -119,68 +125,92 @@ body{
     &__title{
         position: relative;
         left: 4.5%;
+        @media (min-width: 599px) and (max-width: 968px) {
+            text-align: center;
+            margin-right: 6%;
+        }
     }
 
     &__menu{
         display: flex;
         flex-wrap: wrap;
+        @media (min-width: 599px) and (max-width: 968px) {
+            width: 105%;
+            flex-direction: column;
+            margin-right: 5%;
+            background: $background-darker;
+            padding-bottom: 5%;
+            padding-bottom: 10%;
+            
+        }
         @media(max-width: 599px) {
             flex-direction: column;
+            text-align: left;
+            position: relative;
+            right: 6%;
         }
     }
         
     
     &__card{
         margin-top: 2%;
-        margin-left: 6%;
+        margin-left: 10%;
+        background-color: $background-color;
+        border: solid 0.1px;
+        border-radius: 30px;
+        @include border-btn-filter;
         &--size{
-            width: 40%;
+            width: 35%;
             height: 250px;
+            @media (min-width: 599px) and (max-width: 968px) {
+                width: 80%;
+                margin-top: 7%;
+            }
             @media(max-width: 599px) {
-                width: 100%;
+                width: 95%;
                 margin-bottom: 1%;
                 margin-top: 10%;
+                text-align: left;
             }
             
         }
     }
 
+    &__description{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__words{
+        display: flex;
+        flex-direction: column;
+        margin: 1% 0 0 5%;
+        
+    }
+
     &__picture{
         border-radius: 30px 30px 0 0;
-        position: relative;
-        bottom: 8%;
-        right: 1%;
         &--size{
-            width: 102%;
+            width: 100%;
             height: 190px;
             
         }
     }
 
     &__name{
-        position: relative;
-        bottom: 7%;
+        
+        @media (max-width: 599px) {
+        }
         &--size{
             font-size: 17px;
         }
     }
 
-    &__location{
-        position: relative;
-        top: 2%;
-        right: 28%;
-    }
-
     &__new{
-        margin-bottom: 10%;
         position: relative;
         bottom: 85%;
+        left: 80%;
         padding: 2%;
-        @media(max-width: 599px) {
-            position: relative;
-            bottom: 85%;
-            left: 40%;
-        }
         &--color{
             background-color: $color-tertiary;
             color: darken($color: $color-tertiary, $amount: 40%);
@@ -189,36 +219,47 @@ body{
             width: 50%;
             height: 50%;
         }
-        &--second{
-            position: relative;
-            right: 1%;
-            bottom: 80%;
-        }
     }
+    
     
     &__icone{
-        margin-left: 40%;
+        position: absolute;
+        margin-left: 31%;
+        margin-top: 0.3%;
+        z-index: 1;
+        :hover {
+            visibility: hidden;
+            }
+        @media (min-width: 599px) and (max-width: 968px) {
+            margin-top: 1%;
+            position: absolute;
+            left: 55%;
+            }
+        @media (max-width: 599px){
+            margin-top: 1%;
+            position: absolute;
+            left: 60%;
+
+            }
+        }
+        
+    &__solid{
+        position: absolute;
+        margin-left: 31%;
+        margin-top: 0.3%;
+        color: transparent;
+        @media(min-width: 599px) and (max-width: 968px) {
+            margin-top: 1%;
+            position: absolute;
+            left: 55%;
+        }
+        @media (max-width: 599px) {
+            margin-top: 1%;
+            position: absolute;
+            left: 60%;
+
+        }
+        
     }
     
-}
-
-#first-restaurant-name{
-
-}
-
-#second-restaurant-name{
-    margin-left: 2%;
-}
-
-#third-restaurant-name{
-    margin-right: 10%;
-}
-
-#third-restaurant-location{
-    position: relative;
-    right: 31%;
-}
-
-#fourth-restaurant-name{
-
 }
