@@ -16,8 +16,9 @@
         <header class="title title--size">
 
             <!--logo-->
-
-            <img class=" title__logo  title__logo--size" src="./images/logo/ohmyfood.png" alt="Logo" />
+            <div class="title__bloc">
+                <img class=" title__logo  title__logo--size" src="./images/logo/ohmyfood.png" alt="Logo" />
+            </div>
 
             <!--Position de la recherche-->
             <div class="title__information">
@@ -63,43 +64,52 @@
             <section class="restaurant">
                 <h2 class="restaurant__title">Restaurants</h2>
                     <div class="restaurant__menu">
-                        <form action="#" method="get" class="restaurant__card restaurant__card--size">
-                            <button class="restaurant__button restaurant__button--size">
-                                <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="restaurant__picture restaurant__picture--size">                                   
-                                        <strong class="restaurant__name restaurant__name--size" id="first-restaurant-name">La palette du goût</strong>
-                                        <span class="restaurant__location restaurant__location--size" id="first-restaurant-location">Ménilmontant</span>                                    
-                                <i class="far fa-heart fa-2x restaurant__icone"></i>
-                                <span class="restaurant__new restaurant__new--size restaurant__new--color restaurant__new--first">Nouveau</span>
-                            </button>
-                        </form>
+                            <div class="restaurant__card restaurant__card--size">
+                                <a href="./Menu_la_palette_du_goût.html"><img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="restaurant__picture restaurant__picture--size"></a>                                 
+                                    <div class="restaurant__description">   
+                                            <div class="restaurant__words">
+                                                <strong class="restaurant__name restaurant__name--size">La palette du goût</strong><br />
+                                                <span class="restaurant__location restaurant__location--size">Ménilmontant</span>
+                                            </div>                                
+                                        <i class="far fa-heart fa-2x restaurant__icone restaurant__animation"></i><i class="fas fa-heart fa-2x restaurant__solid heart-animation"></i>
+                                    </div>
+                                <span class="restaurant__new restaurant__new--size restaurant__new--color restaurant__new-first">Nouveau</span>
+                            </div>
 
-                        <form action="#" method="get" class="restaurant__card restaurant__card--size">
-                            <button class="restaurant__button restaurant__button--size">
-                                <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" class="restaurant__picture restaurant__picture--size">                                  
-                                        <strong class="restaurant__name restaurant__name--size" id="second-restaurant-name">La note enchantée</strong>
-                                        <span class="restaurant__location restaurant__location--size" id="second-restaurant-location">Charonne</span>
-                                <i class="fas fa-heart fa-2x restaurant__icone restaurant__icone--pink"></i>
-                                <span class="restaurant__new restaurant__new--size restaurant__new--color restaurant__new--second">Nouveau</span>
-                            </button>
-                        </form>
+                            <div class="restaurant__card restaurant__card--size">
+                                <a href="./Menu_la_note_enchantée.html"><img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée" class="restaurant__picture restaurant__picture--size"></a>                               
+                                    <div class="restaurant__description">        
+                                            <div class="restaurant__words">    
+                                                <strong class="restaurant__name restaurant__name--size">La note enchantée</strong><br />
+                                                <span class="restaurant__location restaurant__location--size">Charonne</span>
+                                            </div>
+                                        <i class="far fa-heart fa-2x restaurant__icone restaurant__animation"></i><i class="fas fa-heart fa-2x  restaurant__solid heart-animation"></i>
+                                    </div>
+                                <span class="restaurant__new restaurant__new--size restaurant__new--color restaurant__new-second">Nouveau</span>
+                            </div>
 
-                        <form action="#" method="get" class="restaurant__card restaurant__card--size">
-                            <button class="restaurant__button restaurant__button--size">
-                                <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française" class="restaurant__picture restaurant__picture--size">
-                                        <strong class="restaurant__name restaurant__name--size" id="third-restaurant-name">À la française</strong>
-                                        <span class="restaurant__location restaurant__location--size" id="third-restaurant-location">Cité Rouge</span>
-                                <i class="far fa-heart fa-2x restaurant__icone"></i>
-                            </button>
-                        </form>
-
-                        <form action="#" method="get" class="restaurant__card restaurant__card--size">
-                            <button class="restaurant__button restaurant__button--size">
-                                <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" class="restaurant__picture restaurant__picture--size">                           
-                                        <strong class="restaurant__name restaurant__name--size" id="fourth-restaurant-name">Le délice des sens</strong>
-                                        <span class="restaurant__location restaurant__location--size" id="fourth-restaurant-location">Méricourt</span>                
-                                <i class="far fa-heart fa-2x restaurant__icone"></i>
-                            </button>
-                        </form>
+                            <div class="restaurant__card restaurant__card--size">
+                                <a href="./Menu_à_la_française.html"><img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française" class="restaurant__picture restaurant__picture--size"></a>
+                                    <div class="restaurant__description">
+                                            <div class="restaurant__words">    
+                                                <strong class="restaurant__name restaurant__name--size" id="third-restaurant-name">À la française</strong><br />
+                                                <span class="restaurant__location restaurant__location--size">Cité Rouge</span>
+                                            </div>
+                                        <i class="far fa-heart fa-2x restaurant__icone restaurant__animation"></i><i class="fas fa-heart fa-2x restaurant__solid heart-animation"></i>
+                                    </div>
+                            </div>
+                        
+                            <div class="restaurant__card restaurant__card--size">
+                                <a href="./Menu_le_délice_des_sens.html"><img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" class="restaurant__picture restaurant__picture--size"></a>
+                                    <div class="restaurant__description">
+                                            <div class="restaurant__words">                          
+                                                <strong class="restaurant__name restaurant__name--size" id="fourth-restaurant-name">Le délice des sens</strong><br />
+                                                <span class="restaurant__location restaurant__location--size">Méricourt</span> 
+                                            </div>               
+                                        <i class="far fa-heart fa-2x restaurant__icone restaurant__animation"></i><i class="fas fa-heart fa-2x restaurant__solid heart-animation"></i>
+                                    </div>    
+                            </div>
+                        
                     </div>
             </section>
         </main>
@@ -108,12 +118,12 @@
 
         <footer>
             <div class="footer">
-                <img src="./images/logo/ohmyfood.png" alt="logo" class="footer__logo">
+                <img src="./images/logo/logo_white.png" alt="logo" class="footer__logo">
                 <ul class="footer__list">
                     <li class="footer__choice"><i class="fas fa-utensils"></i><span class="footer__name">Proposer un restaurant</span></li>
                     <li class="footer__choice"><i class="fas fa-handshake-angle fa-xs"></i><span class="footer__name">Devenir partenaire</span></li>
                     <li class="footer__choice">Mention légale</li>
-                    <li class="footer__choice">Contact</li>
+                    <li class="footer__choice"><a href="./email.html">Contact</a></li>
                 </ul>
             </div>
         </footer>
