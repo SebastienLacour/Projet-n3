@@ -1,5 +1,8 @@
 .background{
     height: 500px;
     width: 120%;
-    margin-left: -6%
+    margin-left: -6%;
+    @media (max-width: 599px) {
+        margin-top: 2%;
+    }
 }
