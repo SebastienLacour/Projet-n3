@@ -1,5 +1,12 @@
 $color-primary: #9356DC;
-$color-secondary: #FF79DA;
+$color-secondary: #FF79DA; 
 $color-tertiary: #99E2D0;
+$color-gradient: linear-gradient($color-secondary, $color-primary);
 $background-color:white;
 $background-darker: darken(white, 5%);
+$radius: 30px;
+$anim-timer: 1000ms;
+$anim-timer-2: 2000ms;
+$anim-timer-3: 3000ms;
+$anim-timer-4: 4000ms;
+
