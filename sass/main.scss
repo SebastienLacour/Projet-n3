@@ -24,6 +24,11 @@ body{
     @include margin-page
 }
 
+.bloc-page{
+    display: flex;
+    flex-direction: column;
+}
+
 /* Mise en Page du Header */
 
 .title{
@@ -76,7 +81,8 @@ body{
         @media (min-width: 599px) and (max-width: 968px) {
             width: 80%;
             font-size: 180%;
-            margin-left: 22%;
+            text-align: center;
+            margin-left: 10%;
         }
         @media (max-width: 599px) {
             width: 80%;
@@ -88,8 +94,8 @@ body{
     &__paragraph{
         font-size: 200%;
         @media (min-width: 599px) and (max-width: 968px) {
-            font-size: 150%;
-            margin-left: 10%;
+            font-size: 20px;
+            text-align: center;
         }
         @media (max-width: 599px) {
             width: 80%;
@@ -101,13 +107,18 @@ body{
     &__btn{
         @include btn-type;
         margin-left: 40%;
+        @media (min-width: 599px) and (max-width: 968px) {
+            margin-left: 35%;
+        }
+        @media (max-width: 599px) {
+            margin-left: 21%;
+        }
     }
 }
 
 .restaurant{
     display: flex;
     flex-direction: column;
-    height: 700px;
     margin-top: 5%;
     margin-left: -5%;
     text-align: left;
@@ -115,12 +126,23 @@ body{
     @media (min-width: 599px) and (max-width: 968px) {
         display: flex;
         flex-direction: column;
-        margin-bottom: 50%;
+        margin-bottom: 130px;
     }
     @media(max-width: 599px) {
         display: flex;
         flex-direction: column;
     }
+    &--size{
+        height: 800px ;
+        @media(min-width: 599px) and (max-width: 968px) {
+            height: 700px;
+        }
+        @media(max-width: 599px) {
+            height: 900px;
+            width: 120%;
+        }
+    }
+    
 
     &__title{
         position: relative;
@@ -153,23 +175,23 @@ body{
         
     
     &__card{
-        margin-top: 2%;
-        margin-left: 10%;
+        margin-top: 80px !important;
+        margin-left: 80px;
         background-color: $background-color;
         border: solid 0.1px;
         border-radius: 30px;
         @include border-btn-filter;
         &--size{
-            width: 35%;
+            width: 40%;
             height: 250px;
             @media (min-width: 599px) and (max-width: 968px) {
                 width: 80%;
                 margin-top: 7%;
             }
             @media(max-width: 599px) {
-                width: 95%;
-                margin-bottom: 1%;
-                margin-top: 10%;
+                width: 82%;
+                margin-top: 80px;
+                margin-left: 50px;
                 text-align: left;
             }
             
@@ -224,8 +246,8 @@ body{
     
     &__icone{
         position: absolute;
-        margin-left: 31%;
-        margin-top: 0.3%;
+        margin-left: 35%;
+        margin-top: 0.5%;
         z-index: 1;
         :hover {
             visibility: hidden;
@@ -233,30 +255,30 @@ body{
         @media (min-width: 599px) and (max-width: 968px) {
             margin-top: 1%;
             position: absolute;
-            left: 55%;
+            left: 50%;
             }
         @media (max-width: 599px){
             margin-top: 1%;
             position: absolute;
-            left: 60%;
+            left: 45%;
 
             }
         }
         
     &__solid{
         position: absolute;
-        margin-left: 31%;
-        margin-top: 0.3%;
+        margin-left: 35%;
+        margin-top: 0.5%;
         color: transparent;
         @media(min-width: 599px) and (max-width: 968px) {
             margin-top: 1%;
             position: absolute;
-            left: 55%;
+            left: 50%;
         }
         @media (max-width: 599px) {
             margin-top: 1%;
             position: absolute;
-            left: 60%;
+            left: 45%;
 
         }
         
