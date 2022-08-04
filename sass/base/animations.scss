@@ -1,0 +1,61 @@
+.restaurant__icone{
+    &:hover {
+        @include anim-color-heart
+    }
+    &:hover + .restaurant__solid{
+        @include anim-color-heart
+    }
+    &:active + .restaurant__solid{
+        @include anim-color-heart
+    }
+    
+}
+
+.restaurant__solid{
+    &:hover{
+        @include anim-color-heart
+    }
+    &:hover + .restaurant__icone{
+        @include anim-color-heart
+    }
+    &:active + .restaurant__icone{
+        @include anim-color-heart
+    }
+}
+
+.menu {
+    &__animation{
+        animation: menu-apparition $anim-timer;
+        animation-delay: 150ms;
+        animation-fill-mode: backwards;
+        &--card1 {
+            animation-delay: $anim-timer;
+        }
+        &--card2 {
+            animation-delay: $anim-timer-2;
+        }
+        &--card3 {
+            animation-delay: $anim-timer-3;
+        }
+        &--card4{
+            animation-delay: $anim-timer-4;
+        }
+    }
+
+}
+
+.menu__title-icone{
+    &:hover {
+        color: transparent;
+    }
+    &:hover + .restaurant__solid{
+        background: $color-gradient;
+        background-clip: text;
+        color: transparent;
+    }
+    &:active + .restaurant__solid{
+        background: $color-gradient;
+        background-clip: text;
+        color: transparent;
+    }
+}
