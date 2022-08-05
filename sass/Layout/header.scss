@@ -1,8 +1,26 @@
 .title{
+    &__bloc{
+        box-shadow: 5px 0px 7px darken($color: white, $amount: 60%);
+        width: 110%;
+        margin: -2% 0 -2% -6%;
+        padding-top: 2%;
+        z-index: 1;
+    }
+
+    &__arrow{
+        position: absolute; 
+        left: 5%;
+        top: -45%;
+    }
     &__logo{
             margin-left: 30%;
+            padding: 5px 10px 0 10px;
+            margin-bottom: 2%;
             &--size{
                 width: 40%;
+                @media(max-width: $second-breakpoint) {
+                    width: 40%;
+                }
             }
         }
 }
