@@ -8,11 +8,11 @@
     padding-top: 45px;
     position: relative;
     right: 5%;
-    @media (min-width: 599px) and (max-width: 968px) {
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         width: 100%;
         margin-top: 630px
     }
-    @media(max-width: 599px) {
+    @media(max-width: $second-breakpoint) {
         margin-top: 600px;
         
     }
@@ -20,17 +20,17 @@
         height: 100%;
         width: 100%;
         margin-top: 660px;
-        @media (min-width: 599px) and (max-width: 968px) {
-            margin-top: 158%;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            margin-top: 1100px;
         }
         @media (max-width: 599px) {
-            margin-top: 253%;
+            margin-top: 1100px;
         }
     }
 
     &__logo{
         width: 250px !important;
-        @media(max-width: 599px) {
+        @media(max-width: $second-breakpoint) {
             width: 30%;
         }
     }
@@ -55,8 +55,11 @@
 }
 
 #footer-enchanted{
-    margin-top: 550px;
-    @media (min-width: 599px) and (max-width: 968px) {
-        margin-top: 130% !important;
+    margin-top: 540px;
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+        margin-top: 1200px !important;
+    }
+    @media (max-width: $second-breakpoint) {
+        margin-top: 1150px !important;
     }
 }
