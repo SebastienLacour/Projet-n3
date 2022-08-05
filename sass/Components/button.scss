@@ -1,29 +1,31 @@
 
 
 .filters__btn{
-    background: darken($color: white, $amount: 5%);
-    height: 70px;
-    width: 330px;
-    border-radius: 30px;
-    border: 3px;
-    box-shadow: 2px 2px 3px darken($color: white, $amount: 20%);
-    margin-right: 5%;
+    background: $background-darker;
+    margin-right: 15%;
+    text-align: left;
+    @include border-btn-filter;
+    &--size{
+        height: 70px;
+        width: 180%;
+    }
     &--purple{
         background: lighten($color: #9356DC, $amount: 34%);
     }
-    @media (min-width: 599px) and (max-width: 968px) {
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+        width: 400px;
         margin-top: 25px;
     }
 
-    @media (max-width: 599px) {
-        width: 40%;
+    @media (max-width: $second-breakpoint) {
+        width: 350px;
         margin-top: 25px;
     }
 }
 
 .restaurant__button{
-    background-color: white;
-    border-radius: 30px;
+    background-color: $background-color;
+    border-radius: $radius;
     &--size{
         width: 90%;
         height: 100%;
@@ -31,10 +33,10 @@
 }
 
 .btn-heart{
-    background-color: white;
+    background-color: $background-color;
     border: none;
     margin-right: 5%;
-    &:active{
+    &:checked{
         background: linear-gradient(#FF79DA ,#9356DC);
         background-clip: text;
         color: transparent;
@@ -42,13 +44,26 @@
 }
 
 .menu__btn{
-    height: 80px;
-    width: 30%;
-    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 0 2% 0 2%;
+    text-align: justify;
+    background-color: $background-color;
+    @media (max-width: $second-breakpoint) {
+        margin-bottom: 2%;
+        
+    }
+    &--size{
+        height: 70px;
+        width: 520px;
+        @media (max-width: $second-breakpoint) {
+            width: 90%;
+        }
+    }
     &--border{
-        border-radius: 30px;
-        border: none;
-        box-shadow: 3px 3px 3px darken($color: white, $amount: 20%);
+       @include border-btn-filter;
     }
 
 
