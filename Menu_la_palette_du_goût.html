@@ -10,6 +10,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" rel="stylesheet" />
     </head>
     <body>
+        <div class="bloc-page">
         <header class="title title--size">
 
             <div class="title__bloc">
@@ -20,40 +21,52 @@
         <main>
             <section>
                 <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="background">
-                <div class="menu">
+                <div class="menu menu--size">
                     <div class="menu__title-bloc">
                         <h1 class="menu__title">La palette du goût</h1>
                             <div class="menu__icone menu__icone--animation">
-                                <i class="far fa-heart fa-2x "></i><i class="fas fa-heart fa-2x menu__solid menu-heart-animation"></i>
+                                <i class="far fa-heart fa-2x "></i><i class="fas fa-heart fa-2x menu__solid menu__solid--anim"></i>
                             </div>
                     </div>
                     <div class="menu__starters">
                         <h2 class="menu__subtitle">Entrées</h2>
                             <div class="menu__animation menu__flex">
 
-                                <div class="menu__btn menu__btn--border menu__animation menu__animation--card1">
-                                    <div class="menu__words">
-                                        <strong class="menu__name">Fricassé d'escargot</strong><br />
-                                                                    Au piment d'espelette
+                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card1">
+                                    <div class="menu__btn-flex">
+                                        <div class="menu__words">
+                                            <strong class="menu__name">Fricassé d'escargot</strong><br />
+                                                                        Au piment d'espelette
+                                        </div>
+                                        <span class="menu__price">25€</span>
                                     </div>
-                                <span class="menu__price" id="snail-price">25€</span><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
+                                    <i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
+                                        
                                 </div>
 
-                                <div class="menu__btn menu__btn--border menu__animation menu__animation--card2">
-                                    <div class="menu__words">
-                                        <strong class="menu__name">Foie gras de canard mi-cuit</strong><br />
-                                                                    Et ses copeaux de truffe noire
+                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card2">
+                                    <div class="menu__btn-flex">
+                                        <div class="menu__words">
+                                            <strong class="menu__name">Foie gras de canard mi-cuit</strong><br />
+                                                                        Et ses copeaux de truffe noire
+                                        </div>
+                                        <span class="menu__price">35€</span>
                                     </div>
-                                <span class="menu__price" id="foiegras-price">35€</span><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
+                                    <i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
                                 </div>
+                                    
 
-                                <div class="menu__btn menu__btn--border menu__animation menu__animation--card3">
-                                    <div class="menu__words">
-                                        <strong class="menu__name">Oeuf au plat</strong><br />
-                                                                    Assaisonné à la truffe sur lit de caviar
+                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card3">
+                                    <div class="menu__btn-flex">
+                                        <div class="menu__words">
+                                            <strong class="menu__name">Oeuf au plat</strong><br />
+                                                                        Assaisonné à la truffe sur lit de caviar
+                                        </div>
+                                        <span class="menu__price">20€</span>
                                     </div>
-                                <span class="menu__price" id="egg-price">20€</span><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
+                                    <i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
                                 </div>
+                                    
                             </div>
                     </div>
 
@@ -61,59 +74,83 @@
                         <h2 class="menu__subtitle">Plats</h2>
                             <div class="menu__animation menu__flex">
 
-                                <div class="menu__btn menu__btn--border menu__animation menu__animation--card1">
-                                    <div class="menu__words">
-                                        <strong class="menu__name">Filet de boeuf aux herbes</strong><br />
-                                                                    Accompagné de sa ribambelle de légumes
+                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card1">
+                                    <div class="menu__btn-flex">
+                                        <div class="menu__words">
+                                            <strong class="menu__name">Filet de boeuf aux herbes</strong><br />
+                                                                        Accompagné de sa ribambelle de légumes
+                                        </div>
+                                        <span class="menu__price">40€</span>
                                     </div>
-                                <span class="menu__price" id="beeffilet-price">40€</span><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
+                                    <i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
                                 </div>
+                                    
 
-                                <div class="menu__btn menu__btn--border menu__animation menu__animation--card2">
-                                    <div class="menu__words">
-                                        <strong class="menu__name">Parmentier de queue de boeuf</strong><br />
-                                                                    À la truffe noire sur sa purée de panais
+                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card2">
+                                    <div class="menu__btn-flex">
+                                        <div class="menu__words">
+                                            <strong class="menu__name">Parmentier de queue de boeuf</strong><br />
+                                                                        À la truffe noire sur sa purée de panais
+                                        </div>
+                                        <span class="menu__price"">35€</span>
                                     </div>
-                                <span class="menu__price" id="beeftail-price">35€</span><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
+                                    <i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
                                 </div>
+                                    
 
-                                <div class="menu__btn menu__btn--border menu__animation menu__animation--card3">
-                                    <div class="menu__words">
-                                        <strong class="menu__name">Filet de turbot</strong><br />
-                                                                    Aux agrumes
+                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card3">
+                                    <div class="menu__btn-flex">
+                                        <div class="menu__words">
+                                            <strong class="menu__name">Filet de turbot</strong><br />
+                                                                        Aux agrumes
+                                        </div>
+                                        <span class="menu__price">44€</span>
                                     </div>
-                                <span class="menu__price" id="turbot-price">44€</span><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
+                                    <i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
                                 </div>
-                            </div>
+                                    
+                                </div>
                     </div>
 
                     <div class="menu__desserts">
                         <h2 class="menu__subtitle">Desserts</h2>
                             <div class="menu__animation menu__flex">
 
-                                <div class="menu__btn menu__btn--border menu__animation menu__animation--card1">
-                                    <div class="menu__words">
-                                        <strong class="menu__name">Paris-Brest</strong><br />
-                                                                    Revisité
+                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card1">
+                                    <div class="menu__btn-flex">
+                                        <div class="menu__words">
+                                            <strong class="menu__name">Paris-Brest</strong><br />
+                                                                        Revisité
+                                        </div>
+                                        <span class="menu__price">18€</span>
                                     </div>
-                                <span class="menu__price" id="parisbrest-price">18€</span><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>          
+                                    <i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>          
                                 </div>
+                                    
 
-                                <div class="menu__btn menu__btn--border menu__animation menu__animation--card2">
-                                    <div class="menu__words">
-                                        <strong class="menu__name">Macaron au chocolat d'exception</strong><br />
-                                                                    Et glace à la vanille de Madagascar
+                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card2">
+                                    <div class="menu__btn-flex">
+                                        <div class="menu__words">
+                                            <strong class="menu__name">Macaron au chocolat d'exception</strong><br />
+                                                                        Et glace à la vanille de Madagascar
+                                        </div>
+                                        <span class="menu__price">22€</span>
                                     </div>
-                                <span class="menu__price" id="macaron-price">22€</span><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
+                                    <i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
                                 </div>
+                                    
 
-                                <div class="menu__btn menu__btn--border menu__animation menu__animation--card3">
-                                    <div class="menu__words">
-                                        <strong class="menu__name">Mousse au chocolat</strong><br />
-                                                                    Au piment d'espelette et à la truffe noire
+                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card3">
+                                    <div class="menu__btn-flex">
+                                        <div class="menu__words">
+                                            <strong class="menu__name">Mousse au chocolat</strong><br />
+                                                                        Au piment d'espelette et à la truffe noire
+                                        </div>
+                                        <span class="menu__price">23€</span>
                                     </div>
-                                <span class="menu__price" id="mousse-price">23€</span><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
+                                    <i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i>
                                 </div>
+                                    
                             </div>
                     </div>
 
@@ -129,9 +166,10 @@
                     <li class="footer__choice"><i class="fa-solid fa-utensils"></i><span class="footer__name">Proposer un restaurant</span></li>
                     <li class="footer__choice"><i class="fas fa-handshake-angle fa-xs"></i><span class="footer__name">Devenir partenaire</span></li>
                     <li class="footer__choice">Mention légale</li>
-                    <li class="footer__choice">Contact</li>
+                    <li class="footer__choice"><a href="./email.html">Contact</a></li>
                 </ul>
             </div>
         </footer>
+        </div>
     </body>
 </html>
