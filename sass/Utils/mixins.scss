@@ -24,5 +24,10 @@
     
 }
 
+@mixin anim-color-heart {
+    background: $color-gradient;
+        background-clip: text;
+        color: transparent;
+}
 
 
