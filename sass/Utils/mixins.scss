@@ -12,7 +12,8 @@
     width: 260px;
     height: 60px;
     &:hover {
-        background: lighten($color: $color-secondary, $amount: 2%),
+        background: lighten($color: $color-secondary, $amount: 2%);
+        box-shadow: 5px 5px 5px darken($color: white, $amount: 30%)
     }
         
 }
@@ -25,9 +26,11 @@
 }
 
 @mixin anim-color-heart {
-    background: $color-gradient;
+        background: $color-gradient;
         background-clip: text;
         color: transparent;
+        opacity: 1;
+        transition: all 700ms;
 }
 
 
