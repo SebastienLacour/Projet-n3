@@ -36,30 +36,29 @@
     background-color: $background-color;
     border: none;
     margin-right: 5%;
-    &:checked{
-        background: linear-gradient(#FF79DA ,#9356DC);
-        background-clip: text;
-        color: transparent;
-    }
 }
 
 .menu__btn{
     display: flex;
-    justify-content: space-between;
-    margin-right: 5%;
     margin-bottom: 2%;
+    margin-right: 2%;
     padding: 0 2% 0 2%;
     text-align: justify;
     background-color: $background-color;
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+        margin-left: 10% !important;
+    }
     @media (max-width: $second-breakpoint) {
         margin-bottom: 2%;
-        
     }
     &--size{
         height: 70px;
-        width: 520px;
+        width: 90%;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            width: 80%;
+        }
         @media (max-width: $second-breakpoint) {
-            width: 90%;
+            width: 100%;
         }
     }
     &--border{
