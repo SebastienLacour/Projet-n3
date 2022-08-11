@@ -5,46 +5,89 @@
     flex-direction: column;
     align-items: center;
     border-radius: 25px 25px 0 0;
-    height: 800px;
-    width: 100%;
     margin-left: -5%;
     background-color: $background-darker;
     position: absolute;
     top: 70%;
-    @media (man-width: 599px) {
+    @media (max-width: $second-breakpoint) {
         display: flex;
         flex-direction: column;
-        height: 1450px !important;
-        width: 90%;
+    }
+    &--size{
+        height: 800px;
+        width: $width;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            height: 1200px;
+            width: $width;
+        }
+        @media (max-width: $second-breakpoint){
+            height: 1400px;
+            width: $width;
+        }
     }
 
     &__flex{
         display: flex;
-        flex-direction: row;
-        @media (min-width: 599px) and (max-width: 968px) {
+        justify-content: space-between;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             flex-direction: column;
         }
-        @media (max-width: 599px) {
+        @media (max-width: $second-breakpoint) {
             flex-direction: column;
         }
-    }
-
-    &__flex-enchanted{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
     }
 
     &__subflex-1{
-        display: flex;
+        margin-right: 20%;
+        margin-left: 5%;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            width: $menu-width;
+            margin-left: 1%;
+            margin-bottom: 1%;
+        }
+        @media (max-width: $second-breakpoint) {
+            margin-left: 1%;
+            width: $width;
+        }
     }
 
     &__subflex-2{
-        display: flex;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            width: $menu-width !important;
+            margin-left: 7px;
+        }
+        @media (max-width: $first-breakpoint) {
+            width: $width;
+        }
+    }
+
+    &__subflex-card{
+        &--size{
+            width: $menu-width;
+            @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+                width: $menu-width;
+            }
+            @media (max-width: $second-breakpoint) {
+                width: $width;
+            }
+        }
+        &--margin{
+        margin-bottom: 8% !important;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            margin-bottom: 3% !important;
+            }
+        @media (max-width: $second-breakpoint) {
+            margin-bottom: 3% !important;
+        }
+        }
     }
 
     &__starters{
-        @media (max-width: 599px) {
+        width: $menu-width;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            width: $menu-width;
+        }
+        @media (max-width: $second-breakpoint) {
             display: flex;
             flex-direction: column;
             width: 85%;
@@ -53,7 +96,11 @@
     }
 
     &__dishes{
-        @media (max-width: 599px) {
+        width: $menu-width;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            width: $menu-width;
+        }
+        @media (max-width: $second-breakpoint) {
             display: flex;
             flex-direction: column;
             width: 85%;
@@ -62,7 +109,11 @@
     }
 
     &__desserts{
-        @media (max-width: 599px) {
+        width: $menu-width;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            width: $menu-width;
+        }
+        @media (max-width: $second-breakpoint) {
             display: flex;
             flex-direction: column;
             width: 85%;
@@ -72,19 +123,50 @@
 
     &__title-bloc{
         display: flex;
-        width: 100%;
+        width: $width;
+        @media (max-width: $second-breakpoint) {
+            display: flex;
+            justify-content: space-between;
+            width: 140%;
+        }
     }
 
     &__title{
         display: flex;
         margin-right: 30%;
         margin-left: 20%;
+        margin-top: 1%;
+        font-size: 40px;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            font-size: 30px;
+        }
+        @media (max-width: $second-breakpoint) {
+            display: flex;
+            font-size: 30px;
+            margin-top: 20px;
+        }
     }
 
     &__words{
-        margin-top: 3%;
-        word-wrap: normal;
+        display: table;
+        table-layout: fixed;
+        margin-top: 15px;
+        margin-right: -30px;
+        height: 50px;
+        width: 120%;
+        white-space: nowrap;
         overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+        right: 10px;
+        @media (max-width: $second-breakpoint) {
+            margin-left: 2%;
+        }
+    }
+
+    &__subflex-words{
+        position: relative;
+        left: 5px;
     }
 
     &__subtitle{
@@ -92,8 +174,17 @@
         text-transform: uppercase;
         font-weight: normal;
         font-size: 24px;
-        text-decoration: underline $color-tertiary 3px;
-        @media (max-width: 599px) {
+        position: relative;
+        &::before {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background-color: $color-tertiary;
+            position: absolute;
+            bottom: -5px;
+        }
+        
+        @media (max-width: $second-breakpoint) {
             margin-right: 75%;
         }
     }
@@ -102,75 +193,130 @@
         position: absolute;
         top: 2%;
         left: 73%;
-        z-index: 2;
-        
-            }
-        @media (max-width: 599px) {
-            margin-top: 9%;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            position: absolute;
+            top: 1%;
         }
+        @media (max-width: $second-breakpoint) {
+            position: absolute;
+            left: 85%;
+        }
+    }
+
     &__solid{
         position: absolute;
-        top: 2%;
+        bottom: 0.5%;
         left: 1%;
         color: transparent;
-        z-index:1;
+        opacity: 0;
+        &--anim{
+            &:hover{
+                @include anim-color-heart
+            }
+        }
+        @media (max-width: $second-breakpoint) {
+            position: absolute;
+            left: 1%;
+        }
         
     }
 
     &__name{
         margin-top: 2%;
-        text-align: left;
-        
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: $width;
+        position: relative;
+
+    }
+
+    &__subname{
+        display: table-cell;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: $width;
+        position: relative;
+        top: 18px;
     }
 
     &__price{
-        margin-top: 8%;
+        margin-top: 37px;
+        transform: translateX(150px);
         position: relative;
-        transform: translateX(0);
-        &--anim{
-            &:active{
-                transform: translateX(-50px);
-                transition: transform 700ms;
-            }
+        bottom: 3px;
+        left: 20px;
+
+        @media (max-width: $second-breakpoint) {
+            margin-right: 4%;
+            margin-top: 38px;
+        }
+    }
+
+    &__check-bloc{
+        background: $color-tertiary;
+        border-radius: 0 $radius $radius 0;
+        width: 20%;
+        transform: scaleX(0);
+        transform-origin: right;
+        position: relative;
+        left: 7.4%;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            position: relative;
+            left: 2.5%;
+        }
+        @media (max-width: $second-breakpoint) {
+            position: relative;
+            left: 2.4%;
         }
     }
 
     &__check{
+        margin-right: -9%;
         color: white;
-        background-color: $color-tertiary;
-        border-radius: 0 $radius $radius 0;
-        width: 50px;
-        padding-top: 30px;
-        padding-left: 15px;
+        text-indent: 25px;
+        line-height: 65px !important;
+        transform-origin: center;
+    }
+
+    &__check-subflex{
         position: relative;
-        left: 28px;
-    }
-    &__btn{
-        &--anim{
-            display: none !important;
-            
-
+        left: 3%;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            position: relative;
+            left: 2.3%;
         }
-
-    &:active .menu__btn--anim{
-        display: block !important;
-        transition: 700ms;
+        @media (max-width: $second-breakpoint) {
+            position: relative;
+            left: 2.1%;
         }
     }
+
+    &__btn-flex{
+        display: flex;
+        justify-content: space-between;
+        width: 130%;
+    }
+
     &__command {
         @include btn-type;
-        margin-top: 5%;
-        @media (min-width: 599px) and (max-width: 968px) {
-            padding: 2.5% 0 4% 0;
+        margin-top: 50px;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            padding: 5px 0 5px 0;
         }
         @media (max-width: 599px) {
             padding: 4% 0 4% 0;
         }
     }
-    
-}
+}  
+
 
 #menu-enchanted{
-    height: 150%;
+    height: 860px;
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+        height: 1400px !important;
+    }
+    @media (max-width: $second-breakpoint) {
+        height: 1210px !important;
+    }
 }
 
