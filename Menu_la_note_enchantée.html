@@ -13,10 +13,9 @@
     <body>
         <div class="bloc-page">
         <header class="title title--size">
-
-            <div class="title__bloc">
+            <div class="title__menu">
                 <a href="index.html" class="title__arrow"><i class="fa-solid fa-arrow-left fa-2xl title__arrow"></i></a>
-                <img class=" title__logo  title__logo--size" src="./images/logo/ohmyfood.png" alt="Logo" />
+                <img class="title__menu-logo title__menu-logo--size" src="./images/logo/ohmyfood.png" alt="Logo" />
             </div>
         </header>
         <main>
@@ -26,146 +25,117 @@
                     <div class="menu__title-bloc">
                         <h1 class="menu__title">La note enchantée</h1>
                             <div class="menu__icone menu__icone--animation">
-                                <i class="far fa-heart fa-2x "></i><i class="fas fa-heart fa-2x menu__solid menu__solid--anim"></i>
+                                <button class="menu__focus"><i class="far fa-heart fa-2x "></i><i class="fas fa-heart fa-2x menu__solid menu__solid--anim"></i></button>
                             </div>
                     </div>
                     <div class="menu__starters">
                         <h2 class="menu__subtitle">Entrées</h2>
                             <div class="menu__animation menu__flex">
                                 <div class="menu__subflex-1">
-                                    <div class="menu__btn menu__btn--border menu__btn--size menu__subflex-card menu__subflex-card--size menu__subflex-card--margin menu__animation menu__animation--card1">
-                                        <div class="menu__btn-flex">
-                                            <div class="menu__words menu__subflex-words" >
-                                                <strong class="menu__name">Ravioles de foie gras</strong><br />
-                                                <span class="menu__subname">Accompagnées de leur crème à la truffe</span>
-                                            </div>
-                                            <span class="menu__price">25€</span>
-                                        </div>
-                                        <div class="menu__check-bloc  menu__check-subflex"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></div>
-                                            
-                                    </div>
+                                    <button class="menu__btn menu__btn--border menu__btn--size menu__subflex-card menu__subflex-card--size menu__subflex-card--margin menu__animation menu__animation--card1">
+                                            <span class="menu__words menu__words--size menu__subflex-words" >
+                                                <strong class="menu__name menu__name--size">Ravioles de foie gras</strong><br />
+                                                <span class="menu__subname menu__subname--size">Accompagnées de leur crème à la truffe</span>
+                                            </span>
+                                            <strong class="menu__price">25€</strong>
+                                        <span class="menu__check-bloc  menu__check-subflex"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></span>      
+                                    </button>
 
-                                    <div class="menu__btn menu__btn--border menu__btn--size menu__subflex-card menu__subflex-card--size menu__animation menu__animation--card2">
-                                        <div class="menu__btn-flex">
-                                            <div class="menu__words menu__subflex-words">
-                                                <strong class="menu__name">Caviar osciète</strong><br />
-                                                <span class="menu__subname">Sur blini à la farine de blé noir</span>
-                                            </div>
-                                            <span class="menu__price">35€</span>
-                                        </div>
-                                        <div class="menu__check-bloc menu__check-subflex"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></div>
-                                    </div>
-                                    
-                                                
+                                    <button class="menu__btn menu__btn--border menu__btn--size menu__subflex-card menu__subflex-card--size menu__animation menu__animation--card2">
+                                            <span class="menu__words menu__words--size menu__subflex-words">
+                                                <strong class="menu__name menu__name--size">Caviar osciète</strong><br />
+                                                <span class="menu__subname menu__subname--size">Sur blini à la farine de blé noir</span>
+                                            </span>
+                                            <strong class="menu__price">35€</strong>
+                                        <span class="menu__check-bloc menu__check-subflex"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></span>
+                                    </button>              
                                 </div>
 
                                 <div class="menu__subflex-2">
-                                    <div class="menu__btn menu__btn--border menu__btn--size menu__subflex-card menu__subflex-card--size menu__subflex-card--margin menu__animation menu__animation--card3">
-                                        <div class="menu__btn-flex">
-                                            <div class="menu__words menu__subflex-words">
-                                                <strong class="menu__name">Homard et espuma de ...</strong><br />
-                                                <span class="menu__subname">Marinés aux zests d'orange</span>
-                                            </div>
-                                            <span class="menu__price">20€</span>
-                                        </div>
-                                        <div class="menu__check-bloc menu__check-subflex"><i class="fa-solid fa-circle-check fa-2xl menu__check  menu__btn--anim"></i></div>
-                                            
-                                    </div>
+                                    <button class="menu__btn menu__btn--border menu__btn--size menu__subflex-card menu__subflex-card--size menu__subflex-card--margin menu__animation menu__animation--card3">
+                                            <span class="menu__words menu__words--size menu__subflex-words">
+                                                <strong class="menu__name menu__name--size">Homard et espuma de crustacés</strong><br />
+                                                <span class="menu__subname menu__subname--size">Marinés aux zests d'orange</span>
+                                            </span>
+                                            <strong class="menu__price">20€</strong>
+                                        <span class="menu__check-bloc menu__check-subflex"><i class="fa-solid fa-circle-check fa-2xl menu__check  menu__btn--anim"></i></span>       
+                                    </button>
 
-                                    <div class="menu__btn menu__btn--border menu__btn--size menu__subflex-card menu__subflex-card--size menu__animation menu__animation--card4">
-                                        <div class="menu__btn-flex">
-                                            <div class="menu__words menu__subflex-words">
-                                                <strong class="menu__name">Foie gras de canard cuit entier</strong><br />
-                                                <span class="menu__subname">Confiture de figue et pain toasté</span>
-                                            </div>
-                                            <span class="menu__price">35€</span>
-                                        </div>
-                                        <div class="menu__check-bloc menu__check-subflex"><i class="fa-solid fa-circle-check fa-2xl menu__check  menu__btn--anim"></i></div>
-                                            
-                                    </div>
+                                    <button class="menu__btn menu__btn--border menu__btn--size menu__subflex-card menu__subflex-card--size menu__animation menu__animation--card4">
+                                            <span class="menu__words menu__words--size menu__subflex-words">
+                                                <strong class="menu__name menu__name--size">Foie gras de canard cuit entier</strong><br />
+                                                <span class="menu__subname menu__subname--size">Confiture de figue et pain toasté</span>
+                                            </span>
+                                            <strong class="menu__price">35€</strong>
+                                        <span class="menu__check-bloc menu__check-subflex"><i class="fa-solid fa-circle-check fa-2xl menu__check  menu__btn--anim"></i></span>      
+                                    </button>
                                 </div>
                             </div>
                     </div>
                     <div class="menu__dishes">
                         <h2 class="menu__subtitle">Plats</h2>
                             <div class="menu__animation menu__flex">
-
-                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card1">
-                                    <div class="menu__btn-flex">
-                                        <div class="menu__words">
-                                            <strong class="menu__name">Noix de coquilles Saint-Jacques</strong><br />
-                                            <span class="menu__subname">Sur lit de purée de céleri-rave</span>
-                                        </div>
-                                        <span class="menu__price">40€</span>
-                                    </div>
-                                    <div class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></div>
-                                </div>
+                                <button class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card1">
+                                        <span class="menu__words menu__words--size">
+                                            <strong class="menu__name menu__name--size">Noix de coquilles Saint-Jacques</strong><br />
+                                            <span class="menu__subname menu__subname--size">Sur lit de purée de céleri-rave</span>
+                                        </span>
+                                        <strong class="menu__price">40€</strong>
+                                    <span class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></span>
+                                </button>
                             
 
-                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card2">
-                                    <div class="menu__btn-flex">
-                                        <div class="menu__words">
-                                            <strong class="menu__name">Langoustine poêlée</strong><br />
-                                            <span class="menu__subname">Purée de patate douce</span>
-                                        </div>
-                                        <span class="menu__price">35€</span>
-                                    </div>
-                                    <div class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></div>
-                                </div>
+                                <button class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card2">
+                                        <span class="menu__words menu__words--size">
+                                            <strong class="menu__name menu__name--size">Langoustine poêlée</strong><br />
+                                            <span class="menu__subname menu__subname--size">Purée de patate douce</span>
+                                        </span>
+                                        <strong class="menu__price">35€</strong>
+                                    <span class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></span>
+                                </button>
                                     
 
-                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card3">
-                                    <div class="menu__btn-flex">
-                                        <div class="menu__words">
-                                            <strong class="menu__name">Mijoté de queue de boeuf</strong><br />
-                                            <span class="menu__subname">Et riz sauvage aux zests de citron</span>
-                                        </div>
-                                        <span class="menu__price">44€</span>
-                                    </div>
-                                    <div class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></div>
-                                </div>
+                                <button class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card3">
+                                        <span class="menu__words menu__words--size">
+                                            <strong class="menu__name menu__name--size">Mijoté de queue de boeuf</strong><br />
+                                            <span class="menu__subname menu__subname--size">Et riz sauvage aux zests de citron</span>
+                                        </span>
+                                        <strong class="menu__price">44€</strong>
+                                    <span class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></span>
+                                </button>
                                     
                             </div>
                     </div>
                     <div class="menu__desserts">
                         <h2 class="menu__subtitle">Desserts</h2>
                             <div class="menu__animation menu__flex">
+                                <button class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card1">
+                                        <span class="menu__words menu__words--size">
+                                            <strong class="menu__name menu__name--size">Macaron noisette et chocolat</strong><br />
+                                            <span class="menu__subname menu__subname--size">Glace au caramel brun et sel de Guérande</span>
+                                        </span>
+                                        <strong class="menu__price">18€</strong>
+                                    <span class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></span>   
+                                </button>
 
-                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card1">
-                                    <div class="menu__btn-flex">
-                                        <div class="menu__words">
-                                            <strong class="menu__name">Macaron noisette et chocolat</strong><br />
-                                            <span class="menu__subname">Glace au caramel brun et sel de Guérande</span>
-                                        </div>
-                                        <span class="menu__price">18€</span>
-                                    </div>
-                                    <div class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></div>
-                                    
-                                </div>
-
-                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card2">
-                                    <div class="menu__btn-flex">
-                                        <div class="menu__words">
-                                            <strong class="menu__name">Baba au rhum Revisité</strong><br />
-                                            <span class="menu__subname">Avec son coulis de citron</span>
-                                        </div>
-                                        <span class="menu__price">22€</span>
-                                    </div>
-                                    <div class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></div>
-                                </div>
+                                <button class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card2">
+                                        <span class="menu__words menu__words--size">
+                                            <strong class="menu__name menu__name--size">Baba au rhum Revisité</strong><br />
+                                            <span class="menu__subname menu__subname--size">Avec son coulis de citron</span>
+                                        </span>
+                                        <strong class="menu__price">22€</strong>
+                                    <span class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></span>
+                                </button>
                                     
 
-                                <div class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card3">
-                                    <div class="menu__btn-flex">
-                                        <div class="menu__words">
-                                            <strong class="menu__name">Tarte aux citrons meringuée</strong><br />
-                                            <span class="menu__subname">Destructurée</span>
-                                        </div>
-                                        <span class="menu__price">23€</span>
-                                    </div>
-                                    <div class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></div>
-                                        
-                                </div>
+                                <button class="menu__btn menu__btn--border menu__btn--size menu__animation menu__animation--card3">
+                                        <span class="menu__words menu__words--size">
+                                            <strong class="menu__name menu__name--size">Tarte aux citrons meringuée</strong><br />
+                                            <span class="menu__subname menu__subname--size">Destructurée</span>
+                                        </span>
+                                        <strong class="menu__price">23€</strong>
+                                    <span class="menu__check-bloc"><i class="fa-solid fa-circle-check fa-2xl menu__check menu__btn--anim"></i></span>    
+                                </button>
                             </div>
                     </div>
 
