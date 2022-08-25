@@ -14,20 +14,35 @@
 @import "./Pages/title.scss";
 
 
+/* Mise en place de l'animation loading spinner au chargement de la page */
 
+.loading-spinner{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    @media (max-width: $second-breakpoint) {
+        margin-left: -10%;
+    }
+    &--anim{
+        animation: loading $apparition-timer forwards;
+    }
+}
 
-
-/* Police de la Page */
+/* Centrer la Page */
 
 body{
     text-align: center;
     @include margin-page
 }
 
+/* Disposition des éléments de la page en colonne*/
+
 .bloc-page{
+    width: $width;
     display: flex;
     flex-direction: column;
-}
+} 
+
 
 /* Mise en Page du Header */
 
@@ -36,85 +51,100 @@ body{
     flex-direction: column;
     justify-content: center;
 
+    /*Fond et Positionnement du lieu de Recherche */
+
     &__information{
         background: darken($color: white, $amount: 10%);
         margin-left: -6%;
-        position: relative;
-        top: 3px;
+        margin-right: -2%;
+        margin-top: 2%;
     }
 
+    /* Centrer le lieu  de la Recherche */
+
     &__position{
-        margin-left: 5%;
+        text-align: center;
     }
+
+    /* Taille et Position de l'icone */
     
     &__location{
         margin-left: 1%;
         &--size{
             font-size: 200%;
-            @media (min-width: 599px) and (max-width: 968px) {
+            @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
                 font-size: 150%;
             }
-            @media (max-width: 599px) {
+            @media (max-width: $second-breakpoint) {
                 font-size: 120%;
             }
         }
     }
 }
 
+    /* Taille et Position de l'intro */
+
 .intro{
-    text-align: left;
+    text-align: center;
     background: $background-darker;
-    margin-left: -6%;
-    padding-left: 6%;
     height: 240px;
+    width: $width;
+    margin-left: -5%;
+    padding-left: 6%;
     position: relative;
-    @media (min-width: 599px) and (max-width: 968px) {
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         text-align: center;
     }
-    @media (max-width: 599px) {
+    @media (max-width: $second-breakpoint) {
         text-align: center;
     }
+
+    /* Taille et Position du titre de l'intro */
+
     &__title{
         font-size: 220%;
         margin-top: 0.1%;
         padding-top: 20px;
-        @media (min-width: 599px) and (max-width: 968px) {
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: 80%;
             font-size: 180%;
             text-align: center;
             margin-left: 10%;
         }
-        @media (max-width: 599px) {
+        @media (max-width: $second-breakpoint) {
             width: 80%;
             margin-left: 10%;
             text-align: center;
             font-size: 150%;
         }
     }
+
+    /* Taille et Position de la phrase de l'intro */
+
     &__paragraph{
         font-size: 200%;
-        @media (min-width: 599px) and (max-width: 968px) {
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             font-size: 20px;
             text-align: center;
         }
-        @media (max-width: 599px) {
+        @media (max-width: $second-breakpoint) {
             width: 80%;
             margin-left: 10%;
             text-align: center;
             font-size: 100%;
         }
     }
+
+    /* Taille, Couleur et Position du boutton "Explorer nos restaurant" */
+
     &__btn{
         @include btn-type;
-        margin-left: 40%;
-        @media (min-width: 599px) and (max-width: 968px) {
-            margin-left: 35%;
-        }
-        @media (max-width: 599px) {
-            margin-left: 21%;
-        }
+        text-align: center;
     }
 }
+
+/* Mise en Page des Cartes Restaurant */
+/* Position et Couleur de fond de la section restaurant */
 
 .restaurant{
     display: flex;
@@ -123,40 +153,43 @@ body{
     margin-left: -5%;
     text-align: left;
     background: $background-darker;
-    @media (min-width: 599px) and (max-width: 968px) {
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         display: flex;
         flex-direction: column;
         margin-bottom: 130px;
     }
-    @media(max-width: 599px) {
+    @media(max-width: $second-breakpoint) {
         display: flex;
         flex-direction: column;
     }
     &--size{
         height: 800px ;
-        @media(min-width: 599px) and (max-width: 968px) {
+        @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             height: 700px;
         }
-        @media(max-width: 599px) {
+        @media(max-width: $second-breakpoint) {
             height: 900px;
             width: 120%;
         }
     }
     
+    /* Position du Titre Restaurant */
 
     &__title{
         position: relative;
         left: 4.5%;
-        @media (min-width: 599px) and (max-width: 968px) {
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             text-align: center;
             margin-right: 6%;
         }
     }
 
+    /* Mise en Place par Flexbox des différentes Cartes restaurants */
+
     &__menu{
         display: flex;
         flex-wrap: wrap;
-        @media (min-width: 599px) and (max-width: 968px) {
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: 105%;
             flex-direction: column;
             margin-right: 5%;
@@ -165,7 +198,7 @@ body{
             padding-bottom: 10%;
             
         }
-        @media(max-width: 599px) {
+        @media(max-width: $second-breakpoint) {
             flex-direction: column;
             text-align: left;
             position: relative;
@@ -173,7 +206,8 @@ body{
         }
     }
         
-    
+    /* Position individuelles des Cartes et Couleur de Fond */
+
     &__card{
         margin-top: 80px !important;
         margin-left: 80px;
@@ -181,27 +215,39 @@ body{
         border: solid 0.1px;
         border-radius: 30px;
         @include border-btn-filter;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            margin-left: 65px;
+            margin-top: 7%;
+        }
+        @media (max-width: $second-breakpoint) {
+            margin-top: 80px;
+            margin-left: 10%;
+            text-align: left;
+        }
+
+        /* Taille des Cartes Restaurant */
+
         &--size{
             width: 40%;
             height: 250px;
-            @media (min-width: 599px) and (max-width: 968px) {
+            @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
                 width: 80%;
-                margin-top: 7%;
             }
-            @media(max-width: 599px) {
+            @media(max-width: $second-breakpoint) {
                 width: 82%;
-                margin-top: 80px;
-                margin-left: 50px;
-                text-align: left;
             }
             
         }
     }
 
+    /* Flex sur les différents éléments textes et icones de la carte */
+
     &__description{
         display: flex;
         justify-content: space-between;
     }
+
+    /* Position du Texte de la Carte */
 
     &__words{
         display: flex;
@@ -210,28 +256,34 @@ body{
         
     }
 
+    /* Bordure et Taille de l'image de la Carte */
+
     &__picture{
         border-radius: 30px 30px 0 0;
         &--size{
-            width: 100%;
+            width: $width;
             height: 190px;
             
         }
     }
 
+    /* Taille du nom des cartes en responsive */
+
     &__name{
         
-        @media (max-width: 599px) {
+        @media (max-width: $second-breakpoint) {
         }
         &--size{
             font-size: 17px;
         }
     }
 
+    /* Position et couleur des ettiquettes "Nex" */
+
     &__new{
         position: relative;
         bottom: 85%;
-        left: 80%;
+        left: 82%;
         padding: 2%;
         &--color{
             background-color: $color-tertiary;
@@ -242,46 +294,50 @@ body{
             height: 50%;
         }
     }
-    
-    
+
+    /* Mise en Place du Boutton pour le Focus du coeur */
+
+    &__focus{
+        background-color: $background-color;
+        border-radius: $radius;
+        border: none;
+    }
+
+    /* Position de l'icone sans focus */
+
     &__icone{
-        position: absolute;
+        
         margin-left: 35%;
         margin-top: 0.5%;
-        z-index: 1;
-        :hover {
-            visibility: hidden;
-            }
-        @media (min-width: 599px) and (max-width: 968px) {
+        position: relative;
+        top: 10px;
+        right: 9px;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             margin-top: 1%;
-            position: absolute;
-            left: 50%;
             }
-        @media (max-width: 599px){
+        @media (max-width: $second-breakpoint){
             margin-top: 1%;
-            position: absolute;
-            left: 45%;
 
             }
         }
         
+        /* Position de l'icone qui changera de couleur avec le focus */
+
     &__solid{
-        position: absolute;
+        color: transparent;
         margin-left: 35%;
         margin-top: 0.5%;
-        color: transparent;
-        @media(min-width: 599px) and (max-width: 968px) {
+        position: relative;
+        bottom: 15px;
+        right: 9px;
+        @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             margin-top: 1%;
-            position: absolute;
-            left: 50%;
         }
-        @media (max-width: 599px) {
+        @media (max-width: $second-breakpoint) {
             margin-top: 1%;
-            position: absolute;
-            left: 45%;
 
         }
         
     }
-    
 }
+    
