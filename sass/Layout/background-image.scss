@@ -1,8 +1,16 @@
+/* Position et taille de l'image de fond des pages de menu */
+
 .background{
     height: 500px;
-    width: 120%;
+    width: 106.5%;
     margin-left: -6%;
-    @media (max-width: 599px) {
-        margin-top: 2%;
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+        width: 107.1% !important;
+    }
+    @media (max-width: $second-breakpoint) {
+        height: 400px !important;
+        width: 108% !important;
+        position: relative;
+        bottom: 40px;
     }
 }
