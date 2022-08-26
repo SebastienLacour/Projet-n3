@@ -1,4 +1,10 @@
+
+/* Mise en Page du Header */
+
 .title{
+
+    /* Taille Bordure et Position du totre de la Page d'Accueil */
+
     &__bloc{
         box-shadow: 5px 0px 7px darken($color: white, $amount: 60%);
         width: 110%;
@@ -7,11 +13,60 @@
         z-index: 1;
     }
 
-    &__arrow{
-        position: absolute; 
-        left: 5%;
-        top: -45%;
+    /* Taille du titre des Pages Menu */
+
+    &__menu{
+        height: 120px;
+        width: 100% !important;
     }
+
+    /* Couleur et Position de la Flèche pour Revenir à la Page d'Accueil */
+
+    &__arrow{
+        color: black;
+        position: relative;
+        right: 15%;
+        bottom: 25px;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            position: relative;
+            bottom: 10px;
+            right: 12%;
+        }
+        @media (max-width: $second-breakpoint) {
+            position: relative;
+            bottom: 4px;
+            right: 10%;
+        }
+
+    }
+
+    /* Position et Taille du logo du menu */
+
+    &__menu-logo{
+       @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            position: relative;
+            top: 10px;
+       }
+       @media (max-width: $second-breakpoint) {
+            position: relative;
+            top: 15px;
+       }
+        &--size{
+            height: 100px;
+            width: 40% !important;
+        @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+                height: 80px;
+                width: 50% !important;
+        }
+        @media(max-width: $second-breakpoint) {
+                height: 55px;
+                width: 60% !important;
+        }
+    }
+    }
+
+    /* Position et Taille du Logo de la Page d'Accueil */
+
     &__logo{
             margin-left: 30%;
             padding: 5px 10px 0 10px;
