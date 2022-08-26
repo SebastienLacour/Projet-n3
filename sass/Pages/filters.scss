@@ -1,10 +1,17 @@
+/* Mise en Place des Filtres de la page d'accueil */
+
 .filters{
+
+    /* Position du titre des Filtres */
+
     &__title{
         text-align: left;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             text-align: center;
         }
     }
+
+    /* Position des Filtres en ligne */
 
     &__list{
         display: flex;
@@ -24,10 +31,14 @@
         }
     }
 
+    /* Ajustement de la Position individuelle des Filtres */
+
     &__choice{
         margin-right: 5%;
         margin-left: 10%;
     }
+
+    /* Position des Numéros des Filtres pour qu'ils soient "collés" à la bordure des Filtres */
 
     &__numbers{
         font-size: 12px;
@@ -41,6 +52,7 @@
         }
     }
 
+    /* Position et mise en gras des noms des filtres */
 
     &__name{
         font-weight: bold;
@@ -55,6 +67,8 @@
             right: 3%;
         }
     }
+
+    /* Placement des différentes icones des filtres */
 
     &__icone{
         margin-right: 5%;
@@ -80,6 +94,6 @@
 
     &__icone-store{
         position: relative;
-        color: $color-primary;
+        color :darken($color: white, $amount: 50%);
     }
 }
