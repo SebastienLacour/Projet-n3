@@ -1,12 +1,7 @@
+/* Mise en page du titre de la page d'accueil */
+
 .title{
     &__bloc{
         display: flex;
     }
-
-    &__arrow{
-        margin-top: 5%;
-        position: relative;
-        bottom: 120%;
-        color: black;
-    }    
 }
