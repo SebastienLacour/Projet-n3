@@ -1,3 +1,5 @@
+/* Couleur de fond , taille et poistion du footer */
+
 .footer{
     background-color: lighten($color: black, $amount: 15%);
     color: white;
@@ -16,17 +18,22 @@
         margin-top: 600px;
         
     }
+
+        /* Taille du menu du Footer */
+
     &__menu{
         height: 100%;
         width: 100%;
         margin-top: 660px;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            margin-top: 1100px;
+            margin-top: 1200px;
         }
         @media (max-width: 599px) {
-            margin-top: 1100px;
+            margin-top: 1050px;
         }
     }
+
+        /* Taille du Logo */
 
     &__logo{
         width: 250px !important;
@@ -34,7 +41,7 @@
             width: 30%;
         }
     }
-
+        /* Position et Moise en page de la liste a puce du Footer */
     &__list{
         position: relative;
         right: 35px;
@@ -49,15 +56,19 @@
 
 }
 
+        /* Couleur du lien en Blanc */
+
 .footer a{
     color: white;
     text-decoration: none;
 }
 
+    /* Ajustement des règles pour le footer de la page "Menu La Note Enchantée */
+
 #footer-enchanted{
     margin-top: 740px;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-        margin-top: 1300px !important;
+        margin-top: 1150px !important;
     }
     @media (max-width: $second-breakpoint) {
         margin-top: 1150px !important;
