@@ -1,5 +1,6 @@
+/* Mise en Page des Menus */
 
-
+/* Position, Couleur et Bordure de la Section des Menus */
 .menu{
     display: flex;
     flex-direction: column;
@@ -12,12 +13,16 @@
     @media (max-width: $second-breakpoint) {
         display: flex;
         flex-direction: column;
+        margin-top: -110px;
     }
+
+    /* Taille des Menus */
+
     &--size{
         height: 800px;
         width: $width;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            height: 1200px;
+            height: 1300px;
             width: $width;
         }
         @media (max-width: $second-breakpoint){
@@ -25,6 +30,8 @@
             width: $width;
         }
     }
+
+    /* Positionnement des cartes de chaques sous parties (Entrées, Plats, Desserts) */
 
     &__flex{
         display: flex;
@@ -37,9 +44,11 @@
         }
     }
 
+    /* Positionnement des deux premieres cartes des Entrées du menu "La Note enchantée" */
+
     &__subflex-1{
-        margin-right: 20%;
-        margin-left: 5%;
+        width: $width;
+        margin-right: 7px;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: $menu-width;
             margin-left: 1%;
@@ -51,7 +60,11 @@
         }
     }
 
+    /* Positionnement des deux dernières cartes des Entrées du menu "La Note enchantée" */
+
     &__subflex-2{
+        width: $width;
+        margin-left: 5px;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: $menu-width !important;
             margin-left: 7px;
@@ -61,9 +74,11 @@
         }
     }
 
+    /* Taille des Cartes des Entrées du menu La Note Enchantée */
+
     &__subflex-card{
         &--size{
-            width: $menu-width;
+            width: 95%;
             @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
                 width: $menu-width;
             }
@@ -72,7 +87,7 @@
             }
         }
         &--margin{
-        margin-bottom: 8% !important;
+        margin-bottom: 50px !important;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             margin-bottom: 3% !important;
             }
@@ -81,6 +96,8 @@
         }
         }
     }
+
+    /* Taille et Position de la Partie "Entrées" */
 
     &__starters{
         width: $menu-width;
@@ -95,6 +112,8 @@
         }
     }
 
+    /* Taille et Position de la Partie "Plats" */
+
     &__dishes{
         width: $menu-width;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
@@ -107,6 +126,8 @@
             margin-left: 4%;
         }
     }
+
+    /* Taille et Position de la Partie "Desserts" */
 
     &__desserts{
         width: $menu-width;
@@ -121,9 +142,14 @@
         }
     }
 
+    /* Position et Taille de la Partie "Titre" du Menu */
+
     &__title-bloc{
         display: flex;
         width: $width;
+        @media (min-width: $first-breakpoint) and (max-width: $second-breakpoint) {
+            display: flex;
+        }
         @media (max-width: $second-breakpoint) {
             display: flex;
             justify-content: space-between;
@@ -131,14 +157,18 @@
         }
     }
 
+    /* Position du Titre du Menu */
+
     &__title{
-        display: flex;
+        display: inline-block;
+        white-space: nowrap;
         margin-right: 30%;
         margin-left: 20%;
         margin-top: 1%;
         font-size: 40px;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             font-size: 30px;
+            margin-left: 10%;
         }
         @media (max-width: $second-breakpoint) {
             display: flex;
@@ -147,27 +177,46 @@
         }
     }
 
+    /* Couleur et bordure du boutton du Coeur pour le focus à l'état initial */
+
+    &__focus{
+        background-color: $background-darker;
+        border: none;
+        border-radius: $radius;
+    }
+
+    /* Position du texte des cartes du Menu */
+
     &__words{
-        display: table;
-        table-layout: fixed;
-        margin-top: 15px;
-        margin-right: -30px;
-        height: 50px;
-        width: 120%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        position: relative;
-        right: 10px;
+        display: block;
+        flex-direction: column;
+        text-align: left;
+        margin-top: 8px;
         @media (max-width: $second-breakpoint) {
             margin-left: 2%;
         }
+
+        /* Taille du Texte des Cartes du Menu */
+
+        &--size{
+            width: $width;
+            min-width: 10%;
+            @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+                width: $width;
+            }
+        }
     }
 
+    /* Position du texte des cartes du Menu La  Note Enchantée */
+
     &__subflex-words{
+        display: block;
+        margin-top: 6px;
+        margin-left: 10px;
         position: relative;
-        left: 5px;
     }
+
+    /* Position et Taille des Titres des Parties du Menu (Entrées, Plats, Desserts) */
 
     &__subtitle{
         margin-right: 5%;
@@ -175,6 +224,9 @@
         font-weight: normal;
         font-size: 24px;
         position: relative;
+
+        /* Mise en Place du Soulignements sous les Titres */
+
         &::before {
             content: "";
             width: 60px;
@@ -189,13 +241,17 @@
         }
     }
 
+    /* Position de l'icone vide (Quand le focus est désactivé */
+
     &__icone{
-        position: absolute;
-        top: 2%;
-        left: 73%;
+        display: block;
+        position: relative;
+        top: 28px;
+        width: 100px;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            position: absolute;
-            top: 1%;
+            position: relative;
+            top: 20px;
+            right: 5%;
         }
         @media (max-width: $second-breakpoint) {
             position: absolute;
@@ -203,66 +259,85 @@
         }
     }
 
+    /* Position du coeur "plein" Après le focus */
+
     &__solid{
-        position: absolute;
-        bottom: 0.5%;
-        left: 1%;
         color: transparent;
-        opacity: 0;
-        &--anim{
-            &:hover{
-                @include anim-color-heart
-            }
-        }
-        @media (max-width: $second-breakpoint) {
-            position: absolute;
-            left: 1%;
+        position: relative;
+        right: 28px;
+        @media (min-width :$second-breakpoint) and (max-width: $first-breakpoint){
+            position: relative;
         }
         
     }
 
-    &__name{
-        margin-top: 2%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: $width;
-        position: relative;
+    /* Règles pour que le texte de la carte soit coupé avec une ellipse à la réduction de la carte */
 
+    &__name{
+        display: block;
+        margin-top: 2%;
+        margin-bottom: 20px;
+        white-space: nowrap;
+        overflow: hidden ;
+        text-overflow: ellipsis ;
+        font-size: 14px;
+        position: relative;
+        top: 7px;
+        &--size{
+            width: $width;
+            min-width: 10%;
+            @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+                width: $width;
+            }
+        }
     }
 
     &__subname{
-        display: table-cell;
+        display: block;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: $width;
+        font-size: 14px;
         position: relative;
-        top: 18px;
+        bottom: 30px;
+        &--size{
+            width: $width;
+            @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+                width: $width;
+            }
+        }
     }
 
-    &__price{
-        margin-top: 37px;
-        transform: translateX(150px);
-        position: relative;
-        bottom: 3px;
-        left: 20px;
+    /* Position et Mise en Gras du Prix */
 
+    &__price{
+        display: block;
+        margin-top: 35px;
+        font-size: 14px;
+        position: relative;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            margin-left: 20%;
+        }
         @media (max-width: $second-breakpoint) {
             margin-right: 4%;
             margin-top: 38px;
         }
     }
 
+    /* Mise en place du "check" qui apparait quand on fait le focus sur une carte du menu */
+
     &__check-bloc{
         background: $color-tertiary;
         border-radius: 0 $radius $radius 0;
+        text-align: center;
         width: 20%;
         transform: scaleX(0);
         transform-origin: right;
         position: relative;
-        left: 7.4%;
+        left: 8%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             position: relative;
-            left: 2.5%;
+            left: 3.1%;
         }
         @media (max-width: $second-breakpoint) {
             position: relative;
@@ -270,13 +345,15 @@
         }
     }
 
+    /* Couleur et position de l'icone 'check' */
+
     &__check{
-        margin-right: -9%;
         color: white;
-        text-indent: 25px;
         line-height: 65px !important;
         transform-origin: center;
     }
+
+    /* Position de l'icone 'check' pour les cartes des Entrée du menu La Note Enchantée */
 
     &__check-subflex{
         position: relative;
@@ -291,11 +368,7 @@
         }
     }
 
-    &__btn-flex{
-        display: flex;
-        justify-content: space-between;
-        width: 130%;
-    }
+    /* Règles pour le boutton 'Commandez' */
 
     &__command {
         @include btn-type;
@@ -307,16 +380,17 @@
             padding: 4% 0 4% 0;
         }
     }
-}  
+} 
 
+/* Hauteur pour la page du menu La note Enchantée */
 
 #menu-enchanted{
     height: 860px;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-        height: 1400px !important;
+        height: 1450px !important;
     }
     @media (max-width: $second-breakpoint) {
-        height: 1210px !important;
+        height: 1310px !important;
     }
 }
 
