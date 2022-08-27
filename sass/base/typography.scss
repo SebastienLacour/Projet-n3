@@ -1,12 +1,44 @@
-body{
-    font-family: "Roboto" sans-serif;
+/* Police des titres */
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('/fonts/Shrikhand-Regular.woff2') format('woff2'),
+        url('/fonts/Shrikhand-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+.menu__title{
+    font-family: 'Shrikhand' sans-serif;
 }
 
 h1 h2 h3{
-    font-family: "Shrikhand" sans-serif;
+    font-family: 'Shrikhand' sans-serif;
 }
+
+/* Police du texte des pages */
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('/fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+        url('/fonts/RobotoCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    font-family: 'Roboto Condensed' sans-serif;
+}
+
+
+/* Taille des titres des sous-parties des pages */
 
 h2{
     font-size: 30px;
 }
+
+
+
   
