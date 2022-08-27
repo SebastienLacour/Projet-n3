@@ -1,4 +1,5 @@
 
+/* Taille pour et position des filtres de la page d'accueil */
 
 .filters__btn{
     background: $background-darker;
@@ -9,9 +10,7 @@
         height: 70px;
         width: 180%;
     }
-    &--purple{
-        background: lighten($color: #9356DC, $amount: 34%);
-    }
+    
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         width: 400px;
         margin-top: 25px;
@@ -23,14 +22,7 @@
     }
 }
 
-.restaurant__button{
-    background-color: $background-color;
-    border-radius: $radius;
-    &--size{
-        width: 90%;
-        height: 100%;
-        }
-}
+/* Couleur du bouton de l'icone coeur servant au focus pour qu'on ne le voit pas */
 
 .btn-heart{
     background-color: $background-color;
@@ -38,12 +30,14 @@
     margin-right: 5%;
 }
 
+/* Règles pour les cartes des menus */
+
 .menu__btn{
     display: flex;
+    justify-content: space-between;
     margin-bottom: 2%;
     margin-right: 2%;
     padding: 0 2% 0 2%;
-    text-align: justify;
     background-color: $background-color;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         margin-left: 10% !important;
@@ -53,7 +47,8 @@
     }
     &--size{
         height: 70px;
-        width: 90%;
+        width: 100%;
+        min-width: 10%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: 80%;
         }
