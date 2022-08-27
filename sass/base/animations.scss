@@ -1,14 +1,61 @@
-.restaurant__solid{
-    &:hover{
-        @include anim-color-heart
+
+/* Mise en place de l'animation loading spinner au chargement de la page */
+
+.loading-spinner{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    @media (max-width: $second-breakpoint) {
+        margin-left: -10%;
     }
-    &:hover + .restaurant__icone{
-        @include anim-color-heart
-    }
-    &:active + .restaurant__icone{
-        @include anim-color-heart
+    &--anim{
+        animation: loading $apparition-timer forwards;
     }
 }
+
+/* Apparition de la page d'accueil après le loading */
+
+.bloc-page{
+    &--anim{
+        animation: main-apparition $apparition-timer forwards;
+    }
+}
+
+/* Focus sur les Filtres de la page d'accueil pour qu'ils changent de couleur au clic */
+
+.filters__btn{
+    &:focus{
+        background: lighten($color: $color-primary, $amount: 34%);
+    }
+
+    &:focus .filters__icone{
+        color: $color-primary;
+    }
+}
+
+/* Focus sur les coeurs de la page d'accueil pour qu'ils changent de couleur au clic */
+
+.restaurant__focus{ 
+        &:hover{
+        @include anim-color-heart;
+        }
+        &:focus{
+        @include anim-color-heart;
+        }
+}
+
+/* Focus sur les Filtres de les pages menu pour qu'ils changent de couleur au clic */
+
+.menu__focus{
+    &:hover{
+        @include anim-color-heart;
+    }
+    &:focus{
+        @include anim-color-heart;
+    }
+}
+
+/* Apparition progresssive des cartes au chargement des pages menu */
 
 .menu {
     &__animation{
@@ -27,18 +74,51 @@
 
 }
 
-.menu__title-icone{
-    &:hover {
-        color: transparent;
+/* Apparition du 'check' a droite des cartes au focus */
+
+.menu__btn{
+
+    &:focus .menu__check-bloc{
+        transform: scaleX(100%);
+        transition: all 700ms;
+        transform-origin: right;
     }
-    &:hover + .restaurant__solid{
-        background: $color-gradient;
-        background-clip: text;
-        color: transparent;
+
+    &:not(:focus) .menu__check-bloc{
+        transform: scaleX(0);
+        transition: all 700ms;
+        transform-origin: right;
     }
-    &:active + .restaurant__solid{
-        background: $color-gradient;
-        background-clip: text;
-        color: transparent;
+
+    &:focus .menu__check{
+        transform: rotate(360deg);
+        transition: all 700ms;
+    }
+
+    &:not(:focus) .menu__check{
+        transform: rotate(-360deg);
+        transition: all 700ms;
+    }
+
+    &:focus .menu__price{
+        transform: translateX(-10px);
+        transition: all 700ms;
+    }
+
+    &:not(:focus) .menu__price{
+        transform: translateX(45px);
+        transition: all 700ms;
+    }
+
+    &:focus .menu__words--size{
+        width: 60%;
+        transition: all 700ms;
+    }
+
+    &:not(:focus) .menu__words--size{
+        width: 100%;
+        transition: all 700ms;
     }
 }
+
+
