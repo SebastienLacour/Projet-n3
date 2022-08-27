@@ -1,3 +1,5 @@
+/* Animation pour l'apparition des cartes au chargement des pages menu */
+
 @keyframes menu-apparition{
     0% {
         transform: scaleY(0);
@@ -10,6 +12,8 @@
         opacity: 1;
     }
 }
+
+/* Animation pour l'apparition de la page d'accueil apres le loading spinner */
 
 @keyframes main-apparition{
     0%{
@@ -31,6 +35,9 @@
         opacity: 1;
     }
 }
+
+/* Loading spinner au chargement de la page */
+
 @keyframes loading{
     0%{
         opacity: 1;
