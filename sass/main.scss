@@ -14,19 +14,7 @@
 @import "./Pages/title.scss";
 
 
-/* Mise en place de l'animation loading spinner au chargement de la page */
 
-.loading-spinner{
-    position: absolute;
-    top: 40%;
-    left: 45%;
-    @media (max-width: $second-breakpoint) {
-        margin-left: -10%;
-    }
-    &--anim{
-        animation: loading $apparition-timer forwards;
-    }
-}
 
 /* Centrer la Page */
 
