@@ -2,15 +2,16 @@
 
 .background{
     height: 500px;
-    width: 106.5%;
-    margin-left: -6%;
+    width: 106.9%;
+    margin-left: -1%;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-        width: 107.1% !important;
+        width: 112% !important;
     }
     @media (max-width: $second-breakpoint) {
         height: 400px !important;
-        width: 108% !important;
+        width: 125.5% !important;
         position: relative;
-        bottom: 40px;
+        bottom: 60px;
+        right: 1%;
     }
 }
