@@ -79,7 +79,7 @@
 .menu__btn{
 
     &:focus .menu__check-bloc{
-        transform: scaleX(100%);
+        transform: scaleX(1);
         transition: all 700ms;
         transform-origin: right;
     }
