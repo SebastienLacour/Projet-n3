@@ -2,6 +2,8 @@
 
 .filters{
 
+    width: 100%;
+    margin-left: 5%;
     /* Position du titre des Filtres */
 
     &__title{
@@ -18,7 +20,7 @@
         justify-content: space-around;
         list-style-type: none;
         position: relative;
-        right: 9%;
+        right: 15%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             display: flex;
             flex-direction: column;
