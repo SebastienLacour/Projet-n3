@@ -1,33 +1,39 @@
-/* Mise en Page des Menus */
 
+/* Mise en Page des Menus */
+.bloc-page-menu{
+    @media (max-width: $second-breakpoint) {
+    max-width: 100% !important;
+    }
+}
 /* Position, Couleur et Bordure de la Section des Menus */
 .menu{
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 25px 25px 0 0;
-    margin-left: -5%;
     background-color: $background-darker;
     position: absolute;
-    top: 70%;
+    top: 60%;
     @media (max-width: $second-breakpoint) {
         display: flex;
         flex-direction: column;
         margin-top: -110px;
+        position: relative;
+        right: 0.1%;
     }
 
     /* Taille des Menus */
 
     &--size{
         height: 800px;
-        width: $width;
+        width: 99.8%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            height: 1300px;
+            height: 1250px;
             width: $width;
         }
         @media (max-width: $second-breakpoint){
             height: 1400px;
-            width: $width;
+            width: 101%;
         }
     }
 
@@ -255,7 +261,7 @@
         }
         @media (max-width: $second-breakpoint) {
             position: absolute;
-            left: 85%;
+            left: 80%;
         }
     }
 
@@ -374,10 +380,7 @@
         @include btn-type;
         margin-top: 50px;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            padding: 5px 0 5px 0;
-        }
-        @media (max-width: 599px) {
-            padding: 4% 0 4% 0;
+            margin-bottom: 20px;
         }
     }
 } 
