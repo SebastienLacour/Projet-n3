@@ -1,65 +1,149 @@
-body {
-  font-family: "Roboto" sans-serif;
+@charset "UTF-8";
+/* Police des titres */
+@font-face {
+  font-family: "Shrikhand";
+  src: url("/fonts/Shrikhand-Regular.woff2") format("woff2"), url("/fonts/Shrikhand-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+.menu__title {
+  font-family: "Shrikhand";
 }
 
 h1 h2 h3 {
-  font-family: cursive !important;
+  font-family: "Shrikhand";
 }
 
+/* Police du texte des pages */
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("/fonts/RobotoCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Roboto Condensed";
+}
+
+/* Taille des titres des sous-parties des pages */
 h2 {
   font-size: 30px;
 }
 
-.menu__subtitle {
-  font-family: "shrikhand" sans-serif;
+/* Mise en place de l'animation loading spinner au chargement de la page */
+.loading-spinner {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+@media (max-width: 599px) {
+  .loading-spinner {
+    margin-left: -10%;
+  }
+}
+.loading-spinner--anim {
+  animation: loading 2000ms forwards;
 }
 
-.restaurant__icone:hover {
-  color: transparent;
+/* Apparition de la page d'accueil après le loading */
+.bloc-page--anim {
+  animation: main-apparition 2000ms forwards;
 }
-.restaurant__icone:hover + .restaurant__solid {
+
+/* Focus sur les Filtres de la page d'accueil pour qu'ils changent de couleur au clic */
+.filters__btn:focus {
+  background: #efe6fa;
+}
+.filters__btn:focus .filters__icone {
+  color: #9356DC;
+}
+
+/* Focus sur les coeurs de la page d'accueil pour qu'ils changent de couleur au clic */
+.restaurant__focus:hover {
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   color: transparent;
+  opacity: 1;
+  transition: all 700ms;
 }
-.restaurant__icone:active + .restaurant__solid {
+.restaurant__focus:focus {
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   color: transparent;
+  opacity: 1;
+  transition: all 700ms;
 }
 
+/* Focus sur les Filtres de les pages menu pour qu'ils changent de couleur au clic */
+.menu__focus:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+  opacity: 1;
+  transition: all 700ms;
+}
+.menu__focus:focus {
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+  opacity: 1;
+  transition: all 700ms;
+}
+
+/* Apparition progresssive des cartes au chargement des pages menu */
 .menu__animation {
   animation: menu-apparition 1000ms;
-  animation-delay: 150ms;
   animation-fill-mode: backwards;
 }
-.menu__animation--card1 {
+.menu__animation--card2 {
   animation-delay: 1000ms;
 }
-.menu__animation--card2 {
+.menu__animation--card3 {
   animation-delay: 2000ms;
 }
-.menu__animation--card3 {
+.menu__animation--card4 {
   animation-delay: 3000ms;
 }
-.menu__animation--card4 {
-  animation-delay: 4000ms;
+
+/* Apparition du 'check' a droite des cartes au focus */
+.menu__btn:focus .menu__check-bloc {
+  transform: scaleX(1);
+  transition: all 700ms;
+  transform-origin: right;
+}
+.menu__btn:not(:focus) .menu__check-bloc {
+  transform: scaleX(0);
+  transition: all 700ms;
+  transform-origin: right;
+}
+.menu__btn:focus .menu__check {
+  transform: rotate(360deg);
+  transition: all 700ms;
+}
+.menu__btn:not(:focus) .menu__check {
+  transform: rotate(-360deg);
+  transition: all 700ms;
+}
+.menu__btn:focus .menu__price {
+  transform: translateX(-10px);
+  transition: all 700ms;
+}
+.menu__btn:not(:focus) .menu__price {
+  transform: translateX(45px);
+  transition: all 700ms;
+}
+.menu__btn:focus .menu__words--size {
+  width: 60%;
+  transition: all 700ms;
+}
+.menu__btn:not(:focus) .menu__words--size {
+  width: 100%;
+  transition: all 700ms;
 }
 
-.menu__title-icone:hover {
-  color: transparent;
-}
-.menu__title-icone:hover + .restaurant__solid {
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
-}
-.menu__title-icone:active + .restaurant__solid {
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
-}
-
+/* Animation pour l'apparition des cartes au chargement des pages menu */
 @keyframes menu-apparition {
   0% {
     transform: scaleY(0);
@@ -71,65 +155,114 @@ h2 {
     opacity: 1;
   }
 }
+/* Animation pour l'apparition de la page d'accueil apres le loading spinner */
+@keyframes main-apparition {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Loading spinner au chargement de la page */
+@keyframes loading {
+  0% {
+    opacity: 1;
+    transform: rotate(360deg);
+    margin-top: 0;
+  }
+  50% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  85% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  95% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -140px;
+  }
+}
+/* Taille pour et position des filtres de la page d'accueil */
 .filters__btn {
   background: #f2f2f2;
-  height: 70px;
-  width: 330px;
-  margin-right: 5%;
+  margin-right: 15%;
+  text-align: left;
   border-radius: 30px;
   border: none;
   box-shadow: 3px 3px 3px #cccccc;
 }
-.filters__btn--purple {
-  background: #efe6fa;
+.filters__btn--size {
+  height: 70px;
+  width: 180%;
+  min-width: 100%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .filters__btn {
+    width: 400px;
     margin-top: 25px;
   }
 }
 @media (max-width: 599px) {
   .filters__btn {
-    width: 40%;
+    width: 350px;
     margin-top: 25px;
   }
 }
 
-.restaurant__button {
-  background-color: white;
-  border-radius: 30px;
-}
-.restaurant__button--size {
-  width: 90%;
-  height: 100%;
-}
-
+/* Couleur du bouton de l'icone coeur servant au focus pour qu'on ne le voit pas */
 .btn-heart {
   background-color: white;
   border: none;
   margin-right: 5%;
 }
-.btn-heart:active {
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
-}
 
+/* Règles pour les cartes des menus */
 .menu__btn {
   display: flex;
   justify-content: space-between;
-  height: 70px;
-  width: 450px;
-  margin-right: 5%;
   margin-bottom: 2%;
+  margin-right: 2%;
   padding: 0 2% 0 2%;
-  text-align: justify;
   background-color: white;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__btn {
+    margin-left: 10% !important;
+  }
 }
 @media (max-width: 599px) {
   .menu__btn {
     margin-bottom: 2%;
-    width: 90% !important;
+  }
+}
+.menu__btn--size {
+  height: 70px;
+  width: 100%;
+  min-width: 10%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__btn--size {
+    width: 80%;
+  }
+}
+@media (max-width: 599px) {
+  .menu__btn--size {
+    width: 100%;
   }
 }
 .menu__btn--border {
@@ -138,17 +271,84 @@ h2 {
   box-shadow: 3px 3px 3px #cccccc;
 }
 
+/* Mise en Page du Header */
+.title {
+  /* Taille Bordure et Position du totre de la Page d'Accueil */
+  /* Taille du titre des Pages Menu */
+  /* Couleur et Position de la Flèche pour Revenir à la Page d'Accueil */
+  /* Position et Taille du logo du menu */
+  /* Position et Taille du Logo de la Page d'Accueil */
+}
 .title__bloc {
-  box-shadow: 5px 0px 7px #666666;
-  width: 110%;
-  margin: -2% 0 -2% -6%;
+  box-shadow: 0px 0px 7px #666666;
+  border-right: none;
+  width: 112.5% !important;
+  margin: -2% -0.5% -2% -6%;
   padding-top: 2%;
-  padding-bottom: 1%;
+  z-index: 1;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .title__bloc {
+    width: 117% !important;
+  }
+}
+@media (max-width: 599px) {
+  .title__bloc {
+    width: 131% !important;
+  }
+}
+.title__menu {
+  height: 120px;
+  width: auto;
+  margin-left: 10%;
 }
 .title__arrow {
-  position: absolute;
-  left: 5%;
-  top: -45%;
+  color: black;
+  position: relative;
+  right: 18%;
+  bottom: 22px;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .title__arrow {
+    position: relative;
+    bottom: 10px;
+    right: 12%;
+  }
+}
+@media (max-width: 599px) {
+  .title__arrow {
+    position: relative;
+    bottom: 0px;
+    right: 10%;
+  }
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .title__menu-logo {
+    position: relative;
+    top: 10px;
+  }
+}
+@media (max-width: 599px) {
+  .title__menu-logo {
+    position: relative;
+    top: 15px;
+  }
+}
+.title__menu-logo--size {
+  height: 100px;
+  width: 40% !important;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .title__menu-logo--size {
+    height: 80px;
+    width: 50% !important;
+  }
+}
+@media (max-width: 599px) {
+  .title__menu-logo--size {
+    height: 35px;
+    width: 60% !important;
+  }
 }
 .title__logo {
   margin-left: 30%;
@@ -164,102 +364,187 @@ h2 {
   }
 }
 
+/* Couleur de fond , taille et poistion du footer */
 .footer {
   background-color: #262626;
   color: white;
   text-align: left;
-  height: 260px;
-  margin-left: -5%;
-  padding-left: 5%;
-  padding-top: 3%;
+  height: 220px;
+  width: 106% !important;
+  padding-left: 70px;
+  padding-top: 45px;
+  margin-right: -5%;
+  margin-bottom: -10px;
+  position: relative;
+  right: 5%;
+  /* Taille du menu du Footer */
+  /* Taille du Logo */
+  /* Position et Mise en page de la liste a puce du Footer */
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .footer {
-    margin-top: 90%;
+    width: 102%;
   }
 }
 @media (max-width: 599px) {
   .footer {
-    margin-top: 150%;
+    width: 150% !important;
+    margin-left: 5.5%;
   }
 }
 .footer__menu {
-  margin-top: 45%;
+  height: 100%;
+  width: 106% !important;
+  margin-top: 620px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .footer__menu {
-    margin-top: 158%;
+    margin-top: 1050px;
   }
 }
 @media (max-width: 599px) {
   .footer__menu {
-    margin-top: 253%;
+    margin-top: 1000px;
   }
 }
 .footer__logo {
-  width: 20%;
+  margin-left: 2.2%;
+  width: 250px !important;
 }
 @media (max-width: 599px) {
   .footer__logo {
-    width: 30%;
-    margin-left: 7%;
+    width: 40% !important;
+    margin-left: -9%;
   }
 }
-.footer__list {
-  position: relative;
-  right: 2%;
+@media (min-width: 599px) and (max-width: 968px) {
+  .footer__list {
+    margin-left: -2%;
+  }
+}
+@media (max-width: 599px) {
+  .footer__list {
+    position: relative;
+    right: 18%;
+  }
 }
 .footer__choice {
   list-style-type: none;
-  margin-bottom: 1%;
+  margin-bottom: 10px;
 }
 .footer__name {
   margin-left: 0.5%;
 }
 
+/* Couleur du lien en Blanc */
 .footer a {
   color: white;
   text-decoration: none;
 }
 
+/* Ajustement des règles pour le footer de la page "Menu La Note Enchantée */
 #footer-enchanted {
-  margin-top: 75%;
+  margin-top: 680px;
 }
-
-.background {
-  height: 500px;
-  width: 120%;
-  margin-left: -6%;
+@media (min-width: 599px) and (max-width: 968px) {
+  #footer-enchanted {
+    margin-top: 1200px !important;
+  }
 }
 @media (max-width: 599px) {
-  .background {
-    margin-top: 2%;
+  #footer-enchanted {
+    margin-top: 1150px !important;
   }
 }
 
+/* Position et taille de l'image de fond des pages de menu */
+.background {
+  height: 500px;
+  width: 106.9%;
+  margin-left: -1%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .background {
+    width: 112% !important;
+  }
+}
+@media (max-width: 599px) {
+  .background {
+    height: 400px !important;
+    width: 125.5% !important;
+    position: relative;
+    bottom: 60px;
+    right: 1%;
+  }
+}
+
+/* Mise en Page des Menus */
+@media (max-width: 599px) {
+  .bloc-page-menu {
+    max-width: 100% !important;
+  }
+}
+
+/* Position, Couleur et Bordure de la Section des Menus */
 .menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 25px 25px 0 0;
-  height: 800px;
-  width: 100%;
-  margin-left: -5%;
   background-color: #f2f2f2;
   position: absolute;
-  top: 70%;
+  top: 60%;
+  /* Taille des Menus */
+  /* Positionnement des cartes de chaques sous parties (Entrées, Plats, Desserts) */
+  /* Positionnement des deux premieres cartes des Entrées du menu "La Note enchantée" */
+  /* Positionnement des deux dernières cartes des Entrées du menu "La Note enchantée" */
+  /* Taille des Cartes des Entrées du menu La Note Enchantée */
+  /* Taille et Position de la Partie "Entrées" */
+  /* Taille et Position de la Partie "Plats" */
+  /* Taille et Position de la Partie "Desserts" */
+  /* Position et Taille de la Partie "Titre" du Menu */
+  /* Position du Titre du Menu */
+  /* Couleur et bordure du boutton du Coeur pour le focus à l'état initial */
+  /* Position du texte des cartes du Menu */
+  /* Position du texte des cartes du Menu La  Note Enchantée */
+  /* Position et Taille des Titres des Parties du Menu (Entrées, Plats, Desserts) */
+  /* Position de l'icone vide (Quand le focus est désactivé */
+  /* Position du coeur "plein" Après le focus */
+  /* Règles pour que le texte de la carte soit coupé avec une ellipse à la réduction de la carte */
+  /* Position et Mise en Gras du Prix */
+  /* Mise en place du "check" qui apparait quand on fait le focus sur une carte du menu */
+  /* Couleur et position de l'icone 'check' */
+  /* Position de l'icone 'check' pour les cartes des Entrée du menu La Note Enchantée */
+  /* Règles pour le boutton 'Commandez' */
 }
-@media (man-width: 599px) {
+@media (max-width: 599px) {
   .menu {
     display: flex;
     flex-direction: column;
-    height: 1450px !important;
-    width: 90%;
+    margin-top: -110px;
+    position: relative;
+    right: 0.1%;
+  }
+}
+.menu--size {
+  height: 800px;
+  width: 99.8%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu--size {
+    height: 1250px;
+    width: 100%;
+  }
+}
+@media (max-width: 599px) {
+  .menu--size {
+    height: 1400px;
+    width: 101%;
   }
 }
 .menu__flex {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__flex {
@@ -271,16 +556,71 @@ h2 {
     flex-direction: column;
   }
 }
-.menu__flex-enchanted {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
 .menu__subflex-1 {
-  display: flex;
+  width: 100%;
+  margin-right: 7px;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__subflex-1 {
+    width: 90%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+  }
+}
+@media (max-width: 599px) {
+  .menu__subflex-1 {
+    margin-left: 1%;
+    width: 100%;
+  }
 }
 .menu__subflex-2 {
-  display: flex;
+  width: 100%;
+  margin-left: 5px;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__subflex-2 {
+    width: 90% !important;
+    margin-left: 7px;
+  }
+}
+@media (max-width: 968px) {
+  .menu__subflex-2 {
+    width: 100%;
+  }
+}
+.menu__subflex-card--size {
+  width: 95%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__subflex-card--size {
+    width: 90%;
+  }
+}
+@media (max-width: 599px) {
+  .menu__subflex-card--size {
+    width: 100%;
+  }
+}
+.menu__subflex-card--margin {
+  margin-bottom: 50px !important;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__subflex-card--margin {
+    margin-bottom: 3% !important;
+  }
+}
+@media (max-width: 599px) {
+  .menu__subflex-card--margin {
+    margin-bottom: 3% !important;
+  }
+}
+.menu__starters {
+  width: 90%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__starters {
+    width: 90%;
+  }
 }
 @media (max-width: 599px) {
   .menu__starters {
@@ -290,12 +630,28 @@ h2 {
     margin-left: 4%;
   }
 }
+.menu__dishes {
+  width: 90%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__dishes {
+    width: 90%;
+  }
+}
 @media (max-width: 599px) {
   .menu__dishes {
     display: flex;
     flex-direction: column;
     width: 85%;
     margin-left: 4%;
+  }
+}
+.menu__desserts {
+  width: 90%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__desserts {
+    width: 90%;
   }
 }
 @media (max-width: 599px) {
@@ -310,22 +666,86 @@ h2 {
   display: flex;
   width: 100%;
 }
+@media (min-width: 968px) and (max-width: 599px) {
+  .menu__title-bloc {
+    display: flex;
+  }
+}
+@media (max-width: 599px) {
+  .menu__title-bloc {
+    display: flex;
+    justify-content: space-between;
+    width: 140%;
+  }
+}
 .menu__title {
-  display: flex;
+  display: inline-block;
+  white-space: nowrap;
   margin-right: 30%;
   margin-left: 20%;
+  margin-top: 1%;
+  font-size: 40px;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__title {
+    font-size: 30px;
+    margin-left: 10%;
+  }
+}
+@media (max-width: 599px) {
+  .menu__title {
+    display: flex;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+}
+.menu__focus {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 30px;
 }
 .menu__words {
-  margin-top: 3%;
-  word-wrap: normal;
-  overflow: hidden;
+  display: block;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 8px;
+  /* Taille du Texte des Cartes du Menu */
+}
+@media (max-width: 599px) {
+  .menu__words {
+    margin-left: 2%;
+  }
+}
+.menu__words--size {
+  width: 100%;
+  min-width: 10%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__words--size {
+    width: 100%;
+  }
+}
+.menu__subflex-words {
+  display: block;
+  margin-top: 6px;
+  margin-left: 10px;
+  position: relative;
 }
 .menu__subtitle {
   margin-right: 5%;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 24px;
-  text-decoration: underline #99E2D0 3px;
+  position: relative;
+  /* Mise en Place du Soulignements sous les Titres */
+}
+.menu__subtitle::before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: -5px;
 }
 @media (max-width: 599px) {
   .menu__subtitle {
@@ -333,52 +753,130 @@ h2 {
   }
 }
 .menu__icone {
-  position: absolute;
-  top: 2%;
-  left: 73%;
-  z-index: 2;
+  display: block;
+  position: relative;
+  top: 28px;
+  width: 100px;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__icone {
+    position: relative;
+    top: 20px;
+    right: 5%;
+  }
 }
 @media (max-width: 599px) {
-  .menu {
-    margin-top: 9%;
+  .menu__icone {
+    position: absolute;
+    left: 80%;
   }
 }
 .menu__solid {
-  position: absolute;
-  top: 2%;
-  left: 1%;
   color: transparent;
-  z-index: 1;
+  position: relative;
+  right: 28px;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__solid {
+    position: relative;
+  }
 }
 .menu__name {
+  display: block;
   margin-top: 2%;
-  text-align: left;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  position: relative;
+  top: 7px;
+}
+.menu__name--size {
+  width: 100%;
+  min-width: 10%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__name--size {
+    width: 100%;
+  }
+}
+.menu__subname {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  position: relative;
+  bottom: 30px;
+}
+.menu__subname--size {
+  width: 100%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__subname--size {
+    width: 100%;
+  }
 }
 .menu__price {
-  margin-top: 8%;
+  display: block;
+  margin-top: 35px;
+  font-size: 14px;
   position: relative;
-  transform: translateX(0);
 }
-.menu__price--anim:active {
-  transform: translateX(-50px);
-  transition: transform 700ms;
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__price {
+    margin-left: 20%;
+  }
+}
+@media (max-width: 599px) {
+  .menu__price {
+    margin-right: 4%;
+    margin-top: 38px;
+  }
+}
+.menu__check-bloc {
+  background: #99E2D0;
+  border-radius: 0 30px 30px 0;
+  text-align: center;
+  width: 20%;
+  transform: scaleX(0);
+  transform-origin: right;
+  position: relative;
+  left: 8%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__check-bloc {
+    position: relative;
+    left: 3.1%;
+  }
+}
+@media (max-width: 599px) {
+  .menu__check-bloc {
+    position: relative;
+    left: 2.4%;
+  }
 }
 .menu__check {
   color: white;
-  background-color: #99E2D0;
-  border-radius: 0 30px 30px 0;
-  width: 50px;
-  padding-top: 30px;
-  padding-left: 15px;
+  line-height: 65px !important;
+  transform-origin: center;
+}
+.menu__check-subflex {
   position: relative;
-  left: 28px;
+  left: 3%;
 }
-.menu__btn--anim {
-  display: none !important;
+@media (min-width: 599px) and (max-width: 968px) {
+  .menu__check-subflex {
+    position: relative;
+    left: 2.3%;
+  }
 }
-.menu__btn:active .menu__btn--anim {
-  display: block !important;
-  transition: 700ms;
+@media (max-width: 599px) {
+  .menu__check-subflex {
+    position: relative;
+    left: 2.1%;
+  }
 }
 .menu__command {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -389,26 +887,44 @@ h2 {
   box-shadow: 3px 3px 3px #cccccc;
   width: 260px;
   height: 60px;
-  margin-top: 5%;
+  margin-top: 50px;
 }
 .menu__command:hover {
   background: #ff83dd;
+  box-shadow: 5px 5px 5px #b3b3b3;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__command {
-    padding: 2.5% 0 4% 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* Hauteur pour la page du menu La note Enchantée */
+#menu-enchanted {
+  height: 860px;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  #menu-enchanted {
+    height: 1450px !important;
   }
 }
 @media (max-width: 599px) {
-  .menu__command {
-    padding: 4% 0 4% 0;
+  #menu-enchanted {
+    height: 1310px !important;
   }
 }
 
-#menu-enchanted {
-  height: 150%;
+/* Mise en Place des Filtres de la page d'accueil */
+.filters {
+  width: 100%;
+  margin-left: 5%;
+  /* Position du titre des Filtres */
+  /* Position des Filtres en ligne */
+  /* Ajustement de la Position individuelle des Filtres */
+  /* Position des Numéros des Filtres pour qu'ils soient "collés" à la bordure des Filtres */
+  /* Position et mise en gras des noms des filtres */
+  /* Placement des différentes icones des filtres */
 }
-
 .filters__title {
   text-align: left;
 }
@@ -420,13 +936,15 @@ h2 {
 .filters__list {
   display: flex;
   justify-content: space-around;
-  margin-right: 8%;
   list-style-type: none;
+  position: relative;
+  right: 15%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .filters__list {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-left: 10%;
   }
 }
@@ -436,33 +954,25 @@ h2 {
     flex-direction: column;
   }
 }
+.filters__choice {
+  margin-right: 5%;
+  margin-left: 10%;
+}
 .filters__numbers {
   font-size: 12px;
   border-radius: 45%;
-  position: relative;
-  right: 6%;
+  margin-right: 5%;
+  margin-left: -3%;
   padding: 5px 7px 5px 7px;
 }
 .filters__numbers--color {
   background-color: #9356DC;
   color: white;
 }
-.filters__first {
-  position: relative;
-  right: 5%;
-}
-.filters__second {
-  position: relative;
-  right: 7%;
-}
-.filters__third {
-  position: relative;
-  right: 5%;
-}
 .filters__name {
-  margin-right: 20%;
   font-weight: bold;
   font-size: 15px;
+  position: relative;
 }
 @media (max-width: 599px) {
   .filters__name-second {
@@ -471,7 +981,7 @@ h2 {
   }
 }
 .filters__icone {
-  margin-right: 8%;
+  margin-right: 5%;
 }
 @media (max-width: 599px) {
   .filters__icone {
@@ -494,23 +1004,39 @@ h2 {
 }
 .filters__icone-store {
   position: relative;
-  color: #9356DC;
+  color: gray;
 }
 
+/* Mise en page du titre de la page d'accueil */
 .title__bloc {
+  width: auto;
   display: flex;
 }
-.title__arrow {
-  margin-top: 5%;
-  position: relative;
-  bottom: 120%;
-  color: black;
+
+/* Centrer la Page */
+body {
+  max-width: 94%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  body {
+    max-width: 90% !important;
+  }
+}
+@media (max-width: 599px) {
+  body {
+    max-width: 80% !important;
+  }
 }
 
-/* Police de la Page */
-body {
-  text-align: center;
-  margin-left: 5%;
+/* Disposition des éléments de la page en colonne*/
+.bloc-page {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Mise en Page du Header */
@@ -518,15 +1044,31 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /*Fond et Positionnement du lieu de Recherche */
+  /* Centrer le lieu  de la Recherche */
+  /* Taille et Position de l'icone */
+}
+.title--size {
+  width: 100%;
 }
 .title__information {
+  width: 106.5%;
   background: #e6e6e6;
-  margin-left: -6%;
-  position: relative;
-  top: 3px;
+  margin-top: 2%;
+  margin-right: -0.5%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .title__information {
+    width: 111%;
+  }
+}
+@media (max-width: 599px) {
+  .title__information {
+    width: 125%;
+  }
 }
 .title__position {
-  margin-left: 5%;
+  text-align: center;
 }
 .title__location {
   margin-left: 1%;
@@ -545,22 +1087,29 @@ body {
   }
 }
 
+/* Taille et Position de l'intro */
 .intro {
-  text-align: left;
+  text-align: center;
   background: #f2f2f2;
-  margin-left: -6%;
-  padding-left: 6%;
   height: 240px;
+  width: 100.5%;
+  padding-left: 6%;
+  margin-right: -0.5%;
   position: relative;
+  /* Taille et Position du titre de l'intro */
+  /* Taille et Position de la phrase de l'intro */
+  /* Taille, Couleur et Position du boutton "Explorer nos restaurant" */
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .intro {
     text-align: center;
+    width: 105% !important;
   }
 }
 @media (max-width: 599px) {
   .intro {
     text-align: center;
+    width: 119% !important;
   }
 }
 .intro__title {
@@ -572,7 +1121,8 @@ body {
   .intro__title {
     width: 80%;
     font-size: 180%;
-    margin-left: 22%;
+    text-align: center;
+    margin-left: 10%;
   }
 }
 @media (max-width: 599px) {
@@ -588,8 +1138,8 @@ body {
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .intro__paragraph {
-    font-size: 150%;
-    margin-left: 10%;
+    font-size: 20px;
+    text-align: center;
   }
 }
 @media (max-width: 599px) {
@@ -609,26 +1159,38 @@ body {
   box-shadow: 3px 3px 3px #cccccc;
   width: 260px;
   height: 60px;
-  margin-left: 40%;
+  text-align: center;
 }
 .intro__btn:hover {
   background: #ff83dd;
+  box-shadow: 5px 5px 5px #b3b3b3;
 }
 
+/* Mise en Page des Cartes Restaurant */
+/* Position et Couleur de fond de la section restaurant */
 .restaurant {
   display: flex;
   flex-direction: column;
-  height: 700px;
   margin-top: 5%;
-  margin-left: -5%;
   text-align: left;
   background: #f2f2f2;
+  /* Position du Titre Restaurant */
+  /* Mise en Place par Flexbox des différentes Cartes restaurants */
+  /* Position individuelles des Cartes et Couleur de Fond */
+  /* Flex sur les différents éléments textes et icones de la carte */
+  /* Position du Texte de la Carte */
+  /* Bordure et Taille de l'image de la Carte */
+  /* Taille du nom des cartes en responsive */
+  /* Position et couleur des ettiquettes "Nex" */
+  /* Mise en Place du Boutton pour le Focus du coeur */
+  /* Position de l'icone sans focus */
+  /* Position de l'icone qui changera de couleur avec le focus */
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50%;
+    margin-bottom: 130px;
   }
 }
 @media (max-width: 599px) {
@@ -637,9 +1199,24 @@ body {
     flex-direction: column;
   }
 }
+.restaurant--size {
+  height: 800px;
+  width: 106.5% !important;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .restaurant--size {
+    height: 1300px;
+    width: 111% !important;
+  }
+}
+@media (max-width: 599px) {
+  .restaurant--size {
+    height: 1450px;
+    width: 125% !important;
+  }
+}
 .restaurant__title {
-  position: relative;
-  left: 4.5%;
+  margin-left: 9%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant__title {
@@ -650,15 +1227,14 @@ body {
 .restaurant__menu {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 7%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant__menu {
-    width: 105%;
     flex-direction: column;
-    margin-right: 5%;
     background: #f2f2f2;
-    padding-bottom: 5%;
-    padding-bottom: 10%;
+    padding-bottom: 80px;
+    margin-left: -2%;
   }
 }
 @media (max-width: 599px) {
@@ -670,31 +1246,45 @@ body {
   }
 }
 .restaurant__card {
-  margin-top: 2%;
-  margin-left: 10%;
+  margin-top: 80px !important;
+  margin-left: 5%;
   background-color: white;
   border: solid 0.1px;
   border-radius: 30px;
+  position: relative;
+  right: 4%;
   border-radius: 30px;
   border: none;
   box-shadow: 3px 3px 3px #cccccc;
+  /* Taille des Cartes Restaurant */
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .restaurant__card {
+    margin-left: 65px;
+    margin-top: 7%;
+    position: relative;
+    left: 5%;
+  }
+}
+@media (max-width: 599px) {
+  .restaurant__card {
+    margin-top: 80px;
+    margin-left: 10%;
+    text-align: left;
+  }
 }
 .restaurant__card--size {
-  width: 35%;
+  width: 40%;
   height: 250px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant__card--size {
-    width: 80%;
-    margin-top: 7%;
+    width: 72%;
   }
 }
 @media (max-width: 599px) {
   .restaurant__card--size {
-    width: 95%;
-    margin-bottom: 1%;
-    margin-top: 10%;
-    text-align: left;
+    width: 90%;
   }
 }
 .restaurant__description {
@@ -717,10 +1307,17 @@ body {
   font-size: 17px;
 }
 .restaurant__new {
+  margin-left: 80%;
   position: relative;
   bottom: 85%;
-  left: 80%;
   padding: 2%;
+}
+@media (max-width: 599px) {
+  .restaurant__new {
+    position: relative;
+    right: 4%;
+    bottom: 89%;
+  }
 }
 .restaurant__new--color {
   background-color: #99E2D0;
@@ -730,47 +1327,44 @@ body {
   width: 50%;
   height: 50%;
 }
-.restaurant__icone {
-  position: absolute;
-  margin-left: 31%;
-  margin-top: 0.3%;
-  z-index: 1;
+.restaurant__focus {
+  background-color: white;
+  border-radius: 30px;
+  border: none;
 }
-.restaurant__icone :hover {
-  visibility: hidden;
+.restaurant__icone {
+  margin-left: 35%;
+  margin-top: 0.5%;
+  position: relative;
+  top: 10px;
+  right: 9px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant__icone {
     margin-top: 1%;
-    position: absolute;
-    left: 55%;
   }
 }
 @media (max-width: 599px) {
   .restaurant__icone {
     margin-top: 1%;
-    position: absolute;
-    left: 60%;
   }
 }
 .restaurant__solid {
-  position: absolute;
-  margin-left: 31%;
-  margin-top: 0.3%;
   color: transparent;
+  margin-left: 35%;
+  margin-top: 0.5%;
+  position: relative;
+  bottom: 15px;
+  right: 9px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant__solid {
     margin-top: 1%;
-    position: absolute;
-    left: 55%;
   }
 }
 @media (max-width: 599px) {
   .restaurant__solid {
     margin-top: 1%;
-    position: absolute;
-    left: 60%;
   }
 }
 
