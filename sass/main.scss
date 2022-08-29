@@ -10,7 +10,6 @@
 @import "./Layout/Background-image.scss";
 @import "./Layout/menu.scss";
 @import "./Pages/filters.scss";
-@import "./Pages/title.scss";
 
 /* Centrer la Page */
 
@@ -103,6 +102,14 @@ body{
         text-align: center;
         width: 119% !important;
     }
+    /* Mise en page du titre de la page d'accueil */
+
+    .title{
+        &__bloc{
+            width: auto;
+            display: flex;
+    }
+}
 
     /* Taille et Position du titre de l'intro */
 
