@@ -15,14 +15,24 @@
 /* Centrer la Page */
 
 body{
+    max-width: 94%;
+    width: $width;
     text-align: center;
-    @include margin-page
+    margin: 0;
+    padding: 0;
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+        max-width: 90% !important;
+    }
+    @media (max-width: $second-breakpoint){
+        max-width: 80% !important;
+    }
 }
 
 /* Disposition des éléments de la page en colonne*/
 
 .bloc-page{
-    width: $width;
+    
+    width: 100% !important;
     display: flex;
     flex-direction: column;
 } 
@@ -34,14 +44,23 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &--size{
+        width: $width;
+    }
 
     /*Fond et Positionnement du lieu de Recherche */
 
     &__information{
+        width: 106.5%;
         background: darken($color: white, $amount: 10%);
-        margin-left: -6%;
-        margin-right: -2%;
         margin-top: 2%;
+        margin-right: -0.5%;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            width: 111%;
+        }
+        @media (max-width: $second-breakpoint) {
+            width: 125%;
+        }
     }
 
     /* Centrer le lieu  de la Recherche */
@@ -72,15 +91,17 @@ body{
     text-align: center;
     background: $background-darker;
     height: 240px;
-    width: $width;
-    margin-left: -5%;
+    width: 100.5%;
     padding-left: 6%;
+    margin-right: -0.5%;
     position: relative;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         text-align: center;
+        width: 105% !important;
     }
     @media (max-width: $second-breakpoint) {
         text-align: center;
+        width: 119% !important;
     }
 
     /* Taille et Position du titre de l'intro */
@@ -134,7 +155,6 @@ body{
     display: flex;
     flex-direction: column;
     margin-top: 5%;
-    margin-left: -5%;
     text-align: left;
     background: $background-darker;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
@@ -147,21 +167,22 @@ body{
         flex-direction: column;
     }
     &--size{
-        height: 800px ;
+        height: 800px;
+        width: 106.5% !important;
         @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            height: 700px;
+            height: 1300px;
+            width: 111% !important;
         }
         @media(max-width: $second-breakpoint) {
-            height: 900px;
-            width: 120%;
+            height: 1450px;
+            width: 125% !important;
         }
     }
     
     /* Position du Titre Restaurant */
 
     &__title{
-        position: relative;
-        left: 4.5%;
+        margin-left: 9%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             text-align: center;
             margin-right: 6%;
@@ -173,13 +194,12 @@ body{
     &__menu{
         display: flex;
         flex-wrap: wrap;
+        margin-left: 7%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            width: 105%;
             flex-direction: column;
-            margin-right: 5%;
             background: $background-darker;
-            padding-bottom: 5%;
-            padding-bottom: 10%;
+            padding-bottom: 80px;
+            margin-left: -2%;
             
         }
         @media(max-width: $second-breakpoint) {
@@ -194,14 +214,18 @@ body{
 
     &__card{
         margin-top: 80px !important;
-        margin-left: 80px;
+        margin-left: 5%;
         background-color: $background-color;
         border: solid 0.1px;
         border-radius: 30px;
+        position: relative;
+        right: 4%;
         @include border-btn-filter;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             margin-left: 65px;
             margin-top: 7%;
+            position: relative;
+            left: 5%;
         }
         @media (max-width: $second-breakpoint) {
             margin-top: 80px;
@@ -215,10 +239,10 @@ body{
             width: 40%;
             height: 250px;
             @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-                width: 80%;
+                width: 72%;
             }
             @media(max-width: $second-breakpoint) {
-                width: 82%;
+                width: 90%;
             }
             
         }
@@ -265,10 +289,15 @@ body{
     /* Position et couleur des ettiquettes "Nex" */
 
     &__new{
+        margin-left: 80%;
         position: relative;
         bottom: 85%;
-        left: 82%;
         padding: 2%;
+        @media (max-width: $second-breakpoint) {
+            position: relative;
+            right: 4%;
+            bottom: 89%;
+        }
         &--color{
             background-color: $color-tertiary;
             color: darken($color: $color-tertiary, $amount: 40%);
