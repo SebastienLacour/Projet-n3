@@ -9,6 +9,7 @@
     &--size{
         height: 70px;
         width: 180%;
+        min-width: 100%
     }
     
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
