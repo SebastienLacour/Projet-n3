@@ -4,6 +4,9 @@
 
     width: 100%;
     margin-left: 5%;
+    @media (max-width: $second-breakpoint) {
+        width: 88% !important;
+    }
     /* Position du titre des Filtres */
 
     &__title{
