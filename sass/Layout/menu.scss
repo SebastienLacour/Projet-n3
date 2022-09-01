@@ -1,10 +1,6 @@
 
 /* Mise en Page des Menus */
-.bloc-page-menu{
-    @media (max-width: $second-breakpoint) {
-    max-width: 100% !important;
-    }
-}
+
 /* Position, Couleur et Bordure de la Section des Menus */
 .menu{
     display: flex;
@@ -19,7 +15,6 @@
         flex-direction: column;
         margin-top: -110px;
         position: relative;
-        right: 0.1%;
     }
 
     /* Taille des Menus */
@@ -33,7 +28,8 @@
         }
         @media (max-width: $second-breakpoint){
             height: 1400px;
-            width: 101%;
+            width: 100% !important;
+            max-width: 100%;
         }
     }
 
@@ -159,7 +155,7 @@
         @media (max-width: $second-breakpoint) {
             display: flex;
             justify-content: space-between;
-            width: 140%;
+            width: 100%;
         }
     }
 
@@ -180,6 +176,8 @@
             display: flex;
             font-size: 30px;
             margin-top: 20px;
+            position: relative;
+            right: 8%;
         }
     }
 
@@ -189,6 +187,7 @@
         background-color: $background-darker;
         border: none;
         border-radius: $radius;
+        width: 70%;
     }
 
     /* Position du texte des cartes du Menu */
