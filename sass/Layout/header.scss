@@ -16,7 +16,7 @@
             width: 117% !important;
         }
         @media (max-width: $second-breakpoint) {
-            width: 131% !important;
+            width: 107% !important;
         }
     }
 
@@ -26,6 +26,9 @@
         height: 120px;
         width: auto;
         margin-left: 10%;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            height: 80px;
+        }
     }
 
     /* Couleur et Position de la Flèche pour Revenir à la Page d'Accueil */
@@ -63,11 +66,11 @@
             height: 100px;
             width: 40% !important;
         @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-                height: 80px;
+                height: 60px;
                 width: 50% !important;
         }
         @media(max-width: $second-breakpoint) {
-                height: 35px;
+                height: 40px;
                 width: 60% !important;
         }
     }
@@ -76,7 +79,7 @@
     /* Position et Taille du Logo de la Page d'Accueil */
 
     &__logo{
-            margin-left: 30%;
+            margin-left: 8%;
             padding: 5px 10px 0 10px;
             margin-bottom: 2%;
             &--size{
