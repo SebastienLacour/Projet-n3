@@ -1,9 +1,0 @@
-@function darkness-shift($background-color){
-    @if  (lightness($background-color > 10%)) {
-        @return darken($background-color, 10%);
-    }
-    @else
-    {
-        @return lighten($background-color, 10%);
-    }
-}

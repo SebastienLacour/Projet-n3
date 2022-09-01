@@ -23,7 +23,7 @@ body{
         max-width: 90% !important;
     }
     @media (max-width: $second-breakpoint){
-        max-width: 80% !important;
+        max-width: 100% !important;
     }
 }
 
@@ -58,7 +58,7 @@ body{
             width: 111%;
         }
         @media (max-width: $second-breakpoint) {
-            width: 125%;
+            width: 101%;
         }
     }
 
@@ -90,7 +90,7 @@ body{
     text-align: center;
     background: $background-darker;
     height: 240px;
-    width: 100.5%;
+    width: 100%;
     padding-left: 6%;
     margin-right: -0.5%;
     position: relative;
@@ -100,7 +100,7 @@ body{
     }
     @media (max-width: $second-breakpoint) {
         text-align: center;
-        width: 119% !important;
+        width: 96% !important;
     }
     /* Mise en page du titre de la page d'accueil */
 
@@ -175,14 +175,14 @@ body{
     }
     &--size{
         height: 800px;
-        width: 106.5% !important;
+        width: 106% !important;
         @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             height: 1300px;
             width: 111% !important;
         }
         @media(max-width: $second-breakpoint) {
             height: 1450px;
-            width: 125% !important;
+            width: 101% !important;
         }
     }
     
@@ -243,7 +243,7 @@ body{
         /* Taille des Cartes Restaurant */
 
         &--size{
-            width: 40%;
+            width: 45%;
             height: 250px;
             @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
                 width: 72%;
