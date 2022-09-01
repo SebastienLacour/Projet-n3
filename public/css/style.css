@@ -294,13 +294,18 @@ h2 {
 }
 @media (max-width: 599px) {
   .title__bloc {
-    width: 131% !important;
+    width: 107% !important;
   }
 }
 .title__menu {
   height: 120px;
   width: auto;
   margin-left: 10%;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .title__menu {
+    height: 80px;
+  }
 }
 .title__arrow {
   color: black;
@@ -340,18 +345,18 @@ h2 {
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .title__menu-logo--size {
-    height: 80px;
+    height: 60px;
     width: 50% !important;
   }
 }
 @media (max-width: 599px) {
   .title__menu-logo--size {
-    height: 35px;
+    height: 40px;
     width: 60% !important;
   }
 }
 .title__logo {
-  margin-left: 30%;
+  margin-left: 8%;
   padding: 5px 10px 0 10px;
   margin-bottom: 2%;
 }
@@ -370,7 +375,7 @@ h2 {
   color: white;
   text-align: left;
   height: 220px;
-  width: 106% !important;
+  width: 107% !important;
   padding-left: 70px;
   padding-top: 45px;
   margin-right: -5%;
@@ -388,8 +393,9 @@ h2 {
 }
 @media (max-width: 599px) {
   .footer {
-    width: 150% !important;
-    margin-left: 5.5%;
+    width: 100% !important;
+    max-width: 89%;
+    margin-left: 5%;
   }
 }
 .footer__menu {
@@ -404,7 +410,10 @@ h2 {
 }
 @media (max-width: 599px) {
   .footer__menu {
+    max-width: 88%;
     margin-top: 1000px;
+    position: relative;
+    right: 6% !important;
   }
 }
 .footer__logo {
@@ -471,7 +480,7 @@ h2 {
 @media (max-width: 599px) {
   .background {
     height: 400px !important;
-    width: 125.5% !important;
+    width: 102% !important;
     position: relative;
     bottom: 60px;
     right: 1%;
@@ -479,12 +488,6 @@ h2 {
 }
 
 /* Mise en Page des Menus */
-@media (max-width: 599px) {
-  .bloc-page-menu {
-    max-width: 100% !important;
-  }
-}
-
 /* Position, Couleur et Bordure de la Section des Menus */
 .menu {
   display: flex;
@@ -523,7 +526,6 @@ h2 {
     flex-direction: column;
     margin-top: -110px;
     position: relative;
-    right: 0.1%;
   }
 }
 .menu--size {
@@ -539,7 +541,8 @@ h2 {
 @media (max-width: 599px) {
   .menu--size {
     height: 1400px;
-    width: 101%;
+    width: 100% !important;
+    max-width: 100%;
   }
 }
 .menu__flex {
@@ -675,7 +678,7 @@ h2 {
   .menu__title-bloc {
     display: flex;
     justify-content: space-between;
-    width: 140%;
+    width: 100%;
   }
 }
 .menu__title {
@@ -697,12 +700,15 @@ h2 {
     display: flex;
     font-size: 30px;
     margin-top: 20px;
+    position: relative;
+    right: 8%;
   }
 }
 .menu__focus {
   background-color: #f2f2f2;
   border: none;
   border-radius: 30px;
+  width: 70%;
 }
 .menu__words {
   display: block;
@@ -925,6 +931,11 @@ h2 {
   /* Position et mise en gras des noms des filtres */
   /* Placement des différentes icones des filtres */
 }
+@media (max-width: 599px) {
+  .filters {
+    width: 88% !important;
+  }
+}
 .filters__title {
   text-align: left;
 }
@@ -1007,12 +1018,6 @@ h2 {
   color: gray;
 }
 
-/* Mise en page du titre de la page d'accueil */
-.title__bloc {
-  width: auto;
-  display: flex;
-}
-
 /* Centrer la Page */
 body {
   max-width: 94%;
@@ -1028,7 +1033,7 @@ body {
 }
 @media (max-width: 599px) {
   body {
-    max-width: 80% !important;
+    max-width: 100% !important;
   }
 }
 
@@ -1064,7 +1069,7 @@ body {
 }
 @media (max-width: 599px) {
   .title__information {
-    width: 125%;
+    width: 101%;
   }
 }
 .title__position {
@@ -1092,10 +1097,11 @@ body {
   text-align: center;
   background: #f2f2f2;
   height: 240px;
-  width: 100.5%;
+  width: 100%;
   padding-left: 6%;
   margin-right: -0.5%;
   position: relative;
+  /* Mise en page du titre de la page d'accueil */
   /* Taille et Position du titre de l'intro */
   /* Taille et Position de la phrase de l'intro */
   /* Taille, Couleur et Position du boutton "Explorer nos restaurant" */
@@ -1109,8 +1115,12 @@ body {
 @media (max-width: 599px) {
   .intro {
     text-align: center;
-    width: 119% !important;
+    width: 96% !important;
   }
+}
+.intro .title__bloc {
+  width: auto;
+  display: flex;
 }
 .intro__title {
   font-size: 220%;
@@ -1201,7 +1211,7 @@ body {
 }
 .restaurant--size {
   height: 800px;
-  width: 106.5% !important;
+  width: 106% !important;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant--size {
@@ -1212,7 +1222,7 @@ body {
 @media (max-width: 599px) {
   .restaurant--size {
     height: 1450px;
-    width: 125% !important;
+    width: 101% !important;
   }
 }
 .restaurant__title {
@@ -1274,7 +1284,7 @@ body {
   }
 }
 .restaurant__card--size {
-  width: 40%;
+  width: 45%;
   height: 250px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
