@@ -32,6 +32,11 @@ h2 {
   font-size: 30px;
 }
 
+:focus {
+  border: none;
+  outline: none;
+}
+
 /* Mise en place de l'animation loading spinner au chargement de la page */
 .loading-spinner {
   position: absolute;
@@ -207,9 +212,9 @@ h2 {
   box-shadow: 3px 3px 3px #cccccc;
 }
 .filters__btn--size {
+  width: 350px;
   height: 70px;
-  width: 180%;
-  min-width: 100%;
+  margin-top: 25px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .filters__btn {
@@ -217,10 +222,12 @@ h2 {
     margin-top: 25px;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .filters__btn {
-    width: 350px;
-    margin-top: 25px;
+    height: 70px;
+    width: 180%;
+    min-width: 100%;
+    margin-right: 50%;
   }
 }
 
@@ -282,19 +289,22 @@ h2 {
 .title__bloc {
   box-shadow: 0px 0px 7px #666666;
   border-right: none;
-  width: 112.5% !important;
-  margin: -2% -0.5% -2% -6%;
+  height: 70px;
+  width: 104% !important;
   padding-top: 2%;
+  margin-top: -13px;
   z-index: 1;
+  position: relative;
+  right: 2%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .title__bloc {
-    width: 117% !important;
+    width: 103% !important;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .title__bloc {
-    width: 107% !important;
+    width: 102% !important;
   }
 }
 .title__menu {
@@ -304,14 +314,19 @@ h2 {
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .title__menu {
-    height: 80px;
+    height: 150px;
+  }
+}
+@media (min-width: 968px) {
+  .title__menu {
+    height: 160px;
   }
 }
 .title__arrow {
   color: black;
   position: relative;
-  right: 18%;
-  bottom: 22px;
+  bottom: 0px;
+  right: 10%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .title__arrow {
@@ -320,12 +335,16 @@ h2 {
     right: 12%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .title__arrow {
     position: relative;
-    bottom: 0px;
-    right: 10%;
+    right: 18%;
+    bottom: 15px;
   }
+}
+.title__menu-logo {
+  position: relative;
+  top: 15px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .title__menu-logo {
@@ -333,15 +352,9 @@ h2 {
     top: 10px;
   }
 }
-@media (max-width: 599px) {
-  .title__menu-logo {
-    position: relative;
-    top: 15px;
-  }
-}
 .title__menu-logo--size {
-  height: 100px;
-  width: 40% !important;
+  height: 40px;
+  width: 60%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .title__menu-logo--size {
@@ -349,23 +362,43 @@ h2 {
     width: 50% !important;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .title__menu-logo--size {
-    height: 40px;
-    width: 60% !important;
+    height: 80px;
+    width: 40% !important;
   }
 }
 .title__logo {
-  margin-left: 8%;
+  margin-left: 18%;
   padding: 5px 10px 0 10px;
   margin-bottom: 2%;
 }
-.title__logo--size {
-  width: 40%;
+@media (min-width: 599px) and (max-width: 968px) {
+  .title__logo {
+    margin-left: 25%;
+  }
 }
-@media (max-width: 599px) {
-  .title__logo--size {
+@media (min-width: 968px) {
+  .title__logo {
+    margin-left: 30%;
+    position: relative;
+    bottom: 20px;
+  }
+}
+.title__logo--size {
+  width: 60%;
+  height: 60px;
+}
+@media (min-width: 599px) and (max-width: 968px) {
+  .title__logo {
+    width: 50%;
+    height: 60px;
+  }
+}
+@media (min-width: 968px) {
+  .title__logo {
     width: 40%;
+    height: 80px;
   }
 }
 
@@ -374,14 +407,10 @@ h2 {
   background-color: #262626;
   color: white;
   text-align: left;
-  height: 220px;
-  width: 107% !important;
-  padding-left: 70px;
-  padding-top: 45px;
-  margin-right: -5%;
-  margin-bottom: -10px;
+  width: 103%;
+  height: 200px;
   position: relative;
-  right: 5%;
+  right: 2%;
   /* Taille du menu du Footer */
   /* Taille du Logo */
   /* Position et Mise en page de la liste a puce du Footer */
@@ -389,52 +418,51 @@ h2 {
 @media (min-width: 599px) and (max-width: 968px) {
   .footer {
     width: 102%;
+    height: 250px !important;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .footer {
+    height: 250px !important;
     width: 100% !important;
-    max-width: 89%;
-    margin-left: 5%;
+    padding-left: 20px;
+    padding-top: 15px;
+    margin-right: -5%;
+    margin-bottom: -10px;
+    position: relative;
+    right: 5%;
   }
 }
 .footer__menu {
-  height: 100%;
-  width: 106% !important;
-  margin-top: 620px;
+  width: 110%;
 }
-@media (min-width: 599px) and (max-width: 968px) {
+@media (min-width: 968px) {
   .footer__menu {
-    margin-top: 1050px;
-  }
-}
-@media (max-width: 599px) {
-  .footer__menu {
-    max-width: 88%;
-    margin-top: 1000px;
-    position: relative;
-    right: 6% !important;
+    height: 100%;
+    width: 101% !important;
   }
 }
 .footer__logo {
-  margin-left: 2.2%;
-  width: 250px !important;
-}
-@media (max-width: 599px) {
-  .footer__logo {
-    width: 40% !important;
-    margin-left: -9%;
-  }
+  padding-top: 20px;
+  margin-left: 40px !important;
+  width: 40%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
-  .footer__list {
-    margin-left: -2%;
+  .footer__logo {
+    width: 30%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
+  .footer__logo {
+    width: 20%;
+  }
+}
+.footer__list {
+  margin-top: 2%;
+}
+@media (min-width: 968px) {
   .footer__list {
-    position: relative;
-    right: 18%;
+    margin-top: 5px;
   }
 }
 .footer__choice {
@@ -452,38 +480,24 @@ h2 {
 }
 
 /* Ajustement des règles pour le footer de la page "Menu La Note Enchantée */
-#footer-enchanted {
-  margin-top: 680px;
-}
-@media (min-width: 599px) and (max-width: 968px) {
-  #footer-enchanted {
-    margin-top: 1200px !important;
-  }
-}
-@media (max-width: 599px) {
-  #footer-enchanted {
-    margin-top: 1150px !important;
-  }
-}
-
 /* Position et taille de l'image de fond des pages de menu */
 .background {
-  height: 500px;
-  width: 106.9%;
-  margin-left: -1%;
+  height: 400px;
+  width: 104%;
+  position: relative;
+  bottom: 60px;
+  right: 2%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .background {
-    width: 112% !important;
+    width: 112%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .background {
-    height: 400px !important;
-    width: 102% !important;
-    position: relative;
-    bottom: 60px;
-    right: 1%;
+    height: 500px;
+    width: 103% !important;
+    margin-left: -1%;
   }
 }
 
@@ -495,8 +509,9 @@ h2 {
   align-items: center;
   border-radius: 25px 25px 0 0;
   background-color: #f2f2f2;
-  position: absolute;
-  top: 60%;
+  margin-top: -110px;
+  position: relative;
+  right: 2%;
   /* Taille des Menus */
   /* Positionnement des cartes de chaques sous parties (Entrées, Plats, Desserts) */
   /* Positionnement des deux premieres cartes des Entrées du menu "La Note enchantée" */
@@ -520,48 +535,54 @@ h2 {
   /* Position de l'icone 'check' pour les cartes des Entrée du menu La Note Enchantée */
   /* Règles pour le boutton 'Commandez' */
 }
-@media (max-width: 599px) {
+@media (min-width: 599px) and (max-width: 968px) {
   .menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: -110px;
     position: relative;
+    left: -1%;
+  }
+}
+@media (min-width: 968px) {
+  .menu {
+    position: absolute;
+    top: 60%;
+    left: 0%;
   }
 }
 .menu--size {
-  height: 800px;
-  width: 99.8%;
+  height: 1200px;
+  width: 104%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu--size {
     height: 1250px;
-    width: 100%;
+    width: 102%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu--size {
-    height: 1400px;
-    width: 100% !important;
-    max-width: 100%;
+    height: 800px;
+    width: 100%;
   }
 }
 .menu__flex {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__flex {
     flex-direction: column;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__flex {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 .menu__subflex-1 {
+  margin-left: 1%;
   width: 100%;
-  margin-right: 7px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__subflex-1 {
@@ -570,15 +591,14 @@ h2 {
     margin-bottom: 1%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__subflex-1 {
-    margin-left: 1%;
     width: 100%;
+    margin-right: 7px;
   }
 }
 .menu__subflex-2 {
   width: 100%;
-  margin-left: 5px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__subflex-2 {
@@ -586,87 +606,89 @@ h2 {
     margin-left: 7px;
   }
 }
-@media (max-width: 968px) {
+@media (min-width: 968px) {
   .menu__subflex-2 {
     width: 100%;
+    margin-left: 5px;
   }
 }
 .menu__subflex-card--size {
-  width: 95%;
+  width: 100%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__subflex-card--size {
     width: 90%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__subflex-card--size {
-    width: 100%;
+    width: 95%;
   }
 }
 .menu__subflex-card--margin {
-  margin-bottom: 50px !important;
+  margin-bottom: 3% !important;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__subflex-card--margin {
     margin-bottom: 3% !important;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__subflex-card--margin {
-    margin-bottom: 3% !important;
+    margin-bottom: 50px !important;
   }
 }
 .menu__starters {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin-left: 4%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__starters {
     width: 90%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__starters {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    margin-left: 4%;
+    width: 90%;
   }
 }
 .menu__dishes {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin-left: 4%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__dishes {
     width: 90%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__dishes {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    margin-left: 4%;
+    width: 90%;
   }
 }
 .menu__desserts {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin-left: 4%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__desserts {
     width: 90%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__desserts {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    margin-left: 4%;
+    width: 90%;
   }
 }
 .menu__title-bloc {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 @media (min-width: 968px) and (max-width: 599px) {
@@ -674,20 +696,18 @@ h2 {
     display: flex;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__title-bloc {
     display: flex;
-    justify-content: space-between;
     width: 100%;
   }
 }
 .menu__title {
   display: inline-block;
   white-space: nowrap;
-  margin-right: 30%;
-  margin-left: 20%;
-  margin-top: 1%;
-  font-size: 40px;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 5%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__title {
@@ -695,13 +715,11 @@ h2 {
     margin-left: 10%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__title {
-    display: flex;
-    font-size: 30px;
-    margin-top: 20px;
-    position: relative;
-    right: 8%;
+    margin-left: 15%;
+    margin-top: 1%;
+    font-size: 40px;
   }
 }
 .menu__focus {
@@ -714,16 +732,12 @@ h2 {
   display: block;
   flex-direction: column;
   text-align: left;
-  margin-top: 8px;
+  margin-left: 2%;
+  position: relative;
+  top: 8px;
   /* Taille du Texte des Cartes du Menu */
 }
-@media (max-width: 599px) {
-  .menu__words {
-    margin-left: 2%;
-  }
-}
 .menu__words--size {
-  width: 100%;
   min-width: 10%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
@@ -733,12 +747,11 @@ h2 {
 }
 .menu__subflex-words {
   display: block;
-  margin-top: 6px;
   margin-left: 10px;
   position: relative;
 }
 .menu__subtitle {
-  margin-right: 5%;
+  margin-right: 75%;
   text-transform: uppercase;
   font-weight: normal;
   font-size: 24px;
@@ -753,39 +766,41 @@ h2 {
   position: absolute;
   bottom: -5px;
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__subtitle {
-    margin-right: 75%;
+    margin-right: 5%;
   }
 }
 .menu__icone {
   display: block;
-  position: relative;
-  top: 28px;
-  width: 100px;
+  top: 2.5%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__icone {
     position: relative;
-    top: 20px;
     right: 5%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__icone {
-    position: absolute;
-    left: 80%;
+    position: relative;
+    top: 28px;
+    right: 20%;
+    width: 100px;
+  }
+}
+.menu__title-icone {
+  position: relative;
+  top: 28px;
+}
+@media (min-width: 968px) {
+  .menu__title-icone {
+    top: 0;
+    left: 27px;
   }
 }
 .menu__solid {
   color: transparent;
-  position: relative;
-  right: 28px;
-}
-@media (min-width: 599px) and (max-width: 968px) {
-  .menu__solid {
-    position: relative;
-  }
 }
 .menu__name {
   display: block;
@@ -826,7 +841,7 @@ h2 {
 }
 .menu__price {
   display: block;
-  margin-top: 35px;
+  margin-top: 38px;
   font-size: 14px;
   position: relative;
 }
@@ -835,21 +850,15 @@ h2 {
     margin-left: 20%;
   }
 }
-@media (max-width: 599px) {
-  .menu__price {
-    margin-right: 4%;
-    margin-top: 38px;
-  }
-}
 .menu__check-bloc {
   background: #99E2D0;
   border-radius: 0 30px 30px 0;
   text-align: center;
-  width: 20%;
+  position: relative;
+  left: 2.4%;
   transform: scaleX(0);
   transform-origin: right;
-  position: relative;
-  left: 8%;
+  width: 20%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__check-bloc {
@@ -857,10 +866,11 @@ h2 {
     left: 3.1%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__check-bloc {
+    width: 20%;
     position: relative;
-    left: 2.4%;
+    left: 8%;
   }
 }
 .menu__check {
@@ -870,7 +880,7 @@ h2 {
 }
 .menu__check-subflex {
   position: relative;
-  left: 3%;
+  left: 2.1%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .menu__check-subflex {
@@ -878,10 +888,10 @@ h2 {
     left: 2.3%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .menu__check-subflex {
     position: relative;
-    left: 2.1%;
+    left: 3%;
   }
 }
 .menu__command {
@@ -907,23 +917,22 @@ h2 {
 
 /* Hauteur pour la page du menu La note Enchantée */
 #menu-enchanted {
-  height: 860px;
+  height: 1310px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   #menu-enchanted {
-    height: 1450px !important;
+    height: 1450px;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   #menu-enchanted {
-    height: 1310px !important;
+    height: 900px !important;
   }
 }
 
 /* Mise en Place des Filtres de la page d'accueil */
 .filters {
   width: 100%;
-  margin-left: 5%;
   /* Position du titre des Filtres */
   /* Position des Filtres en ligne */
   /* Ajustement de la Position individuelle des Filtres */
@@ -931,38 +940,42 @@ h2 {
   /* Position et mise en gras des noms des filtres */
   /* Placement des différentes icones des filtres */
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .filters {
-    width: 88% !important;
+    width: 80% !important;
   }
 }
 .filters__title {
   text-align: left;
+  margin-left: 12%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .filters__title {
     text-align: center;
+    margin-left: 8%;
   }
 }
 .filters__list {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   list-style-type: none;
-  position: relative;
-  right: 15%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .filters__list {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 10%;
+    margin-right: 4%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .filters__list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 120%;
+    position: relative;
+    right: 120px !important;
   }
 }
 .filters__choice {
@@ -983,20 +996,15 @@ h2 {
 .filters__name {
   font-weight: bold;
   font-size: 15px;
+  margin-left: 10%;
   position: relative;
 }
-@media (max-width: 599px) {
-  .filters__name-second {
-    position: relative;
-    right: 3%;
-  }
-}
 .filters__icone {
-  margin-right: 5%;
+  margin-left: 5%;
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .filters__icone {
-    margin-left: 5px;
+    margin-right: 5%;
   }
 }
 .filters__icone-mobile {
@@ -1004,13 +1012,11 @@ h2 {
   color: gray;
 }
 .filters__icone-list {
-  position: relative;
   color: gray;
 }
-@media (max-width: 599px) {
-  .filters__icone-list {
+@media (min-width: 968px) {
+  .filters {
     position: relative;
-    right: 3%;
   }
 }
 .filters__icone-store {
@@ -1020,20 +1026,20 @@ h2 {
 
 /* Centrer la Page */
 body {
-  max-width: 94%;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  max-width: 100% !important;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   body {
     max-width: 90% !important;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   body {
-    max-width: 100% !important;
+    max-width: 94%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -1049,27 +1055,38 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   /*Fond et Positionnement du lieu de Recherche */
   /* Centrer le lieu  de la Recherche */
   /* Taille et Position de l'icone */
 }
+@media (min-width: 599px) and (max-width: 968px) {
+  .title {
+    text-align: center;
+  }
+}
 .title--size {
   width: 100%;
 }
+.title__bloc {
+  width: auto;
+  display: flex;
+}
 .title__information {
-  width: 106.5%;
+  width: 105%;
   background: #e6e6e6;
-  margin-top: 2%;
-  margin-right: -0.5%;
+  position: relative;
+  right: 3%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .title__information {
-    width: 111%;
+    width: 104%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .title__information {
-    width: 101%;
+    width: 103%;
+    margin-right: -0.5%;
   }
 }
 .title__position {
@@ -1079,29 +1096,27 @@ body {
   margin-left: 1%;
 }
 .title__location--size {
-  font-size: 200%;
+  font-size: 120%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .title__location--size {
     font-size: 150%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .title__location--size {
-    font-size: 120%;
+    font-size: 200%;
   }
 }
 
 /* Taille et Position de l'intro */
 .intro {
   text-align: center;
+  width: 102%;
+  height: 220px;
   background: #f2f2f2;
-  height: 240px;
-  width: 100%;
-  padding-left: 6%;
-  margin-right: -0.5%;
+  padding-top: 10px;
   position: relative;
-  /* Mise en page du titre de la page d'accueil */
   /* Taille et Position du titre de l'intro */
   /* Taille et Position de la phrase de l'intro */
   /* Taille, Couleur et Position du boutton "Explorer nos restaurant" */
@@ -1109,23 +1124,24 @@ body {
 @media (min-width: 599px) and (max-width: 968px) {
   .intro {
     text-align: center;
-    width: 105% !important;
+    width: 100% !important;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .intro {
     text-align: center;
-    width: 96% !important;
+    height: 260px !important;
+    width: 95% !important;
+    padding-left: 6%;
+    margin-right: -0.5%;
+    position: relative;
   }
 }
-.intro .title__bloc {
-  width: auto;
-  display: flex;
-}
 .intro__title {
-  font-size: 220%;
-  margin-top: 0.1%;
-  padding-top: 20px;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  font-size: 150%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .intro__title {
@@ -1135,16 +1151,18 @@ body {
     margin-left: 10%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .intro__title {
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
-    font-size: 150%;
+    font-size: 220%;
+    margin-top: 0.1%;
+    padding-top: 20px;
   }
 }
 .intro__paragraph {
-  font-size: 200%;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  font-size: 100%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .intro__paragraph {
@@ -1152,12 +1170,9 @@ body {
     text-align: center;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .intro__paragraph {
-    width: 80%;
-    margin-left: 10%;
-    text-align: center;
-    font-size: 100%;
+    font-size: 200%;
   }
 }
 .intro__btn {
@@ -1181,7 +1196,6 @@ body {
 .restaurant {
   display: flex;
   flex-direction: column;
-  margin-top: 5%;
   text-align: left;
   background: #f2f2f2;
   /* Position du Titre Restaurant */
@@ -1191,7 +1205,7 @@ body {
   /* Position du Texte de la Carte */
   /* Bordure et Taille de l'image de la Carte */
   /* Taille du nom des cartes en responsive */
-  /* Position et couleur des ettiquettes "Nex" */
+  /* Position et couleur des ettiquettes "New" */
   /* Mise en Place du Boutton pour le Focus du coeur */
   /* Position de l'icone sans focus */
   /* Position de l'icone qui changera de couleur avec le focus */
@@ -1200,29 +1214,29 @@ body {
   .restaurant {
     display: flex;
     flex-direction: column;
-    margin-bottom: 130px;
+    margin-top: 50px;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .restaurant {
     display: flex;
-    flex-direction: column;
+    margin-top: 5%;
   }
 }
 .restaurant--size {
-  height: 800px;
-  width: 106% !important;
+  height: 1300px;
+  width: 101% !important;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant--size {
-    height: 1300px;
-    width: 111% !important;
+    height: 1400px;
+    width: 101% !important;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .restaurant--size {
-    height: 1450px;
-    width: 101% !important;
+    height: 800px;
+    width: 100% !important;
   }
 }
 .restaurant__title {
@@ -1231,13 +1245,13 @@ body {
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant__title {
     text-align: center;
-    margin-right: 6%;
+    margin-right: 10%;
   }
 }
 .restaurant__menu {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 7%;
+  text-align: left;
+  position: relative;
+  right: 6%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant__menu {
@@ -1247,22 +1261,20 @@ body {
     margin-left: -2%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .restaurant__menu {
-    flex-direction: column;
-    text-align: left;
-    position: relative;
-    right: 6%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15%;
   }
 }
 .restaurant__card {
-  margin-top: 80px !important;
-  margin-left: 5%;
+  margin-top: 30px;
+  margin-left: 10%;
+  text-align: left;
   background-color: white;
   border: solid 0.1px;
   border-radius: 30px;
-  position: relative;
-  right: 4%;
   border-radius: 30px;
   border: none;
   box-shadow: 3px 3px 3px #cccccc;
@@ -1276,30 +1288,33 @@ body {
     left: 5%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .restaurant__card {
-    margin-top: 80px;
-    margin-left: 10%;
-    text-align: left;
+    margin-top: 80px !important;
+    margin-left: 5%;
+    position: relative;
+    right: 4%;
   }
 }
 .restaurant__card--size {
-  width: 45%;
+  width: 90%;
   height: 250px;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant__card--size {
-    width: 72%;
+    width: 90%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .restaurant__card--size {
-    width: 90%;
+    width: 45%;
+    height: 250px;
   }
 }
 .restaurant__description {
   display: flex;
   justify-content: space-between;
+  height: 50px;
 }
 .restaurant__words {
   display: flex;
@@ -1317,16 +1332,24 @@ body {
   font-size: 17px;
 }
 .restaurant__new {
-  margin-left: 80%;
+  display: block;
+  text-align: center;
+  padding: 5px;
   position: relative;
-  bottom: 85%;
-  padding: 2%;
+  left: 75%;
+  bottom: 220px;
 }
-@media (max-width: 599px) {
+@media (min-width: 599px) and (max-width: 968px) {
   .restaurant__new {
     position: relative;
-    right: 4%;
-    bottom: 89%;
+    left: 80%;
+  }
+}
+@media (min-width: 968px) {
+  .restaurant__new {
+    position: relative;
+    bottom: 85%;
+    padding: 2%;
   }
 }
 .restaurant__new--color {
@@ -1334,8 +1357,8 @@ body {
   color: #278870;
 }
 .restaurant__new--size {
-  width: 50%;
-  height: 50%;
+  width: 75px;
+  height: 20px;
 }
 .restaurant__focus {
   background-color: white;
@@ -1343,38 +1366,40 @@ body {
   border: none;
 }
 .restaurant__icone {
-  margin-left: 35%;
-  margin-top: 0.5%;
-  position: relative;
-  top: 10px;
-  right: 9px;
+  margin-top: 1%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant__icone {
     margin-top: 1%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .restaurant__icone {
-    margin-top: 1%;
+    margin-left: 35%;
+    margin-top: 0.5%;
+    position: relative;
+    top: 10px;
+    right: 9px;
   }
 }
 .restaurant__solid {
+  margin-top: 1%;
   color: transparent;
-  margin-left: 35%;
-  margin-top: 0.5%;
   position: relative;
-  bottom: 15px;
-  right: 9px;
+  right: 50%;
 }
 @media (min-width: 599px) and (max-width: 968px) {
   .restaurant__solid {
     margin-top: 1%;
   }
 }
-@media (max-width: 599px) {
+@media (min-width: 968px) {
   .restaurant__solid {
-    margin-top: 1%;
+    margin-left: 35%;
+    margin-top: 0.5%;
+    position: relative;
+    bottom: 15px;
+    right: 9px;
   }
 }
 
