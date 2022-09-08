@@ -8,28 +8,32 @@
     align-items: center;
     border-radius: 25px 25px 0 0;
     background-color: $background-darker;
-    position: absolute;
-    top: 60%;
-    @media (max-width: $second-breakpoint) {
-        display: flex;
-        flex-direction: column;
-        margin-top: -110px;
+    margin-top: -110px;
+    position: relative;
+    right: 2%;
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         position: relative;
+        left: -1%;
+    }
+
+    @media (min-width: $first-breakpoint) {
+        position: absolute;
+        top: 60%;
+        left: 0%;
     }
 
     /* Taille des Menus */
 
     &--size{
-        height: 800px;
-        width: 99.8%;
+        height: 1200px;
+        width: 104%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             height: 1250px;
-            width: $width;
+            width: 102%;
         }
-        @media (max-width: $second-breakpoint){
-            height: 1400px;
-            width: 100% !important;
-            max-width: 100%;
+        @media (min-width: $first-breakpoint) {
+            height: 800px;
+            width: $width;
         }
     }
 
@@ -37,28 +41,30 @@
 
     &__flex{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             flex-direction: column;
         }
-        @media (max-width: $second-breakpoint) {
-            flex-direction: column;
+        @media (min-width: $first-breakpoint) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 
     /* Positionnement des deux premieres cartes des Entrées du menu "La Note enchantée" */
 
     &__subflex-1{
+        margin-left: 1%;
         width: $width;
-        margin-right: 7px;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: $menu-width;
             margin-left: 1%;
             margin-bottom: 1%;
         }
-        @media (max-width: $second-breakpoint) {
-            margin-left: 1%;
+        @media (min-width: $first-breakpoint) {
             width: $width;
+            margin-right: 7px;
         }
     }
 
@@ -66,13 +72,13 @@
 
     &__subflex-2{
         width: $width;
-        margin-left: 5px;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: $menu-width !important;
             margin-left: 7px;
         }
-        @media (max-width: $first-breakpoint) {
+        @media (min-width: $first-breakpoint) {
             width: $width;
+            margin-left: 5px;
         }
     }
 
@@ -80,21 +86,21 @@
 
     &__subflex-card{
         &--size{
-            width: 95%;
+            width: $width;
             @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
                 width: $menu-width;
             }
-            @media (max-width: $second-breakpoint) {
-                width: $width;
+            @media (min-width: $first-breakpoint) {
+                width: 95%;
             }
         }
         &--margin{
-        margin-bottom: 50px !important;
+        margin-bottom: 3% !important;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             margin-bottom: 3% !important;
             }
-        @media (max-width: $second-breakpoint) {
-            margin-bottom: 3% !important;
+        @media (min-width: $first-breakpoint) {
+            margin-bottom: 50px !important;
         }
         }
     }
@@ -102,45 +108,45 @@
     /* Taille et Position de la Partie "Entrées" */
 
     &__starters{
-        width: $menu-width;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin-left: 4%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: $menu-width;
         }
-        @media (max-width: $second-breakpoint) {
-            display: flex;
-            flex-direction: column;
-            width: 85%;
-            margin-left: 4%;
+        @media (min-width: $first-breakpoint) {
+            width: $menu-width;
         }
     }
 
     /* Taille et Position de la Partie "Plats" */
 
     &__dishes{
-        width: $menu-width;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin-left: 4%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: $menu-width;
         }
-        @media (max-width: $second-breakpoint) {
-            display: flex;
-            flex-direction: column;
-            width: 85%;
-            margin-left: 4%;
+        @media (min-width: $first-breakpoint) {
+            width: $menu-width;
         }
     }
 
     /* Taille et Position de la Partie "Desserts" */
 
     &__desserts{
-        width: $menu-width;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin-left: 4%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: $menu-width;
         }
-        @media (max-width: $second-breakpoint) {
-            display: flex;
-            flex-direction: column;
-            width: 85%;
-            margin-left: 4%;
+        @media (min-width: $first-breakpoint) {
+            width: $menu-width;
         }
     }
 
@@ -148,14 +154,14 @@
 
     &__title-bloc{
         display: flex;
-        width: $width;
+        justify-content: space-between;
+        width: 100%;
         @media (min-width: $first-breakpoint) and (max-width: $second-breakpoint) {
             display: flex;
         }
-        @media (max-width: $second-breakpoint) {
+        @media (min-width: $first-breakpoint) {
             display: flex;
-            justify-content: space-between;
-            width: 100%;
+            width: $width;
         }
     }
 
@@ -164,20 +170,17 @@
     &__title{
         display: inline-block;
         white-space: nowrap;
-        margin-right: 30%;
-        margin-left: 20%;
-        margin-top: 1%;
-        font-size: 40px;
+        font-size: 30px;
+        margin-top: 20px;
+        margin-left: 5%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             font-size: 30px;
             margin-left: 10%;
         }
-        @media (max-width: $second-breakpoint) {
-            display: flex;
-            font-size: 30px;
-            margin-top: 20px;
-            position: relative;
-            right: 8%;
+        @media (min-width: $first-breakpoint) {
+            margin-left: 15%;
+            margin-top: 1%;
+            font-size: 40px;
         }
     }
 
@@ -196,15 +199,15 @@
         display: block;
         flex-direction: column;
         text-align: left;
-        margin-top: 8px;
-        @media (max-width: $second-breakpoint) {
-            margin-left: 2%;
+        margin-left: 2%;
+        position: relative;
+        top: 8px;
+        @media (min-width: $first-breakpoint) {
         }
 
         /* Taille du Texte des Cartes du Menu */
 
         &--size{
-            width: $width;
             min-width: 10%;
             @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
                 width: $width;
@@ -216,7 +219,6 @@
 
     &__subflex-words{
         display: block;
-        margin-top: 6px;
         margin-left: 10px;
         position: relative;
     }
@@ -224,7 +226,7 @@
     /* Position et Taille des Titres des Parties du Menu (Entrées, Plats, Desserts) */
 
     &__subtitle{
-        margin-right: 5%;
+        margin-right: 75%;
         text-transform: uppercase;
         font-weight: normal;
         font-size: 24px;
@@ -241,8 +243,8 @@
             bottom: -5px;
         }
         
-        @media (max-width: $second-breakpoint) {
-            margin-right: 75%;
+        @media (min-width: $first-breakpoint) {
+            margin-right: 5%;
         }
     }
 
@@ -250,17 +252,25 @@
 
     &__icone{
         display: block;
-        position: relative;
-        top: 28px;
-        width: 100px;
+        top: 2.5%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             position: relative;
-            top: 20px;
             right: 5%;
         }
-        @media (max-width: $second-breakpoint) {
-            position: absolute;
-            left: 80%;
+        @media (min-width: $first-breakpoint) {
+            position: relative;
+            top: 28px;
+            right: 20%;
+            width: 100px;
+        }
+    }
+
+    &__title-icone{
+        position: relative;
+        top: 28px;
+        @media (min-width: $first-breakpoint) {
+            top: 0;
+            left: 27px;
         }
     }
 
@@ -268,12 +278,6 @@
 
     &__solid{
         color: transparent;
-        position: relative;
-        right: 28px;
-        @media (min-width :$second-breakpoint) and (max-width: $first-breakpoint){
-            position: relative;
-        }
-        
     }
 
     /* Règles pour que le texte de la carte soit coupé avec une ellipse à la réduction de la carte */
@@ -317,15 +321,11 @@
 
     &__price{
         display: block;
-        margin-top: 35px;
+        margin-top: 38px;
         font-size: 14px;
         position: relative;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             margin-left: 20%;
-        }
-        @media (max-width: $second-breakpoint) {
-            margin-right: 4%;
-            margin-top: 38px;
         }
     }
 
@@ -335,18 +335,20 @@
         background: $color-tertiary;
         border-radius: 0 $radius $radius 0;
         text-align: center;
-        width: 20%;
+        position: relative;
+        left: 2.4%;
         transform: scaleX(0);
         transform-origin: right;
-        position: relative;
-        left: 8%;
+        width: 20%;
+       
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             position: relative;
             left: 3.1%;
         }
-        @media (max-width: $second-breakpoint) {
+        @media (min-width: $first-breakpoint) {
+            width: 20%;
             position: relative;
-            left: 2.4%;
+            left: 8%;
         }
     }
 
@@ -362,14 +364,14 @@
 
     &__check-subflex{
         position: relative;
-        left: 3%;
+        left: 2.1%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             position: relative;
             left: 2.3%;
         }
-        @media (max-width: $second-breakpoint) {
+        @media (min-width: $first-breakpoint) {
             position: relative;
-            left: 2.1%;
+            left: 3%;
         }
     }
 
@@ -387,12 +389,12 @@
 /* Hauteur pour la page du menu La note Enchantée */
 
 #menu-enchanted{
-    height: 860px;
+    height: 1310px;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-        height: 1450px !important;
+        height: 1450px;
     }
-    @media (max-width: $second-breakpoint) {
-        height: 1310px !important;
+    @media (min-width: $first-breakpoint) {
+        height: 900px !important;
     }
 }
 
