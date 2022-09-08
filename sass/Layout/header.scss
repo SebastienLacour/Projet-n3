@@ -8,15 +8,18 @@
     &__bloc{
         box-shadow: 0px 0px 7px darken($color: white, $amount: 60%);
         border-right: none;
-        width: 112.5% !important;
-        margin: -2% -0.5% -2% -6%;
+        height: 70px;
+        width: 104% !important;
         padding-top: 2%;
+        margin-top: -13px;
         z-index: 1;
+        position: relative;
+        right: 2%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            width: 117% !important;
+            width: 103% !important;
         }
-        @media (max-width: $second-breakpoint) {
-            width: 107% !important;
+        @media (min-width: $first-breakpoint) {
+            width: 102% !important;
         }
     }
 
@@ -27,7 +30,10 @@
         width: auto;
         margin-left: 10%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            height: 80px;
+            height: 150px;
+        }
+        @media (min-width: $first-breakpoint) {
+            height: 160px;
         }
     }
 
@@ -36,17 +42,17 @@
     &__arrow{
         color: black;
         position: relative;
-        right: 18%;
-        bottom: 22px;
+        bottom: 0px;
+        right: 10%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             position: relative;
             bottom: 10px;
             right: 12%;
         }
-        @media (max-width: $second-breakpoint) {
+        @media (min-width: $first-breakpoint) {
             position: relative;
-            bottom: 0px;
-            right: 10%;
+            right: 18%;
+            bottom: 15px;
         }
 
     }
@@ -54,39 +60,51 @@
     /* Position et Taille du logo du menu */
 
     &__menu-logo{
+        position: relative;
+        top: 15px;
        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             position: relative;
             top: 10px;
        }
-       @media (max-width: $second-breakpoint) {
-            position: relative;
-            top: 15px;
-       }
         &--size{
-            height: 100px;
-            width: 40% !important;
+            height: 40px;
+            width: 60%;
         @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
                 height: 60px;
                 width: 50% !important;
         }
-        @media(max-width: $second-breakpoint) {
-                height: 40px;
-                width: 60% !important;
+        @media (min-width: $first-breakpoint) {
+            height: 80px;
+            width: 40% !important;
         }
-    }
+        }
     }
 
     /* Position et Taille du Logo de la Page d'Accueil */
 
     &__logo{
-            margin-left: 8%;
+            margin-left: 18%;
             padding: 5px 10px 0 10px;
             margin-bottom: 2%;
+            @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+                margin-left: 25%;
+            }
+            @media (min-width: $first-breakpoint) {
+                margin-left: 30%;
+                position: relative;
+                bottom: 20px;
+            }
             &--size{
-                width: 40%;
-                @media(max-width: $second-breakpoint) {
+                width: 60%;
+                height: 60px;
+                }
+                @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+                    width: 50%;
+                    height: 60px;
+                }
+                @media (min-width: $first-breakpoint) {
                     width: 40%;
+                    height: 80px;
                 }
             }
-        }
 }
