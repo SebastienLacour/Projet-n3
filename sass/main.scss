@@ -14,23 +14,23 @@
 /* Centrer la Page */
 
 body{
-    max-width: 94%;
-    width: $width;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    max-width: 100% !important;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         max-width: 90% !important;
     }
-    @media (max-width: $second-breakpoint){
-        max-width: 100% !important;
+    @media (min-width: $first-breakpoint) {
+        max-width: 94%;
+        width: $width;
+        text-align: center;
+        margin: 0;
+        padding: 0;
     }
 }
+
 
 /* Disposition des éléments de la page en colonne*/
 
 .bloc-page{
-    
     width: 100% !important;
     display: flex;
     flex-direction: column;
@@ -39,26 +39,37 @@ body{
 
 /* Mise en Page du Header */
 
+   
 .title{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+        text-align: center;
+    }
     &--size{
         width: $width;
     }
 
+    &__bloc{
+        width: auto;
+        display: flex;
+}
+
     /*Fond et Positionnement du lieu de Recherche */
 
     &__information{
-        width: 106.5%;
+        width: 105%;
         background: darken($color: white, $amount: 10%);
-        margin-top: 2%;
-        margin-right: -0.5%;
+        position: relative;
+        right: 3%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            width: 111%;
+            width: 104%;
         }
-        @media (max-width: $second-breakpoint) {
-            width: 101%;
+        @media (min-width: $first-breakpoint) {
+            width: 103%;
+            margin-right: -0.5%;
         }
     }
 
@@ -73,12 +84,12 @@ body{
     &__location{
         margin-left: 1%;
         &--size{
-            font-size: 200%;
+            font-size: 120%;
             @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
                 font-size: 150%;
             }
-            @media (max-width: $second-breakpoint) {
-                font-size: 120%;
+            @media (min-width: $first-breakpoint) {
+                font-size: 200%;
             }
         }
     }
@@ -88,62 +99,58 @@ body{
 
 .intro{
     text-align: center;
+    width: 102%;
+    height: 220px;
     background: $background-darker;
-    height: 240px;
-    width: 100%;
-    padding-left: 6%;
-    margin-right: -0.5%;
+    padding-top: 10px;
     position: relative;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         text-align: center;
-        width: 105% !important;
+        width: 100% !important;
     }
-    @media (max-width: $second-breakpoint) {
+    @media (min-width: $first-breakpoint) {
         text-align: center;
-        width: 96% !important;
+        height: 260px !important;
+        width: 95% !important;
+        padding-left: 6%;
+        margin-right: -0.5%;
+        position: relative;
     }
-    /* Mise en page du titre de la page d'accueil */
-
-    .title{
-        &__bloc{
-            width: auto;
-            display: flex;
-    }
-}
 
     /* Taille et Position du titre de l'intro */
 
     &__title{
-        font-size: 220%;
-        margin-top: 0.1%;
-        padding-top: 20px;
+
+        width: 80%;
+        margin-left: 10%;
+        text-align: center;
+        font-size: 150%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: 80%;
             font-size: 180%;
             text-align: center;
             margin-left: 10%;
         }
-        @media (max-width: $second-breakpoint) {
-            width: 80%;
-            margin-left: 10%;
-            text-align: center;
-            font-size: 150%;
+        @media (min-width: $first-breakpoint) {
+            font-size: 220%;
+            margin-top: 0.1%;
+            padding-top: 20px;
         }
     }
 
     /* Taille et Position de la phrase de l'intro */
 
     &__paragraph{
-        font-size: 200%;
+        width: 80%;
+        margin-left: 10%;
+        text-align: center;
+        font-size: 100%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             font-size: 20px;
             text-align: center;
         }
-        @media (max-width: $second-breakpoint) {
-            width: 80%;
-            margin-left: 10%;
-            text-align: center;
-            font-size: 100%;
+        @media (min-width: $first-breakpoint) {
+            font-size: 200%;
         }
     }
 
@@ -161,28 +168,27 @@ body{
 .restaurant{
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
     text-align: left;
     background: $background-darker;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         display: flex;
         flex-direction: column;
-        margin-bottom: 130px;
+        margin-top: 50px;
     }
-    @media(max-width: $second-breakpoint) {
+    @media (min-width: $first-breakpoint) {
         display: flex;
-        flex-direction: column;
+        margin-top: 5%;
     }
     &--size{
-        height: 800px;
-        width: 106% !important;
+        height: 1300px;
+        width: 101% !important;
         @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            height: 1300px;
-            width: 111% !important;
-        }
-        @media(max-width: $second-breakpoint) {
-            height: 1450px;
+            height: 1400px;
             width: 101% !important;
+        }
+        @media (min-width: $first-breakpoint) {
+            height: 800px;
+            width: 100% !important;
         }
     }
     
@@ -192,16 +198,18 @@ body{
         margin-left: 9%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             text-align: center;
-            margin-right: 6%;
+            margin-right: 10%;
+        }
+        @media (min-width: $first-breakpoint) {
         }
     }
 
     /* Mise en Place par Flexbox des différentes Cartes restaurants */
 
     &__menu{
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 7%;
+        text-align: left;
+        position: relative;
+        right: 6%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             flex-direction: column;
             background: $background-darker;
@@ -209,24 +217,22 @@ body{
             margin-left: -2%;
             
         }
-        @media(max-width: $second-breakpoint) {
-            flex-direction: column;
-            text-align: left;
-            position: relative;
-            right: 6%;
+        @media(min-width: $first-breakpoint) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 15%;
         }
     }
         
     /* Position individuelles des Cartes et Couleur de Fond */
 
     &__card{
-        margin-top: 80px !important;
-        margin-left: 5%;
+        margin-top: 30px;
+        margin-left: 10%;
+        text-align: left;
         background-color: $background-color;
         border: solid 0.1px;
         border-radius: 30px;
-        position: relative;
-        right: 4%;
         @include border-btn-filter;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             margin-left: 65px;
@@ -234,22 +240,25 @@ body{
             position: relative;
             left: 5%;
         }
-        @media (max-width: $second-breakpoint) {
-            margin-top: 80px;
-            margin-left: 10%;
-            text-align: left;
+        @media (min-width: $first-breakpoint) {
+            margin-top: 80px !important;
+            margin-left: 5%;
+            position: relative;
+            right: 4%;
+            
         }
 
         /* Taille des Cartes Restaurant */
 
         &--size{
-            width: 45%;
+            width: 90%;
             height: 250px;
             @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-                width: 72%;
-            }
-            @media(max-width: $second-breakpoint) {
                 width: 90%;
+            }
+            @media (min-width: $first-breakpoint) {
+                width: 45%;
+                height: 250px;
             }
             
         }
@@ -260,6 +269,7 @@ body{
     &__description{
         display: flex;
         justify-content: space-between;
+        height: 50px;
     }
 
     /* Position du Texte de la Carte */
@@ -285,34 +295,39 @@ body{
     /* Taille du nom des cartes en responsive */
 
     &__name{
-        
-        @media (max-width: $second-breakpoint) {
-        }
         &--size{
             font-size: 17px;
         }
     }
 
-    /* Position et couleur des ettiquettes "Nex" */
+    /* Position et couleur des ettiquettes "New" */
 
     &__new{
-        margin-left: 80%;
+        display: block;
+        text-align: center;
+        padding: 5px;
         position: relative;
-        bottom: 85%;
-        padding: 2%;
-        @media (max-width: $second-breakpoint) {
+        left: 75%;
+        bottom: 220px;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             position: relative;
-            right: 4%;
-            bottom: 89%;
+            left: 80%;
+        }
+        @media (min-width: $first-breakpoint) {
+            position: relative;
+            bottom: 85%;
+            padding: 2%;
         }
         &--color{
             background-color: $color-tertiary;
             color: darken($color: $color-tertiary, $amount: 40%);
         }
         &--size{
-            width: 50%;
-            height: 50%;
+            width: 75px;
+            height: 20px;
         }
+       
+       
     }
 
     /* Mise en Place du Boutton pour le Focus du coeur */
@@ -326,36 +341,35 @@ body{
     /* Position de l'icone sans focus */
 
     &__icone{
-        
-        margin-left: 35%;
-        margin-top: 0.5%;
-        position: relative;
-        top: 10px;
-        right: 9px;
+        margin-top: 1%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             margin-top: 1%;
             }
-        @media (max-width: $second-breakpoint){
-            margin-top: 1%;
-
-            }
+        @media (min-width: $first-breakpoint) {
+            margin-left: 35%;
+            margin-top: 0.5%;
+            position: relative;
+            top: 10px;
+            right: 9px;
+        }
         }
         
         /* Position de l'icone qui changera de couleur avec le focus */
 
     &__solid{
+        margin-top: 1%;
         color: transparent;
-        margin-left: 35%;
-        margin-top: 0.5%;
         position: relative;
-        bottom: 15px;
-        right: 9px;
+        right: 50%;
         @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             margin-top: 1%;
         }
-        @media (max-width: $second-breakpoint) {
-            margin-top: 1%;
-
+        @media(min-width: $first-breakpoint) {
+            margin-left: 35%;
+            margin-top: 0.5%;
+            position: relative;
+            bottom: 15px;
+            right: 9px;
         }
         
     }
