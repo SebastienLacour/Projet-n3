@@ -7,19 +7,20 @@
     text-align: left;
     @include border-btn-filter;
     &--size{
+        width: 350px;
         height: 70px;
-        width: 180%;
-        min-width: 100%
+        margin-top: 25px;
     }
     
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         width: 400px;
         margin-top: 25px;
     }
-
-    @media (max-width: $second-breakpoint) {
-        width: 350px;
-        margin-top: 25px;
+    @media (min-width: $first-breakpoint) {
+        height: 70px;
+        width: 180%;
+        min-width: 100%;
+        margin-right: 50%;
     }
 }
 
