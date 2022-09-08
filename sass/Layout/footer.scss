@@ -4,58 +4,57 @@
     background-color: lighten($color: black, $amount: 15%);
     color: white;
     text-align: left;
-    height: 220px;
-    width: 107% !important;
-    padding-left: 70px;
-    padding-top: 45px;
-    margin-right: -5%;
-    margin-bottom: -10px;
+    width: 103%;
+    height: 200px;
     position: relative;
-    right: 5%;
+    right: 2%;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         width: 102%;
+        height: 250px !important;
     }
-    @media (max-width: $second-breakpoint) {
+    @media (min-width: $first-breakpoint) {
+        height: 250px !important;
         width: 100% !important;
-        max-width: 89%;
-        margin-left: 5%;
+        padding-left: 20px;
+        padding-top: 15px;
+        margin-right: -5%;
+        margin-bottom: -10px;
+        position: relative;
+        right: 5%;
     }
 
         /* Taille du menu du Footer */
 
     &__menu{
-        height: 100%;
-        width: 106% !important;
-        margin-top: 620px;
+        width: 110%;
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            margin-top: 1050px;
         }
-        @media (max-width: 599px) {
-            max-width: 88%;
-            margin-top: 1000px;
-            position: relative;
-            right: 6% !important;
+       
+        @media (min-width: $first-breakpoint) {
+            height: 100%;
+            width: 101% !important;
         }
     }
 
         /* Taille du Logo */
 
     &__logo{
-        margin-left: 2.2%;
-        width: 250px !important;
-        @media(max-width: $second-breakpoint) {
-            width: 40% !important;
-            margin-left: -9%;
+        padding-top: 20px;
+        margin-left: 40px !important;
+        width: 40%;
+        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+            width: 30%;
         }
-    }
+        @media (min-width: $first-breakpoint) {
+            width: 20%;
+        }
+        }
+    
         /* Position et Mise en page de la liste a puce du Footer */
     &__list{
-        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-           margin-left: -2%;
-        }
-        @media (max-width: $second-breakpoint) {
-            position: relative;
-            right: 18%;
+        margin-top: 2%;
+        @media (min-width: $first-breakpoint) {
+           margin-top: 5px;
         }
     }
     &__choice{
@@ -65,8 +64,9 @@
     &__name{
         margin-left: 0.5%;
     }
-
 }
+
+
 
         /* Couleur du lien en Blanc */
 
@@ -77,12 +77,3 @@
 
     /* Ajustement des règles pour le footer de la page "Menu La Note Enchantée */
 
-#footer-enchanted{
-    margin-top: 680px;
-    @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-        margin-top: 1200px !important;
-    }
-    @media (max-width: $second-breakpoint) {
-        margin-top: 1150px !important;
-    }
-}
