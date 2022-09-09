@@ -7,7 +7,7 @@
     width: 103%;
     height: 200px;
     position: relative;
-    right: 2%;
+    right: 2% !important;
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         width: 102%;
         height: 250px !important;
