@@ -410,7 +410,7 @@ h2 {
   width: 103%;
   height: 200px;
   position: relative;
-  right: 2%;
+  right: 2% !important;
   /* Taille du menu du Footer */
   /* Taille du Logo */
   /* Position et Mise en page de la liste a puce du Footer */
@@ -430,7 +430,7 @@ h2 {
     margin-right: -5%;
     margin-bottom: -10px;
     position: relative;
-    right: 5%;
+    right: 2%;
   }
 }
 .footer__menu {
