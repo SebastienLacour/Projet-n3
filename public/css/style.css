@@ -543,9 +543,8 @@ h2 {
 }
 @media (min-width: 968px) {
   .menu {
-    position: absolute;
-    top: 60%;
-    left: 0%;
+    position: relative;
+    left: 1px;
   }
 }
 .menu--size {
