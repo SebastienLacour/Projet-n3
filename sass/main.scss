@@ -1,4 +1,3 @@
-
 @import "./base/typography.scss";
 @import "./Utils/variables";
 @import "./Utils/mixins.scss";
@@ -13,11 +12,13 @@
 
 /* Centrer la Page */
 
-body{
+body {
     max-width: 100% !important;
+
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         max-width: 90% !important;
     }
+
     @media (min-width: $first-breakpoint) {
         max-width: 94%;
         width: $width;
@@ -30,43 +31,47 @@ body{
 
 /* Disposition des éléments de la page en colonne*/
 
-.bloc-page{
+.bloc-page {
     width: 100% !important;
     display: flex;
     flex-direction: column;
-} 
+}
 
 
 /* Mise en Page du Header */
 
-   
-.title{
+
+.title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         text-align: center;
     }
-    &--size{
+
+    &--size {
         width: $width;
     }
 
-    &__bloc{
+    &__bloc {
         width: auto;
         display: flex;
-}
+    }
 
     /*Fond et Positionnement du lieu de Recherche */
 
-    &__information{
+    &__information {
         width: 105%;
         background: darken($color: white, $amount: 10%);
         position: relative;
         right: 3%;
+
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: 104%;
         }
+
         @media (min-width: $first-breakpoint) {
             width: 103%;
             margin-right: -0.5%;
@@ -75,19 +80,22 @@ body{
 
     /* Centrer le lieu  de la Recherche */
 
-    &__position{
+    &__position {
         text-align: center;
     }
 
     /* Taille et Position de l'icone */
-    
-    &__location{
+
+    &__location {
         margin-left: 1%;
-        &--size{
+
+        &--size {
             font-size: 120%;
+
             @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
                 font-size: 150%;
             }
+
             @media (min-width: $first-breakpoint) {
                 font-size: 200%;
             }
@@ -95,19 +103,21 @@ body{
     }
 }
 
-    /* Taille et Position de l'intro */
+/* Taille et Position de l'intro */
 
-.intro{
+.intro {
     text-align: center;
     width: 102%;
     height: 220px;
     background: $background-darker;
     padding-top: 10px;
     position: relative;
+
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         text-align: center;
         width: 100% !important;
     }
+
     @media (min-width: $first-breakpoint) {
         text-align: center;
         height: 260px !important;
@@ -119,18 +129,20 @@ body{
 
     /* Taille et Position du titre de l'intro */
 
-    &__title{
+    &__title {
 
         width: 80%;
         margin-left: 10%;
         text-align: center;
         font-size: 150%;
+
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             width: 80%;
             font-size: 180%;
             text-align: center;
             margin-left: 10%;
         }
+
         @media (min-width: $first-breakpoint) {
             font-size: 220%;
             margin-top: 0.1%;
@@ -140,15 +152,17 @@ body{
 
     /* Taille et Position de la phrase de l'intro */
 
-    &__paragraph{
+    &__paragraph {
         width: 80%;
         margin-left: 10%;
         text-align: center;
         font-size: 100%;
+
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             font-size: 20px;
             text-align: center;
         }
+
         @media (min-width: $first-breakpoint) {
             font-size: 200%;
         }
@@ -156,7 +170,7 @@ body{
 
     /* Taille, Couleur et Position du boutton "Explorer nos restaurant" */
 
-    &__btn{
+    &__btn {
         @include btn-type;
         text-align: center;
     }
@@ -165,68 +179,76 @@ body{
 /* Mise en Page des Cartes Restaurant */
 /* Position et Couleur de fond de la section restaurant */
 
-.restaurant{
+.restaurant {
     display: flex;
     flex-direction: column;
     text-align: left;
     background: $background-darker;
+
     @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
         display: flex;
         flex-direction: column;
         margin-top: 50px;
     }
+
     @media (min-width: $first-breakpoint) {
         display: flex;
         margin-top: 5%;
     }
-    &--size{
+
+    &--size {
         height: 1300px;
         width: 101% !important;
+
         @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             height: 1400px;
             width: 101% !important;
         }
+
         @media (min-width: $first-breakpoint) {
             height: 800px;
             width: 100% !important;
         }
     }
-    
+
     /* Position du Titre Restaurant */
 
-    &__title{
+    &__title {
         margin-left: 9%;
+
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             text-align: center;
             margin-right: 10%;
         }
-        @media (min-width: $first-breakpoint) {
-        }
+
+        @media (min-width: $first-breakpoint) {}
     }
 
     /* Mise en Place par Flexbox des différentes Cartes restaurants */
 
-    &__menu{
+    &__menu {
         text-align: left;
         position: relative;
         right: 6%;
+
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             flex-direction: column;
             background: $background-darker;
             padding-bottom: 80px;
             margin-left: -2%;
-            
+
         }
+
         @media(min-width: $first-breakpoint) {
             display: flex;
             flex-wrap: wrap;
             margin-left: 15%;
         }
     }
-        
+
     /* Position individuelles des Cartes et Couleur de Fond */
 
-    &__card{
+    &__card {
         margin-top: 30px;
         margin-left: 10%;
         text-align: left;
@@ -234,39 +256,43 @@ body{
         border: solid 0.1px;
         border-radius: 30px;
         @include border-btn-filter;
+
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             margin-left: 65px;
             margin-top: 7%;
             position: relative;
             left: 5%;
         }
+
         @media (min-width: $first-breakpoint) {
             margin-top: 80px !important;
             margin-left: 5%;
             position: relative;
             right: 4%;
-            
+
         }
 
         /* Taille des Cartes Restaurant */
 
-        &--size{
+        &--size {
             width: 90%;
             height: 250px;
+
             @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
                 width: 90%;
             }
+
             @media (min-width: $first-breakpoint) {
                 width: 45%;
                 height: 250px;
             }
-            
+
         }
     }
 
     /* Flex sur les différents éléments textes et icones de la carte */
 
-    &__description{
+    &__description {
         display: flex;
         justify-content: space-between;
         height: 50px;
@@ -274,104 +300,178 @@ body{
 
     /* Position du Texte de la Carte */
 
-    &__words{
+    &__words {
         display: flex;
         flex-direction: column;
         margin: 1% 0 0 5%;
-        
+
+    }
+
+    &__location {
+        position: relative;
+        bottom: 10px;
     }
 
     /* Bordure et Taille de l'image de la Carte */
 
-    &__picture{
+    &__picture {
         border-radius: 30px 30px 0 0;
-        &--size{
+
+        &--size {
             width: $width;
             height: 190px;
-            
+
         }
     }
 
     /* Taille du nom des cartes en responsive */
 
-    &__name{
-        &--size{
+    &__name {
+        &--size {
             font-size: 17px;
         }
     }
 
     /* Position et couleur des ettiquettes "New" */
 
-    &__new{
+    &__new {
         display: block;
         text-align: center;
         padding: 5px;
         position: relative;
         left: 75%;
         bottom: 220px;
+
         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
             position: relative;
             left: 80%;
         }
+
         @media (min-width: $first-breakpoint) {
             position: relative;
             bottom: 85%;
             padding: 2%;
         }
-        &--color{
+
+        &--color {
             background-color: $color-tertiary;
             color: darken($color: $color-tertiary, $amount: 40%);
         }
-        &--size{
+
+        &--size {
             width: 75px;
             height: 20px;
         }
-       
-       
+
+
     }
 
     /* Mise en Place du Boutton pour le Focus du coeur */
 
-    &__focus{
-        background-color: $background-color;
-        border-radius: $radius;
+    &__focus {
+        border-radius: 25px;
+        position: relative;
+        width: 100px;
+        height: 50px;
+        background-color: white;
         border: none;
+
+        &__icon-full {
+            color: transparent;
+            display: block;
+            margin-left: -30px;
+        }
+
+        &:hover {
+            background: $color-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: all 500ms;
+        }
+        &:focus {
+            background: $color-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
     }
 
     /* Position de l'icone sans focus */
 
-    &__icone{
-        margin-top: 1%;
-        @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            margin-top: 1%;
-            }
-        @media (min-width: $first-breakpoint) {
-            margin-left: 35%;
-            margin-top: 0.5%;
-            position: relative;
-            top: 10px;
-            right: 9px;
-        }
-        }
-        
-        /* Position de l'icone qui changera de couleur avec le focus */
+    //     &__icone {
+    //         margin-top: 1%;
 
-    &__solid{
-        margin-top: 1%;
+    //         @media (min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+    //             margin-top: 1%;
+    //         }
+
+    //         @media (min-width: $first-breakpoint) {
+    //             margin-left: 35%;
+    //             margin-top: 0.5%;
+    //             position: relative;
+    //             top: 10px;
+    //             right: 9px;
+    //         }
+    //     }
+
+    //     /* Position de l'icone qui changera de couleur avec le focus */
+
+    //     &__solid {
+    //         margin-top: 1%;
+    //         // color: transparent;
+    //         background-color: $color-gradient;
+    //         position: relative;
+    //         right: 50%;
+
+    //         @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
+    //             margin-top: 1%;
+    //         }
+
+    //         @media(min-width: $first-breakpoint) {
+    //             margin-left: 35%;
+    //             margin-top: 0.5%;
+    //             position: relative;
+    //             bottom: 15px;
+    //             right: 9px;
+    //         }
+    //     }
+}
+
+.test {
+    border: none;
+    background-color: white;
+    position: relative;
+    width: 100px;
+    height: 50px;
+
+    :hover {
+        background: $color-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
-        position: relative;
-        right: 50%;
-        @media(min-width: $second-breakpoint) and (max-width: $first-breakpoint) {
-            margin-top: 1%;
-        }
-        @media(min-width: $first-breakpoint) {
-            margin-left: 35%;
-            margin-top: 0.5%;
-            position: relative;
-            bottom: 15px;
-            right: 9px;
-        }
-        
+    }
+
+    :focus {
+        background: $color-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &__icon {
+        position: absolute;
+    }
+
+    &__full-icon {
+        // background: $color-gradient;
+        // background-clip: text;
+        // -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &__empty-icon {
+        color: black;
+
     }
 }
-    
